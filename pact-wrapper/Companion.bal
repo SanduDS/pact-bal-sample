@@ -14,7 +14,7 @@ import ballerina/jballerina.java;
 
 # Ballerina class mapping for the Java `au.com.dius.pact.consumer.ConsumerPactBuilder$Companion` class.
 @java:Binding {'class: "au.com.dius.pact.consumer.ConsumerPactBuilder$Companion"}
-distinct class Companion {
+public distinct class Companion {
 
     *java:JObject;
 
@@ -24,14 +24,14 @@ distinct class Companion {
     # The init function of the Ballerina class mapping the `au.com.dius.pact.consumer.ConsumerPactBuilder$Companion` Java class.
     #
     # + obj - The `handle` value containing the Java reference of the object.
-    function init(handle obj) {
+    public function init(handle obj) {
         self.jObj = obj;
     }
 
     # The function to retrieve the string representation of the Ballerina class mapping the `au.com.dius.pact.consumer.ConsumerPactBuilder$Companion` Java class.
     #
     # + return - The `string` form of the Java object instance.
-    function toString() returns string {
+    public function toString() returns string {
         return java:toString(self.jObj) ?: "";
     }
 

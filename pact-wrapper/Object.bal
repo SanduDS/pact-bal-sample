@@ -2,7 +2,7 @@ import ballerina/jballerina.java;
 
 # Ballerina class mapping for the Java `java.lang.Object` class.
 @java:Binding {'class: "java.lang.Object"}
-distinct class Object {
+public distinct class Object {
 
     *java:JObject;
 
@@ -12,54 +12,54 @@ distinct class Object {
     # The init function of the Ballerina class mapping the `java.lang.Object` Java class.
     #
     # + obj - The `handle` value containing the Java reference of the object.
-    function init(handle obj) {
+    public function init(handle obj) {
         self.jObj = obj;
     }
 
     # The function to retrieve the string representation of the Ballerina class mapping the `java.lang.Object` Java class.
     #
     # + return - The `string` form of the Java object instance.
-    function toString() returns string {
-        return java:toString(self.jObj) ?: "";
+    public function toString() returns string? {
+        return java:toString(self.jObj);
     }
     # The function that maps to the `equals` method of `java.lang.Object`.
     #
-    # + arg0 - The `Object` value required to map with the Java method parameter.
+    # + arg0 - The `Object?` value required to map with the Java method parameter.
     # + return - The `boolean` value returning from the Java mapping.
-    function 'equals(Object arg0) returns boolean {
-        return java_lang_Object_equals(self.jObj, arg0.jObj);
+    public function 'equals(Object? arg0) returns boolean {
+        return java_lang_Object_equals(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
     }
 
     # The function that maps to the `getClass` method of `java.lang.Object`.
     #
-    # + return - The `Class` value returning from the Java mapping.
-    function getClass() returns Class {
+    # + return - The `Class?` value returning from the Java mapping.
+    public function getClass() returns Class? {
         handle externalObj = java_lang_Object_getClass(self.jObj);
         Class newObj = new (externalObj);
-        return newObj;
+        return java:isNull(newObj.jObj) ? () : newObj;
     }
 
     # The function that maps to the `hashCode` method of `java.lang.Object`.
     #
     # + return - The `int` value returning from the Java mapping.
-    function hashCode() returns int {
+    public function hashCode() returns int {
         return java_lang_Object_hashCode(self.jObj);
     }
 
     # The function that maps to the `notify` method of `java.lang.Object`.
-    function notify() {
+    public function notify() {
         java_lang_Object_notify(self.jObj);
     }
 
     # The function that maps to the `notifyAll` method of `java.lang.Object`.
-    function notifyAll() {
+    public function notifyAll() {
         java_lang_Object_notifyAll(self.jObj);
     }
 
     # The function that maps to the `wait` method of `java.lang.Object`.
     #
     # + return - The `InterruptedException` value returning from the Java mapping.
-    function 'wait() returns InterruptedException? {
+    public function 'wait() returns InterruptedException? {
         error|() externalObj = java_lang_Object_wait(self.jObj);
         if (externalObj is error) {
             InterruptedException e = error InterruptedException(INTERRUPTEDEXCEPTION, externalObj, message = externalObj.message());
@@ -71,7 +71,7 @@ distinct class Object {
     #
     # + arg0 - The `int` value required to map with the Java method parameter.
     # + return - The `InterruptedException` value returning from the Java mapping.
-    function wait2(int arg0) returns InterruptedException? {
+    public function wait2(int arg0) returns InterruptedException? {
         error|() externalObj = java_lang_Object_wait2(self.jObj, arg0);
         if (externalObj is error) {
             InterruptedException e = error InterruptedException(INTERRUPTEDEXCEPTION, externalObj, message = externalObj.message());
@@ -84,7 +84,7 @@ distinct class Object {
     # + arg0 - The `int` value required to map with the Java method parameter.
     # + arg1 - The `int` value required to map with the Java method parameter.
     # + return - The `InterruptedException` value returning from the Java mapping.
-    function wait3(int arg0, int arg1) returns InterruptedException? {
+    public function wait3(int arg0, int arg1) returns InterruptedException? {
         error|() externalObj = java_lang_Object_wait3(self.jObj, arg0, arg1);
         if (externalObj is error) {
             InterruptedException e = error InterruptedException(INTERRUPTEDEXCEPTION, externalObj, message = externalObj.message());
@@ -97,7 +97,7 @@ distinct class Object {
 # The constructor function to generate an object of `java.lang.Object`.
 #
 # + return - The new `Object` class generated.
-function newObject1() returns Object {
+public function newObject1() returns Object {
     handle externalObj = java_lang_Object_newObject1();
     Object newObj = new (externalObj);
     return newObj;
