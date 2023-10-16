@@ -627,7 +627,7 @@ public distinct class PactDslRequestWithoutPath {
     # + arg3 - The `byte[]` value required to map with the Java method parameter.
     # + return - The `PactDslRequestWithoutPath?` or the `IOException` value returning from the Java mapping.
     public function withFileUpload(string? arg0, string? arg1, string? arg2, byte[] arg3) returns PactDslRequestWithoutPath?|IOException|error {
-        handle|error externalObj = au_com_dius_pact_consumer_dsl_PactDslRequestWithoutPath_withFileUpload(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : java:fromString(arg1), arg2 is () ? java:createNull() : java:fromString(arg2), check jarrays:toHandle(arg3 ?: [], "byte"));
+        handle|error externalObj = au_com_dius_pact_consumer_dsl_PactDslRequestWithoutPath_withFileUpload(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : java:fromString(arg1), arg2 is () ? java:createNull() : java:fromString(arg2), check jarrays:toHandle(arg3, "byte"));
         if (externalObj is error) {
             IOException e = error IOException(IOEXCEPTION, externalObj, message = externalObj.message());
             return e;

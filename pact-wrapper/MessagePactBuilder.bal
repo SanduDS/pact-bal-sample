@@ -228,7 +228,7 @@ public distinct class MessagePactBuilder {
     #
     # + arg0 - The `Consumer2?` value required to map with the Java method parameter.
     # + return - The `MessagePactBuilder?` value returning from the Java mapping.
-    public function withMetadata(Consumer2? arg0) returns MessagePactBuilder? {
+    public function withMetadata(Consumer? arg0) returns MessagePactBuilder? {
         handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_withMetadata(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
         MessagePactBuilder newObj = new (externalObj);
         return java:isNull(newObj.jObj) ? () : newObj;

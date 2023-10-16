@@ -71,7 +71,7 @@ public distinct class HttpRequestBuilder {
     # + arg1 - The `byte[]` value required to map with the Java method parameter.
     # + return - The `HttpRequestBuilder?` value returning from the Java mapping.
     public function bodyMatchingContentType(string? arg0, byte[] arg1) returns HttpRequestBuilder?|error {
-        handle externalObj = au_com_dius_pact_consumer_dsl_HttpRequestBuilder_bodyMatchingContentType(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0), check jarrays:toHandle(arg1 ?: [], "byte"));
+        handle externalObj = au_com_dius_pact_consumer_dsl_HttpRequestBuilder_bodyMatchingContentType(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0), check jarrays:toHandle(arg1, "byte"));
         HttpRequestBuilder newObj = new (externalObj);
         return java:isNull(newObj.jObj) ? () : newObj;
     }

@@ -436,8 +436,8 @@ public distinct class DslPart {
     # + arg1 - The `string?` value required to map with the Java method parameter.
     # + arg2 - The `Object?[]?` value required to map with the Java method parameter.
     # + return - The `DslPart?` value returning from the Java mapping.
-    public function matchUrl2(string? arg0, string? arg1, Object?[]? arg2) returns DslPart?|error {
-        handle externalObj = au_com_dius_pact_consumer_dsl_DslPart_matchUrl2(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : java:fromString(arg1), check jarrays:toHandle(arg2 ?: [], "java.lang.Object"));
+    public function matchUrl3(string? arg0, string? arg1, Object?[]? arg2) returns DslPart?|error {
+        handle externalObj = au_com_dius_pact_consumer_dsl_DslPart_matchUrl3(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : java:fromString(arg1), check jarrays:toHandle(arg2 ?: [], "java.lang.Object"));
         DslPart newObj = new (externalObj);
         return java:isNull(newObj.jObj) ? () : newObj;
     }
@@ -1158,7 +1158,7 @@ function au_com_dius_pact_consumer_dsl_DslPart_matchUrl2(handle receiver, handle
     paramTypes: ["[Ljava.lang.Object;"]
 } external;
 
-function au_com_dius_pact_consumer_dsl_DslPart_matchUrl2(handle receiver, handle arg0, handle arg1, handle arg2) returns handle = @java:Method {
+function au_com_dius_pact_consumer_dsl_DslPart_matchUrl3(handle receiver, handle arg0, handle arg1, handle arg2) returns handle = @java:Method {
     name: "matchUrl",
     'class: "au.com.dius.pact.consumer.dsl.DslPart",
     paramTypes: ["java.lang.String", "java.lang.String", "[Ljava.lang.Object;"]

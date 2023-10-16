@@ -67,7 +67,7 @@ public distinct class OptionalBody {
     # + arg3 - The `ContentTypeHint?` value required to map with the Java method parameter.
     # + return - The `OptionalBody?` value returning from the Java mapping.
     public function copy(State? arg0, byte[] arg1, ContentType? arg2, ContentTypeHint? arg3) returns OptionalBody?|error {
-        handle externalObj = au_com_dius_pact_core_model_OptionalBody_copy(self.jObj, arg0 is () ? java:createNull() : arg0.jObj, check jarrays:toHandle(arg1 ?: [], "byte"), arg2 is () ? java:createNull() : arg2.jObj, arg3 is () ? java:createNull() : arg3.jObj);
+        handle externalObj = au_com_dius_pact_core_model_OptionalBody_copy(self.jObj, arg0 is () ? java:createNull() : arg0.jObj, check jarrays:toHandle(arg1, "byte"), arg2 is () ? java:createNull() : arg2.jObj, arg3 is () ? java:createNull() : arg3.jObj);
         OptionalBody newObj = new (externalObj);
         return java:isNull(newObj.jObj) ? () : newObj;
     }
@@ -199,7 +199,7 @@ public distinct class OptionalBody {
     # + arg0 - The `byte[]` value required to map with the Java method parameter.
     # + return - The `byte[]` value returning from the Java mapping.
     public function orElse(byte[] arg0) returns byte[]|error {
-        handle externalObj = au_com_dius_pact_core_model_OptionalBody_orElse(self.jObj, check jarrays:toHandle(arg0 ?: [], "byte"));
+        handle externalObj = au_com_dius_pact_core_model_OptionalBody_orElse(self.jObj, check jarrays:toHandle(arg0, "byte"));
         return <byte[]>check jarrays:fromHandle(externalObj, "byte");
     }
 
@@ -319,7 +319,7 @@ public function newOptionalBody1(State? arg0) returns OptionalBody {
 # + arg1 - The `byte[]` value required to map with the Java constructor parameter.
 # + return - The new `OptionalBody` class generated.
 public function newOptionalBody2(State? arg0, byte[] arg1) returns OptionalBody|error {
-    handle externalObj = au_com_dius_pact_core_model_OptionalBody_newOptionalBody2(arg0 is () ? java:createNull() : arg0.jObj, check jarrays:toHandle(arg1 ?: [], "byte"));
+    handle externalObj = au_com_dius_pact_core_model_OptionalBody_newOptionalBody2(arg0 is () ? java:createNull() : arg0.jObj, check jarrays:toHandle(arg1, "byte"));
     OptionalBody newObj = new (externalObj);
     return newObj;
 }
@@ -331,7 +331,7 @@ public function newOptionalBody2(State? arg0, byte[] arg1) returns OptionalBody|
 # + arg2 - The `ContentType?` value required to map with the Java constructor parameter.
 # + return - The new `OptionalBody` class generated.
 public function newOptionalBody3(State? arg0, byte[] arg1, ContentType? arg2) returns OptionalBody|error {
-    handle externalObj = au_com_dius_pact_core_model_OptionalBody_newOptionalBody3(arg0 is () ? java:createNull() : arg0.jObj, check jarrays:toHandle(arg1 ?: [], "byte"), arg2 is () ? java:createNull() : arg2.jObj);
+    handle externalObj = au_com_dius_pact_core_model_OptionalBody_newOptionalBody3(arg0 is () ? java:createNull() : arg0.jObj, check jarrays:toHandle(arg1, "byte"), arg2 is () ? java:createNull() : arg2.jObj);
     OptionalBody newObj = new (externalObj);
     return newObj;
 }
@@ -344,7 +344,7 @@ public function newOptionalBody3(State? arg0, byte[] arg1, ContentType? arg2) re
 # + arg3 - The `ContentTypeHint?` value required to map with the Java constructor parameter.
 # + return - The new `OptionalBody` class generated.
 public function newOptionalBody4(State? arg0, byte[] arg1, ContentType? arg2, ContentTypeHint? arg3) returns OptionalBody|error {
-    handle externalObj = au_com_dius_pact_core_model_OptionalBody_newOptionalBody4(arg0 is () ? java:createNull() : arg0.jObj, check jarrays:toHandle(arg1 ?: [], "byte"), arg2 is () ? java:createNull() : arg2.jObj, arg3 is () ? java:createNull() : arg3.jObj);
+    handle externalObj = au_com_dius_pact_core_model_OptionalBody_newOptionalBody4(arg0 is () ? java:createNull() : arg0.jObj, check jarrays:toHandle(arg1, "byte"), arg2 is () ? java:createNull() : arg2.jObj, arg3 is () ? java:createNull() : arg3.jObj);
     OptionalBody newObj = new (externalObj);
     return newObj;
 }
@@ -359,7 +359,7 @@ public function newOptionalBody4(State? arg0, byte[] arg1, ContentType? arg2, Co
 # + arg5 - The `DefaultConstructorMarker?` value required to map with the Java constructor parameter.
 # + return - The new `OptionalBody` class generated.
 public function newOptionalBody5(State? arg0, byte[] arg1, ContentType? arg2, ContentTypeHint? arg3, int arg4, DefaultConstructorMarker? arg5) returns OptionalBody|error {
-    handle externalObj = au_com_dius_pact_core_model_OptionalBody_newOptionalBody5(arg0 is () ? java:createNull() : arg0.jObj, check jarrays:toHandle(arg1 ?: [], "byte"), arg2 is () ? java:createNull() : arg2.jObj, arg3 is () ? java:createNull() : arg3.jObj, arg4, arg5 is () ? java:createNull() : arg5.jObj);
+    handle externalObj = au_com_dius_pact_core_model_OptionalBody_newOptionalBody5(arg0 is () ? java:createNull() : arg0.jObj, check jarrays:toHandle(arg1, "byte"), arg2 is () ? java:createNull() : arg2.jObj, arg3 is () ? java:createNull() : arg3.jObj, arg4, arg5 is () ? java:createNull() : arg5.jObj);
     OptionalBody newObj = new (externalObj);
     return newObj;
 }
@@ -369,7 +369,7 @@ public function newOptionalBody5(State? arg0, byte[] arg1, ContentType? arg2, Co
 # + arg0 - The `byte[]` value required to map with the Java method parameter.
 # + return - The `OptionalBody?` value returning from the Java mapping.
 public function OptionalBody_body(byte[] arg0) returns OptionalBody?|error {
-    handle externalObj = au_com_dius_pact_core_model_OptionalBody_body(check jarrays:toHandle(arg0 ?: [], "byte"));
+    handle externalObj = au_com_dius_pact_core_model_OptionalBody_body(check jarrays:toHandle(arg0, "byte"));
     OptionalBody newObj = new (externalObj);
     return java:isNull(newObj.jObj) ? () : newObj;
 }
@@ -380,7 +380,7 @@ public function OptionalBody_body(byte[] arg0) returns OptionalBody?|error {
 # + arg1 - The `ContentType?` value required to map with the Java method parameter.
 # + return - The `OptionalBody?` value returning from the Java mapping.
 public function OptionalBody_body2(byte[] arg0, ContentType? arg1) returns OptionalBody?|error {
-    handle externalObj = au_com_dius_pact_core_model_OptionalBody_body2(check jarrays:toHandle(arg0 ?: [], "byte"), arg1 is () ? java:createNull() : arg1.jObj);
+    handle externalObj = au_com_dius_pact_core_model_OptionalBody_body2(check jarrays:toHandle(arg0, "byte"), arg1 is () ? java:createNull() : arg1.jObj);
     OptionalBody newObj = new (externalObj);
     return java:isNull(newObj.jObj) ? () : newObj;
 }
@@ -392,7 +392,7 @@ public function OptionalBody_body2(byte[] arg0, ContentType? arg1) returns Optio
 # + arg2 - The `ContentTypeHint?` value required to map with the Java method parameter.
 # + return - The `OptionalBody?` value returning from the Java mapping.
 public function OptionalBody_body3(byte[] arg0, ContentType? arg1, ContentTypeHint? arg2) returns OptionalBody?|error {
-    handle externalObj = au_com_dius_pact_core_model_OptionalBody_body3(check jarrays:toHandle(arg0 ?: [], "byte"), arg1 is () ? java:createNull() : arg1.jObj, arg2 is () ? java:createNull() : arg2.jObj);
+    handle externalObj = au_com_dius_pact_core_model_OptionalBody_body3(check jarrays:toHandle(arg0, "byte"), arg1 is () ? java:createNull() : arg1.jObj, arg2 is () ? java:createNull() : arg2.jObj);
     OptionalBody newObj = new (externalObj);
     return java:isNull(newObj.jObj) ? () : newObj;
 }

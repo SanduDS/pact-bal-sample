@@ -335,22 +335,6 @@ public distinct class PactXmlBuilder {
         return java:isNull(newObj.jObj) ? () : newObj;
     }
 
-    # The function that retrieves the value of the public field `doc`.
-    #
-    # + return - The `Document?` value of the field.
-    public function getDoc() returns Document? {
-        handle externalObj = au_com_dius_pact_consumer_xml_PactXmlBuilder_getDoc(self.jObj);
-        Document? newObj = new (externalObj);
-        return newObj;
-    }
-
-    # The function to set the value of the public field `doc`.
-    #
-    # + arg - The `Document?` value that is to be set for the field.
-    public function setDoc(Document? arg) {
-        au_com_dius_pact_consumer_xml_PactXmlBuilder_setDoc(self.jObj, arg is () ? java:createNull() : arg.jObj);
-    }
-
 }
 
 # The constructor function to generate an object of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
@@ -665,16 +649,6 @@ function au_com_dius_pact_consumer_xml_PactXmlBuilder_withVersion(handle receive
     name: "withVersion",
     'class: "au.com.dius.pact.consumer.xml.PactXmlBuilder",
     paramTypes: ["java.lang.String"]
-} external;
-
-function au_com_dius_pact_consumer_xml_PactXmlBuilder_getDoc(handle receiver) returns handle = @java:FieldGet {
-    name: "doc",
-    'class: "au.com.dius.pact.consumer.xml.PactXmlBuilder"
-} external;
-
-function au_com_dius_pact_consumer_xml_PactXmlBuilder_setDoc(handle receiver, handle arg) = @java:FieldSet {
-    name: "doc",
-    'class: "au.com.dius.pact.consumer.xml.PactXmlBuilder"
 } external;
 
 function au_com_dius_pact_consumer_xml_PactXmlBuilder_newPactXmlBuilder1(handle arg0) returns handle = @java:Constructor {

@@ -169,3 +169,11 @@ version = "5.8.0"
 groupId = "io.github.oshai"
 artifactId = "kotlin-logging-jvm"
 version = "5.1.0"
+
+[[platform.java11.dependency]]
+groupId = "org.jetbrains.kotlin"
+artifactId = "kotlin-stdlib"
+
+[[platform.java11.dependency]]
+groupId = "org.json"
+artifactId = "json"

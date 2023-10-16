@@ -483,7 +483,7 @@ public distinct class PactDslResponse {
     # + arg1 - The `string?` value required to map with the Java method parameter.
     # + return - The `PactDslResponse?` value returning from the Java mapping.
     public function withBinaryData(byte[] arg0, string? arg1) returns PactDslResponse?|error {
-        handle externalObj = au_com_dius_pact_consumer_dsl_PactDslResponse_withBinaryData(self.jObj, check jarrays:toHandle(arg0 ?: [], "byte"), arg1 is () ? java:createNull() : java:fromString(arg1));
+        handle externalObj = au_com_dius_pact_consumer_dsl_PactDslResponse_withBinaryData(self.jObj, check jarrays:toHandle(arg0, "byte"), arg1 is () ? java:createNull() : java:fromString(arg1));
         PactDslResponse newObj = new (externalObj);
         return java:isNull(newObj.jObj) ? () : newObj;
     }
