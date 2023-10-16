@@ -35,6 +35,7 @@ version = "5.2.1"
 [[platform.java11.dependency]]
 groupId = "org.apache.httpcomponents.client5"
 artifactId = "httpclient5-fluent"
+version = "5.2.1"
 
 
 [[platform.java11.dependency]]
@@ -60,16 +61,17 @@ version = "2.0.0-alpha1"
 [[platform.java11.dependency]]
 groupId = "io.ktor"
 artifactId = "ktor-server-netty"
-
+version="2.3.0"
 
 [[platform.java11.dependency]]
 groupId = "io.ktor"
 artifactId = "ktor-network-tls-certificates"
-
+version="2.3.0"
 
 [[platform.java11.dependency]]
 groupId = "io.pact.plugin.driver"
 artifactId = "core"
+version="0.4.1"
 
 
 [[platform.java11.dependency]]
@@ -95,6 +97,7 @@ version = "1.10.0"
 [[platform.java11.dependency]]
 groupId = "org.apache.tika"
 artifactId = "tika-core"
+version="2.8.0"
 
 
 [[platform.java11.dependency]]
@@ -105,11 +108,12 @@ version = "2.2"
 [[platform.java11.dependency]]
 groupId = "org.spockframework"
 artifactId = "spock-core"
+version = "2.3-groovy-4.0"
 
 [[platform.java11.dependency]]
 groupId = "junit"
 artifactId = "junit"
-
+version="4.13.2"
 
 [[platform.java11.dependency]]
 groupId = "ch.qos.logback"
@@ -124,21 +128,22 @@ version = "1.1.0"
 [[platform.java11.dependency]]
 groupId = "org.apache.groovy"
 artifactId = "groovy"
-
+version="4.0.15"
 
 [[platform.java11.dependency]]
 groupId = "org.apache.groovy"
 artifactId = "groovy-json"
-
+version="4.0.15"
 
 [[platform.java11.dependency]]
 groupId = "org.apache.groovy"
 artifactId = "groovy-xml"
-
+version="4.0.15"
 
 [[platform.java11.dependency]]
 groupId = "org.apache.groovy"
 artifactId = "groovy-dateutil"
+version="4.0.15"
 
 [[platform.java11.dependency]]
 groupId = "net.bytebuddy"
@@ -173,7 +178,9 @@ version = "5.1.0"
 [[platform.java11.dependency]]
 groupId = "org.jetbrains.kotlin"
 artifactId = "kotlin-stdlib"
+version="1.9.10"
 
 [[platform.java11.dependency]]
 groupId = "org.json"
 artifactId = "json"
+version="20230227"
