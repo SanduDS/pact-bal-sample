@@ -14,7 +14,7 @@ import ballerina/jballerina.java;
 
 # Ballerina class mapping for the Java `org.json.JSONObject` class.
 @java:Binding {'class: "org.json.JSONObject"}
-distinct class JSONObject {
+public distinct class JSONObject {
 
     *java:JObject;
 

@@ -21,62 +21,62 @@ public distinct class SynchronousMessageInteractionBuilder {
     # The function to retrieve the string representation of the Ballerina class mapping the `au.com.dius.pact.consumer.dsl.SynchronousMessageInteractionBuilder` Java class.
     #
     # + return - The `string` form of the Java object instance.
-    public function toString() returns string? {
-        return java:toString(self.jObj);
+    public function toString() returns string {
+        return java:toString(self.jObj) ?: "";
     }
     # The function that maps to the `build` method of `au.com.dius.pact.consumer.dsl.SynchronousMessageInteractionBuilder`.
     #
-    # + return - The `V4Interaction?` value returning from the Java mapping.
-    public function build() returns V4Interaction? {
+    # + return - The `V4Interaction` value returning from the Java mapping.
+    public function build() returns V4Interaction {
         handle externalObj = au_com_dius_pact_consumer_dsl_SynchronousMessageInteractionBuilder_build(self.jObj);
         V4Interaction newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `comment` method of `au.com.dius.pact.consumer.dsl.SynchronousMessageInteractionBuilder`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    # + return - The `SynchronousMessageInteractionBuilder?` value returning from the Java mapping.
-    public function comment(string? arg0) returns SynchronousMessageInteractionBuilder? {
-        handle externalObj = au_com_dius_pact_consumer_dsl_SynchronousMessageInteractionBuilder_comment(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0));
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    # + return - The `SynchronousMessageInteractionBuilder` value returning from the Java mapping.
+    public function comment(string arg0) returns SynchronousMessageInteractionBuilder {
+        handle externalObj = au_com_dius_pact_consumer_dsl_SynchronousMessageInteractionBuilder_comment(self.jObj, java:fromString(arg0));
         SynchronousMessageInteractionBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `description` method of `au.com.dius.pact.consumer.dsl.SynchronousMessageInteractionBuilder`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    # + return - The `SynchronousMessageInteractionBuilder?` value returning from the Java mapping.
-    public function description(string? arg0) returns SynchronousMessageInteractionBuilder? {
-        handle externalObj = au_com_dius_pact_consumer_dsl_SynchronousMessageInteractionBuilder_description(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0));
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    # + return - The `SynchronousMessageInteractionBuilder` value returning from the Java mapping.
+    public function description(string arg0) returns SynchronousMessageInteractionBuilder {
+        handle externalObj = au_com_dius_pact_consumer_dsl_SynchronousMessageInteractionBuilder_description(self.jObj, java:fromString(arg0));
         SynchronousMessageInteractionBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `equals` method of `au.com.dius.pact.consumer.dsl.SynchronousMessageInteractionBuilder`.
     #
-    # + arg0 - The `Object?` value required to map with the Java method parameter.
+    # + arg0 - The `Object` value required to map with the Java method parameter.
     # + return - The `boolean` value returning from the Java mapping.
-    public function 'equals(Object? arg0) returns boolean {
-        return au_com_dius_pact_consumer_dsl_SynchronousMessageInteractionBuilder_equals(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    public function 'equals(Object arg0) returns boolean {
+        return au_com_dius_pact_consumer_dsl_SynchronousMessageInteractionBuilder_equals(self.jObj, arg0.jObj);
     }
 
     # The function that maps to the `getClass` method of `au.com.dius.pact.consumer.dsl.SynchronousMessageInteractionBuilder`.
     #
-    # + return - The `Class?` value returning from the Java mapping.
-    public function getClass() returns Class? {
+    # + return - The `Class` value returning from the Java mapping.
+    public function getClass() returns Class {
         handle externalObj = au_com_dius_pact_consumer_dsl_SynchronousMessageInteractionBuilder_getClass(self.jObj);
         Class newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `getInteraction` method of `au.com.dius.pact.consumer.dsl.SynchronousMessageInteractionBuilder`.
     #
-    # + return - The `SynchronousMessages?` value returning from the Java mapping.
-    public function getInteraction() returns SynchronousMessages? {
+    # + return - The `SynchronousMessages` value returning from the Java mapping.
+    public function getInteraction() returns SynchronousMessages {
         handle externalObj = au_com_dius_pact_consumer_dsl_SynchronousMessageInteractionBuilder_getInteraction(self.jObj);
         SynchronousMessages newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `hashCode` method of `au.com.dius.pact.consumer.dsl.SynchronousMessageInteractionBuilder`.
@@ -88,12 +88,12 @@ public distinct class SynchronousMessageInteractionBuilder {
 
     # The function that maps to the `key` method of `au.com.dius.pact.consumer.dsl.SynchronousMessageInteractionBuilder`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    # + return - The `SynchronousMessageInteractionBuilder?` value returning from the Java mapping.
-    public function 'key(string? arg0) returns SynchronousMessageInteractionBuilder? {
-        handle externalObj = au_com_dius_pact_consumer_dsl_SynchronousMessageInteractionBuilder_key(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0));
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    # + return - The `SynchronousMessageInteractionBuilder` value returning from the Java mapping.
+    public function 'key(string arg0) returns SynchronousMessageInteractionBuilder {
+        handle externalObj = au_com_dius_pact_consumer_dsl_SynchronousMessageInteractionBuilder_key(self.jObj, java:fromString(arg0));
         SynchronousMessageInteractionBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `notify` method of `au.com.dius.pact.consumer.dsl.SynchronousMessageInteractionBuilder`.
@@ -109,55 +109,55 @@ public distinct class SynchronousMessageInteractionBuilder {
     # The function that maps to the `pending` method of `au.com.dius.pact.consumer.dsl.SynchronousMessageInteractionBuilder`.
     #
     # + arg0 - The `boolean` value required to map with the Java method parameter.
-    # + return - The `SynchronousMessageInteractionBuilder?` value returning from the Java mapping.
-    public function pending(boolean arg0) returns SynchronousMessageInteractionBuilder? {
+    # + return - The `SynchronousMessageInteractionBuilder` value returning from the Java mapping.
+    public function pending(boolean arg0) returns SynchronousMessageInteractionBuilder {
         handle externalObj = au_com_dius_pact_consumer_dsl_SynchronousMessageInteractionBuilder_pending(self.jObj, arg0);
         SynchronousMessageInteractionBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `state` method of `au.com.dius.pact.consumer.dsl.SynchronousMessageInteractionBuilder`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    # + return - The `SynchronousMessageInteractionBuilder?` value returning from the Java mapping.
-    public function state(string? arg0) returns SynchronousMessageInteractionBuilder? {
-        handle externalObj = au_com_dius_pact_consumer_dsl_SynchronousMessageInteractionBuilder_state(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0));
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    # + return - The `SynchronousMessageInteractionBuilder` value returning from the Java mapping.
+    public function state(string arg0) returns SynchronousMessageInteractionBuilder {
+        handle externalObj = au_com_dius_pact_consumer_dsl_SynchronousMessageInteractionBuilder_state(self.jObj, java:fromString(arg0));
         SynchronousMessageInteractionBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `state` method of `au.com.dius.pact.consumer.dsl.SynchronousMessageInteractionBuilder`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    # + arg1 - The `Map?` value required to map with the Java method parameter.
-    # + return - The `SynchronousMessageInteractionBuilder?` value returning from the Java mapping.
-    public function state2(string? arg0, Map? arg1) returns SynchronousMessageInteractionBuilder? {
-        handle externalObj = au_com_dius_pact_consumer_dsl_SynchronousMessageInteractionBuilder_state2(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : arg1.jObj);
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    # + arg1 - The `Map` value required to map with the Java method parameter.
+    # + return - The `SynchronousMessageInteractionBuilder` value returning from the Java mapping.
+    public function state2(string arg0, Map arg1) returns SynchronousMessageInteractionBuilder {
+        handle externalObj = au_com_dius_pact_consumer_dsl_SynchronousMessageInteractionBuilder_state2(self.jObj, java:fromString(arg0), arg1.jObj);
         SynchronousMessageInteractionBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `state` method of `au.com.dius.pact.consumer.dsl.SynchronousMessageInteractionBuilder`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    # + arg1 - The `Pair?[]?` value required to map with the Java method parameter.
-    # + return - The `SynchronousMessageInteractionBuilder?` value returning from the Java mapping.
-    public function state3(string? arg0, Pair?[]? arg1) returns SynchronousMessageInteractionBuilder?|error {
-        handle externalObj = au_com_dius_pact_consumer_dsl_SynchronousMessageInteractionBuilder_state3(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0), check jarrays:toHandle(arg1 ?: [], "kotlin.Pair"));
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    # + arg1 - The `Pair[]` value required to map with the Java method parameter.
+    # + return - The `SynchronousMessageInteractionBuilder` value returning from the Java mapping.
+    public function state3(string arg0, Pair[] arg1) returns SynchronousMessageInteractionBuilder|error {
+        handle externalObj = au_com_dius_pact_consumer_dsl_SynchronousMessageInteractionBuilder_state3(self.jObj, java:fromString(arg0), check jarrays:toHandle(arg1, "kotlin.Pair"));
         SynchronousMessageInteractionBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `state` method of `au.com.dius.pact.consumer.dsl.SynchronousMessageInteractionBuilder`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    # + arg1 - The `string?` value required to map with the Java method parameter.
-    # + arg2 - The `Object?` value required to map with the Java method parameter.
-    # + return - The `SynchronousMessageInteractionBuilder?` value returning from the Java mapping.
-    public function state4(string? arg0, string? arg1, Object? arg2) returns SynchronousMessageInteractionBuilder? {
-        handle externalObj = au_com_dius_pact_consumer_dsl_SynchronousMessageInteractionBuilder_state4(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : java:fromString(arg1), arg2 is () ? java:createNull() : arg2.jObj);
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    # + arg1 - The `string` value required to map with the Java method parameter.
+    # + arg2 - The `Object` value required to map with the Java method parameter.
+    # + return - The `SynchronousMessageInteractionBuilder` value returning from the Java mapping.
+    public function state4(string arg0, string arg1, Object arg2) returns SynchronousMessageInteractionBuilder {
+        handle externalObj = au_com_dius_pact_consumer_dsl_SynchronousMessageInteractionBuilder_state4(self.jObj, java:fromString(arg0), java:fromString(arg1), arg2.jObj);
         SynchronousMessageInteractionBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `wait` method of `au.com.dius.pact.consumer.dsl.SynchronousMessageInteractionBuilder`.
@@ -198,34 +198,34 @@ public distinct class SynchronousMessageInteractionBuilder {
 
     # The function that maps to the `willRespondWith` method of `au.com.dius.pact.consumer.dsl.SynchronousMessageInteractionBuilder`.
     #
-    # + arg0 - The `Function1?` value required to map with the Java method parameter.
-    # + return - The `SynchronousMessageInteractionBuilder?` value returning from the Java mapping.
-    public function willRespondWith(Function1? arg0) returns SynchronousMessageInteractionBuilder? {
-        handle externalObj = au_com_dius_pact_consumer_dsl_SynchronousMessageInteractionBuilder_willRespondWith(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    # + arg0 - The `Function1` value required to map with the Java method parameter.
+    # + return - The `SynchronousMessageInteractionBuilder` value returning from the Java mapping.
+    public function willRespondWith(Function1 arg0) returns SynchronousMessageInteractionBuilder {
+        handle externalObj = au_com_dius_pact_consumer_dsl_SynchronousMessageInteractionBuilder_willRespondWith(self.jObj, arg0.jObj);
         SynchronousMessageInteractionBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `withRequest` method of `au.com.dius.pact.consumer.dsl.SynchronousMessageInteractionBuilder`.
     #
-    # + arg0 - The `Function1?` value required to map with the Java method parameter.
-    # + return - The `SynchronousMessageInteractionBuilder?` value returning from the Java mapping.
-    public function withRequest(Function1? arg0) returns SynchronousMessageInteractionBuilder? {
-        handle externalObj = au_com_dius_pact_consumer_dsl_SynchronousMessageInteractionBuilder_withRequest(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    # + arg0 - The `Function1` value required to map with the Java method parameter.
+    # + return - The `SynchronousMessageInteractionBuilder` value returning from the Java mapping.
+    public function withRequest(Function1 arg0) returns SynchronousMessageInteractionBuilder {
+        handle externalObj = au_com_dius_pact_consumer_dsl_SynchronousMessageInteractionBuilder_withRequest(self.jObj, arg0.jObj);
         SynchronousMessageInteractionBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
 }
 
 # The constructor function to generate an object of `au.com.dius.pact.consumer.dsl.SynchronousMessageInteractionBuilder`.
 #
-# + arg0 - The `string?` value required to map with the Java constructor parameter.
-# + arg1 - The `List?` value required to map with the Java constructor parameter.
-# + arg2 - The `List?` value required to map with the Java constructor parameter.
+# + arg0 - The `string` value required to map with the Java constructor parameter.
+# + arg1 - The `List` value required to map with the Java constructor parameter.
+# + arg2 - The `List` value required to map with the Java constructor parameter.
 # + return - The new `SynchronousMessageInteractionBuilder` class generated.
-public function newSynchronousMessageInteractionBuilder1(string? arg0, List? arg1, List? arg2) returns SynchronousMessageInteractionBuilder {
-    handle externalObj = au_com_dius_pact_consumer_dsl_SynchronousMessageInteractionBuilder_newSynchronousMessageInteractionBuilder1(arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : arg1.jObj, arg2 is () ? java:createNull() : arg2.jObj);
+public function newSynchronousMessageInteractionBuilder1(string arg0, List arg1, List arg2) returns SynchronousMessageInteractionBuilder {
+    handle externalObj = au_com_dius_pact_consumer_dsl_SynchronousMessageInteractionBuilder_newSynchronousMessageInteractionBuilder1(java:fromString(arg0), arg1.jObj, arg2.jObj);
     SynchronousMessageInteractionBuilder newObj = new (externalObj);
     return newObj;
 }

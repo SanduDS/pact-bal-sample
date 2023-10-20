@@ -20,63 +20,63 @@ public distinct class InteractionMarkup {
     # The function to retrieve the string representation of the Ballerina class mapping the `au.com.dius.pact.core.model.InteractionMarkup` Java class.
     #
     # + return - The `string` form of the Java object instance.
-    public function toString() returns string? {
-        return java:toString(self.jObj);
+    public function toString() returns string {
+        return java:toString(self.jObj) ?: "";
     }
     # The function that maps to the `component1` method of `au.com.dius.pact.core.model.InteractionMarkup`.
     #
-    # + return - The `string?` value returning from the Java mapping.
-    public function component1() returns string? {
-        return java:toString(au_com_dius_pact_core_model_InteractionMarkup_component1(self.jObj));
+    # + return - The `string` value returning from the Java mapping.
+    public function component1() returns string {
+        return java:toString(au_com_dius_pact_core_model_InteractionMarkup_component1(self.jObj)) ?: "";
     }
 
     # The function that maps to the `component2` method of `au.com.dius.pact.core.model.InteractionMarkup`.
     #
-    # + return - The `string?` value returning from the Java mapping.
-    public function component2() returns string? {
-        return java:toString(au_com_dius_pact_core_model_InteractionMarkup_component2(self.jObj));
+    # + return - The `string` value returning from the Java mapping.
+    public function component2() returns string {
+        return java:toString(au_com_dius_pact_core_model_InteractionMarkup_component2(self.jObj)) ?: "";
     }
 
     # The function that maps to the `copy` method of `au.com.dius.pact.core.model.InteractionMarkup`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    # + arg1 - The `string?` value required to map with the Java method parameter.
-    # + return - The `InteractionMarkup?` value returning from the Java mapping.
-    public function copy(string? arg0, string? arg1) returns InteractionMarkup? {
-        handle externalObj = au_com_dius_pact_core_model_InteractionMarkup_copy(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : java:fromString(arg1));
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    # + arg1 - The `string` value required to map with the Java method parameter.
+    # + return - The `InteractionMarkup` value returning from the Java mapping.
+    public function copy(string arg0, string arg1) returns InteractionMarkup {
+        handle externalObj = au_com_dius_pact_core_model_InteractionMarkup_copy(self.jObj, java:fromString(arg0), java:fromString(arg1));
         InteractionMarkup newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `equals` method of `au.com.dius.pact.core.model.InteractionMarkup`.
     #
-    # + arg0 - The `Object?` value required to map with the Java method parameter.
+    # + arg0 - The `Object` value required to map with the Java method parameter.
     # + return - The `boolean` value returning from the Java mapping.
-    public function 'equals(Object? arg0) returns boolean {
-        return au_com_dius_pact_core_model_InteractionMarkup_equals(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    public function 'equals(Object arg0) returns boolean {
+        return au_com_dius_pact_core_model_InteractionMarkup_equals(self.jObj, arg0.jObj);
     }
 
     # The function that maps to the `getClass` method of `au.com.dius.pact.core.model.InteractionMarkup`.
     #
-    # + return - The `Class?` value returning from the Java mapping.
-    public function getClass() returns Class? {
+    # + return - The `Class` value returning from the Java mapping.
+    public function getClass() returns Class {
         handle externalObj = au_com_dius_pact_core_model_InteractionMarkup_getClass(self.jObj);
         Class newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `getMarkup` method of `au.com.dius.pact.core.model.InteractionMarkup`.
     #
-    # + return - The `string?` value returning from the Java mapping.
-    public function getMarkup() returns string? {
-        return java:toString(au_com_dius_pact_core_model_InteractionMarkup_getMarkup(self.jObj));
+    # + return - The `string` value returning from the Java mapping.
+    public function getMarkup() returns string {
+        return java:toString(au_com_dius_pact_core_model_InteractionMarkup_getMarkup(self.jObj)) ?: "";
     }
 
     # The function that maps to the `getMarkupType` method of `au.com.dius.pact.core.model.InteractionMarkup`.
     #
-    # + return - The `string?` value returning from the Java mapping.
-    public function getMarkupType() returns string? {
-        return java:toString(au_com_dius_pact_core_model_InteractionMarkup_getMarkupType(self.jObj));
+    # + return - The `string` value returning from the Java mapping.
+    public function getMarkupType() returns string {
+        return java:toString(au_com_dius_pact_core_model_InteractionMarkup_getMarkupType(self.jObj)) ?: "";
     }
 
     # The function that maps to the `hashCode` method of `au.com.dius.pact.core.model.InteractionMarkup`.
@@ -95,12 +95,12 @@ public distinct class InteractionMarkup {
 
     # The function that maps to the `merge` method of `au.com.dius.pact.core.model.InteractionMarkup`.
     #
-    # + arg0 - The `InteractionMarkup?` value required to map with the Java method parameter.
-    # + return - The `InteractionMarkup?` value returning from the Java mapping.
-    public function merge(InteractionMarkup? arg0) returns InteractionMarkup? {
-        handle externalObj = au_com_dius_pact_core_model_InteractionMarkup_merge(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    # + arg0 - The `InteractionMarkup` value required to map with the Java method parameter.
+    # + return - The `InteractionMarkup` value returning from the Java mapping.
+    public function merge(InteractionMarkup arg0) returns InteractionMarkup {
+        handle externalObj = au_com_dius_pact_core_model_InteractionMarkup_merge(self.jObj, arg0.jObj);
         InteractionMarkup newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `notify` method of `au.com.dius.pact.core.model.InteractionMarkup`.
@@ -115,11 +115,11 @@ public distinct class InteractionMarkup {
 
     # The function that maps to the `toMap` method of `au.com.dius.pact.core.model.InteractionMarkup`.
     #
-    # + return - The `Map?` value returning from the Java mapping.
-    public function toMap() returns Map? {
+    # + return - The `Map` value returning from the Java mapping.
+    public function toMap() returns Map {
         handle externalObj = au_com_dius_pact_core_model_InteractionMarkup_toMap(self.jObj);
         Map newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `wait` method of `au.com.dius.pact.core.model.InteractionMarkup`.
@@ -171,34 +171,34 @@ public function newInteractionMarkup1() returns InteractionMarkup {
 
 # The constructor function to generate an object of `au.com.dius.pact.core.model.InteractionMarkup`.
 #
-# + arg0 - The `string?` value required to map with the Java constructor parameter.
-# + arg1 - The `string?` value required to map with the Java constructor parameter.
+# + arg0 - The `string` value required to map with the Java constructor parameter.
+# + arg1 - The `string` value required to map with the Java constructor parameter.
 # + return - The new `InteractionMarkup` class generated.
-public function newInteractionMarkup2(string? arg0, string? arg1) returns InteractionMarkup {
-    handle externalObj = au_com_dius_pact_core_model_InteractionMarkup_newInteractionMarkup2(arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : java:fromString(arg1));
+public function newInteractionMarkup2(string arg0, string arg1) returns InteractionMarkup {
+    handle externalObj = au_com_dius_pact_core_model_InteractionMarkup_newInteractionMarkup2(java:fromString(arg0), java:fromString(arg1));
     InteractionMarkup newObj = new (externalObj);
     return newObj;
 }
 
 # The constructor function to generate an object of `au.com.dius.pact.core.model.InteractionMarkup`.
 #
-# + arg0 - The `string?` value required to map with the Java constructor parameter.
-# + arg1 - The `string?` value required to map with the Java constructor parameter.
+# + arg0 - The `string` value required to map with the Java constructor parameter.
+# + arg1 - The `string` value required to map with the Java constructor parameter.
 # + arg2 - The `int` value required to map with the Java constructor parameter.
-# + arg3 - The `DefaultConstructorMarker?` value required to map with the Java constructor parameter.
+# + arg3 - The `DefaultConstructorMarker` value required to map with the Java constructor parameter.
 # + return - The new `InteractionMarkup` class generated.
-public function newInteractionMarkup3(string? arg0, string? arg1, int arg2, DefaultConstructorMarker? arg3) returns InteractionMarkup {
-    handle externalObj = au_com_dius_pact_core_model_InteractionMarkup_newInteractionMarkup3(arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : java:fromString(arg1), arg2, arg3 is () ? java:createNull() : arg3.jObj);
+public function newInteractionMarkup3(string arg0, string arg1, int arg2, DefaultConstructorMarker arg3) returns InteractionMarkup {
+    handle externalObj = au_com_dius_pact_core_model_InteractionMarkup_newInteractionMarkup3(java:fromString(arg0), java:fromString(arg1), arg2, arg3.jObj);
     InteractionMarkup newObj = new (externalObj);
     return newObj;
 }
 
 # The function that retrieves the value of the public field `Companion`.
 #
-# + return - The `Companion?` value of the field.
-public function InteractionMarkup_getCompanion() returns Companion? {
+# + return - The `Companion` value of the field.
+public function InteractionMarkup_getCompanion() returns Companion {
     handle externalObj = au_com_dius_pact_core_model_InteractionMarkup_getCompanion();
-    Companion? newObj = new (externalObj);
+    Companion newObj = new (externalObj);
     return newObj;
 }
 

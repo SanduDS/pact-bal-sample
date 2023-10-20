@@ -20,31 +20,31 @@ public distinct class PactSource {
     # The function to retrieve the string representation of the Ballerina class mapping the `au.com.dius.pact.core.model.PactSource` Java class.
     #
     # + return - The `string` form of the Java object instance.
-    public function toString() returns string? {
-        return java:toString(self.jObj);
+    public function toString() returns string {
+        return java:toString(self.jObj) ?: "";
     }
     # The function that maps to the `description` method of `au.com.dius.pact.core.model.PactSource`.
     #
-    # + return - The `string?` value returning from the Java mapping.
-    public function description() returns string? {
-        return java:toString(au_com_dius_pact_core_model_PactSource_description(self.jObj));
+    # + return - The `string` value returning from the Java mapping.
+    public function description() returns string {
+        return java:toString(au_com_dius_pact_core_model_PactSource_description(self.jObj)) ?: "";
     }
 
     # The function that maps to the `equals` method of `au.com.dius.pact.core.model.PactSource`.
     #
-    # + arg0 - The `Object?` value required to map with the Java method parameter.
+    # + arg0 - The `Object` value required to map with the Java method parameter.
     # + return - The `boolean` value returning from the Java mapping.
-    public function 'equals(Object? arg0) returns boolean {
-        return au_com_dius_pact_core_model_PactSource_equals(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    public function 'equals(Object arg0) returns boolean {
+        return au_com_dius_pact_core_model_PactSource_equals(self.jObj, arg0.jObj);
     }
 
     # The function that maps to the `getClass` method of `au.com.dius.pact.core.model.PactSource`.
     #
-    # + return - The `Class?` value returning from the Java mapping.
-    public function getClass() returns Class? {
+    # + return - The `Class` value returning from the Java mapping.
+    public function getClass() returns Class {
         handle externalObj = au_com_dius_pact_core_model_PactSource_getClass(self.jObj);
         Class newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `hashCode` method of `au.com.dius.pact.core.model.PactSource`.
@@ -104,10 +104,10 @@ public distinct class PactSource {
 
 # The constructor function to generate an object of `au.com.dius.pact.core.model.PactSource`.
 #
-# + arg0 - The `DefaultConstructorMarker?` value required to map with the Java constructor parameter.
+# + arg0 - The `DefaultConstructorMarker` value required to map with the Java constructor parameter.
 # + return - The new `PactSource` class generated.
-public function newPactSource1(DefaultConstructorMarker? arg0) returns PactSource {
-    handle externalObj = au_com_dius_pact_core_model_PactSource_newPactSource1(arg0 is () ? java:createNull() : arg0.jObj);
+public function newPactSource1(DefaultConstructorMarker arg0) returns PactSource {
+    handle externalObj = au_com_dius_pact_core_model_PactSource_newPactSource1(arg0.jObj);
     PactSource newObj = new (externalObj);
     return newObj;
 }

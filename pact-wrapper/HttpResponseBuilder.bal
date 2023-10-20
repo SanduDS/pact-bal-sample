@@ -21,114 +21,114 @@ public distinct class HttpResponseBuilder {
     # The function to retrieve the string representation of the Ballerina class mapping the `au.com.dius.pact.consumer.dsl.HttpResponseBuilder` Java class.
     #
     # + return - The `string` form of the Java object instance.
-    public function toString() returns string? {
-        return java:toString(self.jObj);
+    public function toString() returns string {
+        return java:toString(self.jObj) ?: "";
     }
     # The function that maps to the `body` method of `au.com.dius.pact.consumer.dsl.HttpResponseBuilder`.
     #
-    # + arg0 - The `BodyBuilder?` value required to map with the Java method parameter.
-    # + return - The `HttpResponseBuilder?` value returning from the Java mapping.
-    public function body(BodyBuilder? arg0) returns HttpResponseBuilder? {
-        handle externalObj = au_com_dius_pact_consumer_dsl_HttpResponseBuilder_body(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    # + arg0 - The `BodyBuilder` value required to map with the Java method parameter.
+    # + return - The `HttpResponseBuilder` value returning from the Java mapping.
+    public function body(BodyBuilder arg0) returns HttpResponseBuilder {
+        handle externalObj = au_com_dius_pact_consumer_dsl_HttpResponseBuilder_body(self.jObj, arg0.jObj);
         HttpResponseBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
-    }
-
-    # The function that maps to the `body` method of `au.com.dius.pact.consumer.dsl.HttpResponseBuilder`.
-    #
-    # + arg0 - The `DslPart?` value required to map with the Java method parameter.
-    # + return - The `HttpResponseBuilder?` value returning from the Java mapping.
-    public function body2(DslPart? arg0) returns HttpResponseBuilder? {
-        handle externalObj = au_com_dius_pact_consumer_dsl_HttpResponseBuilder_body2(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
-        HttpResponseBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `body` method of `au.com.dius.pact.consumer.dsl.HttpResponseBuilder`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    # + return - The `HttpResponseBuilder?` value returning from the Java mapping.
-    public function body3(string? arg0) returns HttpResponseBuilder? {
-        handle externalObj = au_com_dius_pact_consumer_dsl_HttpResponseBuilder_body3(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0));
+    # + arg0 - The `DslPart` value required to map with the Java method parameter.
+    # + return - The `HttpResponseBuilder` value returning from the Java mapping.
+    public function body2(DslPart arg0) returns HttpResponseBuilder {
+        handle externalObj = au_com_dius_pact_consumer_dsl_HttpResponseBuilder_body2(self.jObj, arg0.jObj);
         HttpResponseBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `body` method of `au.com.dius.pact.consumer.dsl.HttpResponseBuilder`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    # + arg1 - The `string?` value required to map with the Java method parameter.
-    # + return - The `HttpResponseBuilder?` value returning from the Java mapping.
-    public function body4(string? arg0, string? arg1) returns HttpResponseBuilder? {
-        handle externalObj = au_com_dius_pact_consumer_dsl_HttpResponseBuilder_body4(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : java:fromString(arg1));
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    # + return - The `HttpResponseBuilder` value returning from the Java mapping.
+    public function body3(string arg0) returns HttpResponseBuilder {
+        handle externalObj = au_com_dius_pact_consumer_dsl_HttpResponseBuilder_body3(self.jObj, java:fromString(arg0));
         HttpResponseBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
+    }
+
+    # The function that maps to the `body` method of `au.com.dius.pact.consumer.dsl.HttpResponseBuilder`.
+    #
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    # + arg1 - The `string` value required to map with the Java method parameter.
+    # + return - The `HttpResponseBuilder` value returning from the Java mapping.
+    public function body4(string arg0, string arg1) returns HttpResponseBuilder {
+        handle externalObj = au_com_dius_pact_consumer_dsl_HttpResponseBuilder_body4(self.jObj, java:fromString(arg0), java:fromString(arg1));
+        HttpResponseBuilder newObj = new (externalObj);
+        return newObj;
     }
 
     # The function that maps to the `bodyMatchingContentType` method of `au.com.dius.pact.consumer.dsl.HttpResponseBuilder`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
+    # + arg0 - The `string` value required to map with the Java method parameter.
     # + arg1 - The `byte[]` value required to map with the Java method parameter.
-    # + return - The `HttpResponseBuilder?` value returning from the Java mapping.
-    public function bodyMatchingContentType(string? arg0, byte[] arg1) returns HttpResponseBuilder?|error {
-        handle externalObj = au_com_dius_pact_consumer_dsl_HttpResponseBuilder_bodyMatchingContentType(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0), check jarrays:toHandle(arg1, "byte"));
+    # + return - The `HttpResponseBuilder` value returning from the Java mapping.
+    public function bodyMatchingContentType(string arg0, byte[] arg1) returns HttpResponseBuilder|error {
+        handle externalObj = au_com_dius_pact_consumer_dsl_HttpResponseBuilder_bodyMatchingContentType(self.jObj, java:fromString(arg0), check jarrays:toHandle(arg1, "byte"));
         HttpResponseBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `bodyMatchingContentType` method of `au.com.dius.pact.consumer.dsl.HttpResponseBuilder`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    # + arg1 - The `string?` value required to map with the Java method parameter.
-    # + return - The `HttpResponseBuilder?` value returning from the Java mapping.
-    public function bodyMatchingContentType2(string? arg0, string? arg1) returns HttpResponseBuilder? {
-        handle externalObj = au_com_dius_pact_consumer_dsl_HttpResponseBuilder_bodyMatchingContentType2(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : java:fromString(arg1));
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    # + arg1 - The `string` value required to map with the Java method parameter.
+    # + return - The `HttpResponseBuilder` value returning from the Java mapping.
+    public function bodyMatchingContentType2(string arg0, string arg1) returns HttpResponseBuilder {
+        handle externalObj = au_com_dius_pact_consumer_dsl_HttpResponseBuilder_bodyMatchingContentType2(self.jObj, java:fromString(arg0), java:fromString(arg1));
         HttpResponseBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `build` method of `au.com.dius.pact.consumer.dsl.HttpResponseBuilder`.
     #
-    # + return - The `HttpResponse?` value returning from the Java mapping.
-    public function build() returns HttpResponse? {
+    # + return - The `HttpResponse` value returning from the Java mapping.
+    public function build() returns HttpResponse {
         handle externalObj = au_com_dius_pact_consumer_dsl_HttpResponseBuilder_build(self.jObj);
         HttpResponse newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `clientErrorStatus` method of `au.com.dius.pact.consumer.dsl.HttpResponseBuilder`.
     #
-    # + return - The `HttpResponseBuilder?` value returning from the Java mapping.
-    public function clientErrorStatus() returns HttpResponseBuilder? {
+    # + return - The `HttpResponseBuilder` value returning from the Java mapping.
+    public function clientErrorStatus() returns HttpResponseBuilder {
         handle externalObj = au_com_dius_pact_consumer_dsl_HttpResponseBuilder_clientErrorStatus(self.jObj);
         HttpResponseBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `equals` method of `au.com.dius.pact.consumer.dsl.HttpResponseBuilder`.
     #
-    # + arg0 - The `Object?` value required to map with the Java method parameter.
+    # + arg0 - The `Object` value required to map with the Java method parameter.
     # + return - The `boolean` value returning from the Java mapping.
-    public function 'equals(Object? arg0) returns boolean {
-        return au_com_dius_pact_consumer_dsl_HttpResponseBuilder_equals(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    public function 'equals(Object arg0) returns boolean {
+        return au_com_dius_pact_consumer_dsl_HttpResponseBuilder_equals(self.jObj, arg0.jObj);
     }
 
     # The function that maps to the `errorStatus` method of `au.com.dius.pact.consumer.dsl.HttpResponseBuilder`.
     #
-    # + return - The `HttpResponseBuilder?` value returning from the Java mapping.
-    public function errorStatus() returns HttpResponseBuilder? {
+    # + return - The `HttpResponseBuilder` value returning from the Java mapping.
+    public function errorStatus() returns HttpResponseBuilder {
         handle externalObj = au_com_dius_pact_consumer_dsl_HttpResponseBuilder_errorStatus(self.jObj);
         HttpResponseBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `getClass` method of `au.com.dius.pact.consumer.dsl.HttpResponseBuilder`.
     #
-    # + return - The `Class?` value returning from the Java mapping.
-    public function getClass() returns Class? {
+    # + return - The `Class` value returning from the Java mapping.
+    public function getClass() returns Class {
         handle externalObj = au_com_dius_pact_consumer_dsl_HttpResponseBuilder_getClass(self.jObj);
         Class newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `hashCode` method of `au.com.dius.pact.consumer.dsl.HttpResponseBuilder`.
@@ -140,75 +140,75 @@ public distinct class HttpResponseBuilder {
 
     # The function that maps to the `header` method of `au.com.dius.pact.consumer.dsl.HttpResponseBuilder`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    # + arg1 - The `Object?` value required to map with the Java method parameter.
-    # + return - The `HttpResponseBuilder?` value returning from the Java mapping.
-    public function header(string? arg0, Object? arg1) returns HttpResponseBuilder? {
-        handle externalObj = au_com_dius_pact_consumer_dsl_HttpResponseBuilder_header(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : arg1.jObj);
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    # + arg1 - The `Object` value required to map with the Java method parameter.
+    # + return - The `HttpResponseBuilder` value returning from the Java mapping.
+    public function header(string arg0, Object arg1) returns HttpResponseBuilder {
+        handle externalObj = au_com_dius_pact_consumer_dsl_HttpResponseBuilder_header(self.jObj, java:fromString(arg0), arg1.jObj);
         HttpResponseBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `headers` method of `au.com.dius.pact.consumer.dsl.HttpResponseBuilder`.
     #
-    # + arg0 - The `Map?` value required to map with the Java method parameter.
-    # + return - The `HttpResponseBuilder?` value returning from the Java mapping.
-    public function headers(Map? arg0) returns HttpResponseBuilder? {
-        handle externalObj = au_com_dius_pact_consumer_dsl_HttpResponseBuilder_headers(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    # + arg0 - The `Map` value required to map with the Java method parameter.
+    # + return - The `HttpResponseBuilder` value returning from the Java mapping.
+    public function headers(Map arg0) returns HttpResponseBuilder {
+        handle externalObj = au_com_dius_pact_consumer_dsl_HttpResponseBuilder_headers(self.jObj, arg0.jObj);
         HttpResponseBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `headers` method of `au.com.dius.pact.consumer.dsl.HttpResponseBuilder`.
     #
-    # + arg0 - The `Pair?[]?` value required to map with the Java method parameter.
-    # + return - The `HttpResponseBuilder?` value returning from the Java mapping.
-    public function headers2(Pair?[]? arg0) returns HttpResponseBuilder?|error {
-        handle externalObj = au_com_dius_pact_consumer_dsl_HttpResponseBuilder_headers2(self.jObj, check jarrays:toHandle(arg0 ?: [], "kotlin.Pair"));
+    # + arg0 - The `Pair[]` value required to map with the Java method parameter.
+    # + return - The `HttpResponseBuilder` value returning from the Java mapping.
+    public function headers2(Pair[] arg0) returns HttpResponseBuilder|error {
+        handle externalObj = au_com_dius_pact_consumer_dsl_HttpResponseBuilder_headers2(self.jObj, check jarrays:toHandle(arg0, "kotlin.Pair"));
         HttpResponseBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `headers` method of `au.com.dius.pact.consumer.dsl.HttpResponseBuilder`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    # + arg1 - The `string?` value required to map with the Java method parameter.
-    # + arg2 - The `string?[]?` value required to map with the Java method parameter.
-    # + return - The `HttpResponseBuilder?` value returning from the Java mapping.
-    public function headers3(string? arg0, string? arg1, string?[]? arg2) returns HttpResponseBuilder?|error {
-        handle externalObj = au_com_dius_pact_consumer_dsl_HttpResponseBuilder_headers3(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : java:fromString(arg1), check jarrays:toHandle(arg2 ?: [], "java.lang.String"));
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    # + arg1 - The `string` value required to map with the Java method parameter.
+    # + arg2 - The `string[]` value required to map with the Java method parameter.
+    # + return - The `HttpResponseBuilder` value returning from the Java mapping.
+    public function headers3(string arg0, string arg1, string[] arg2) returns HttpResponseBuilder|error {
+        handle externalObj = au_com_dius_pact_consumer_dsl_HttpResponseBuilder_headers3(self.jObj, java:fromString(arg0), java:fromString(arg1), check jarrays:toHandle(arg2, "java.lang.String"));
         HttpResponseBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `informationStatus` method of `au.com.dius.pact.consumer.dsl.HttpResponseBuilder`.
     #
-    # + return - The `HttpResponseBuilder?` value returning from the Java mapping.
-    public function informationStatus() returns HttpResponseBuilder? {
+    # + return - The `HttpResponseBuilder` value returning from the Java mapping.
+    public function informationStatus() returns HttpResponseBuilder {
         handle externalObj = au_com_dius_pact_consumer_dsl_HttpResponseBuilder_informationStatus(self.jObj);
         HttpResponseBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `matchSetCookie` method of `au.com.dius.pact.consumer.dsl.HttpResponseBuilder`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    # + arg1 - The `string?` value required to map with the Java method parameter.
-    # + arg2 - The `string?` value required to map with the Java method parameter.
-    # + return - The `HttpResponseBuilder?` value returning from the Java mapping.
-    public function matchSetCookie(string? arg0, string? arg1, string? arg2) returns HttpResponseBuilder? {
-        handle externalObj = au_com_dius_pact_consumer_dsl_HttpResponseBuilder_matchSetCookie(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : java:fromString(arg1), arg2 is () ? java:createNull() : java:fromString(arg2));
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    # + arg1 - The `string` value required to map with the Java method parameter.
+    # + arg2 - The `string` value required to map with the Java method parameter.
+    # + return - The `HttpResponseBuilder` value returning from the Java mapping.
+    public function matchSetCookie(string arg0, string arg1, string arg2) returns HttpResponseBuilder {
+        handle externalObj = au_com_dius_pact_consumer_dsl_HttpResponseBuilder_matchSetCookie(self.jObj, java:fromString(arg0), java:fromString(arg1), java:fromString(arg2));
         HttpResponseBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `nonErrorStatus` method of `au.com.dius.pact.consumer.dsl.HttpResponseBuilder`.
     #
-    # + return - The `HttpResponseBuilder?` value returning from the Java mapping.
-    public function nonErrorStatus() returns HttpResponseBuilder? {
+    # + return - The `HttpResponseBuilder` value returning from the Java mapping.
+    public function nonErrorStatus() returns HttpResponseBuilder {
         handle externalObj = au_com_dius_pact_consumer_dsl_HttpResponseBuilder_nonErrorStatus(self.jObj);
         HttpResponseBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `notify` method of `au.com.dius.pact.consumer.dsl.HttpResponseBuilder`.
@@ -223,49 +223,49 @@ public distinct class HttpResponseBuilder {
 
     # The function that maps to the `redirectStatus` method of `au.com.dius.pact.consumer.dsl.HttpResponseBuilder`.
     #
-    # + return - The `HttpResponseBuilder?` value returning from the Java mapping.
-    public function redirectStatus() returns HttpResponseBuilder? {
+    # + return - The `HttpResponseBuilder` value returning from the Java mapping.
+    public function redirectStatus() returns HttpResponseBuilder {
         handle externalObj = au_com_dius_pact_consumer_dsl_HttpResponseBuilder_redirectStatus(self.jObj);
         HttpResponseBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `serverErrorStatus` method of `au.com.dius.pact.consumer.dsl.HttpResponseBuilder`.
     #
-    # + return - The `HttpResponseBuilder?` value returning from the Java mapping.
-    public function serverErrorStatus() returns HttpResponseBuilder? {
+    # + return - The `HttpResponseBuilder` value returning from the Java mapping.
+    public function serverErrorStatus() returns HttpResponseBuilder {
         handle externalObj = au_com_dius_pact_consumer_dsl_HttpResponseBuilder_serverErrorStatus(self.jObj);
         HttpResponseBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `status` method of `au.com.dius.pact.consumer.dsl.HttpResponseBuilder`.
     #
     # + arg0 - The `int` value required to map with the Java method parameter.
-    # + return - The `HttpResponseBuilder?` value returning from the Java mapping.
-    public function status(int arg0) returns HttpResponseBuilder? {
+    # + return - The `HttpResponseBuilder` value returning from the Java mapping.
+    public function status(int arg0) returns HttpResponseBuilder {
         handle externalObj = au_com_dius_pact_consumer_dsl_HttpResponseBuilder_status(self.jObj, arg0);
         HttpResponseBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `statusCodes` method of `au.com.dius.pact.consumer.dsl.HttpResponseBuilder`.
     #
-    # + arg0 - The `List?` value required to map with the Java method parameter.
-    # + return - The `HttpResponseBuilder?` value returning from the Java mapping.
-    public function statusCodes(List? arg0) returns HttpResponseBuilder? {
-        handle externalObj = au_com_dius_pact_consumer_dsl_HttpResponseBuilder_statusCodes(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    # + arg0 - The `List` value required to map with the Java method parameter.
+    # + return - The `HttpResponseBuilder` value returning from the Java mapping.
+    public function statusCodes(List arg0) returns HttpResponseBuilder {
+        handle externalObj = au_com_dius_pact_consumer_dsl_HttpResponseBuilder_statusCodes(self.jObj, arg0.jObj);
         HttpResponseBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `successStatus` method of `au.com.dius.pact.consumer.dsl.HttpResponseBuilder`.
     #
-    # + return - The `HttpResponseBuilder?` value returning from the Java mapping.
-    public function successStatus() returns HttpResponseBuilder? {
+    # + return - The `HttpResponseBuilder` value returning from the Java mapping.
+    public function successStatus() returns HttpResponseBuilder {
         handle externalObj = au_com_dius_pact_consumer_dsl_HttpResponseBuilder_successStatus(self.jObj);
         HttpResponseBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `wait` method of `au.com.dius.pact.consumer.dsl.HttpResponseBuilder`.
@@ -308,20 +308,20 @@ public distinct class HttpResponseBuilder {
 
 # The constructor function to generate an object of `au.com.dius.pact.consumer.dsl.HttpResponseBuilder`.
 #
-# + arg0 - The `HttpResponse?` value required to map with the Java constructor parameter.
+# + arg0 - The `HttpResponse` value required to map with the Java constructor parameter.
 # + return - The new `HttpResponseBuilder` class generated.
-public function newHttpResponseBuilder1(HttpResponse? arg0) returns HttpResponseBuilder {
-    handle externalObj = au_com_dius_pact_consumer_dsl_HttpResponseBuilder_newHttpResponseBuilder1(arg0 is () ? java:createNull() : arg0.jObj);
+public function newHttpResponseBuilder1(HttpResponse arg0) returns HttpResponseBuilder {
+    handle externalObj = au_com_dius_pact_consumer_dsl_HttpResponseBuilder_newHttpResponseBuilder1(arg0.jObj);
     HttpResponseBuilder newObj = new (externalObj);
     return newObj;
 }
 
 # The function that retrieves the value of the public field `Companion`.
 #
-# + return - The `Companion?` value of the field.
-public function HttpResponseBuilder_getCompanion() returns Companion? {
+# + return - The `Companion` value of the field.
+public function HttpResponseBuilder_getCompanion() returns Companion {
     handle externalObj = au_com_dius_pact_consumer_dsl_HttpResponseBuilder_getCompanion();
-    Companion? newObj = new (externalObj);
+    Companion newObj = new (externalObj);
     return newObj;
 }
 

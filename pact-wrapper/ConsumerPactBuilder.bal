@@ -20,50 +20,50 @@ public distinct class ConsumerPactBuilder {
     # The function to retrieve the string representation of the Ballerina class mapping the `au.com.dius.pact.consumer.ConsumerPactBuilder` Java class.
     #
     # + return - The `string` form of the Java object instance.
-    public function toString() returns string? {
-        return java:toString(self.jObj);
+    public function toString() returns string {
+        return java:toString(self.jObj) ?: "";
     }
     # The function that maps to the `equals` method of `au.com.dius.pact.consumer.ConsumerPactBuilder`.
     #
-    # + arg0 - The `Object?` value required to map with the Java method parameter.
+    # + arg0 - The `Object` value required to map with the Java method parameter.
     # + return - The `boolean` value returning from the Java mapping.
-    public function 'equals(Object? arg0) returns boolean {
-        return au_com_dius_pact_consumer_ConsumerPactBuilder_equals(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    public function 'equals(Object arg0) returns boolean {
+        return au_com_dius_pact_consumer_ConsumerPactBuilder_equals(self.jObj, arg0.jObj);
     }
 
     # The function that maps to the `getClass` method of `au.com.dius.pact.consumer.ConsumerPactBuilder`.
     #
-    # + return - The `Class?` value returning from the Java mapping.
-    public function getClass() returns Class? {
+    # + return - The `Class` value returning from the Java mapping.
+    public function getClass() returns Class {
         handle externalObj = au_com_dius_pact_consumer_ConsumerPactBuilder_getClass(self.jObj);
         Class newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `getConsumerName` method of `au.com.dius.pact.consumer.ConsumerPactBuilder`.
     #
-    # + return - The `string?` value returning from the Java mapping.
-    public function getConsumerName() returns string? {
-        return java:toString(au_com_dius_pact_consumer_ConsumerPactBuilder_getConsumerName(self.jObj));
+    # + return - The `string` value returning from the Java mapping.
+    public function getConsumerName() returns string {
+        return java:toString(au_com_dius_pact_consumer_ConsumerPactBuilder_getConsumerName(self.jObj)) ?: "";
     }
 
     # The function that maps to the `getInteractions` method of `au.com.dius.pact.consumer.ConsumerPactBuilder`.
     #
-    # + return - The `List?` value returning from the Java mapping.
-    public function getInteractions() returns List? {
+    # + return - The `List` value returning from the Java mapping.
+    public function getInteractions() returns List {
         handle externalObj = au_com_dius_pact_consumer_ConsumerPactBuilder_getInteractions(self.jObj);
         List newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `hasPactWith` method of `au.com.dius.pact.consumer.ConsumerPactBuilder`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    # + return - The `PactDslWithProvider?` value returning from the Java mapping.
-    public function hasPactWith(string? arg0) returns PactDslWithProvider? {
-        handle externalObj = au_com_dius_pact_consumer_ConsumerPactBuilder_hasPactWith(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0));
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    # + return - The `PactDslWithProvider` value returning from the Java mapping.
+    public function hasPactWith(string arg0) returns PactDslWithProvider {
+        handle externalObj = au_com_dius_pact_consumer_ConsumerPactBuilder_hasPactWith(self.jObj, java:fromString(arg0));
         PactDslWithProvider newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `hashCode` method of `au.com.dius.pact.consumer.ConsumerPactBuilder`.
@@ -85,12 +85,12 @@ public distinct class ConsumerPactBuilder {
 
     # The function that maps to the `pactSpecVersion` method of `au.com.dius.pact.consumer.ConsumerPactBuilder`.
     #
-    # + arg0 - The `PactSpecVersion?` value required to map with the Java method parameter.
-    # + return - The `ConsumerPactBuilder?` value returning from the Java mapping.
-    public function pactSpecVersion(PactSpecVersion? arg0) returns ConsumerPactBuilder? {
-        handle externalObj = au_com_dius_pact_consumer_ConsumerPactBuilder_pactSpecVersion(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    # + arg0 - The `PactSpecVersion` value required to map with the Java method parameter.
+    # + return - The `ConsumerPactBuilder` value returning from the Java mapping.
+    public function pactSpecVersion(PactSpecVersion arg0) returns ConsumerPactBuilder {
+        handle externalObj = au_com_dius_pact_consumer_ConsumerPactBuilder_pactSpecVersion(self.jObj, arg0.jObj);
         ConsumerPactBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `wait` method of `au.com.dius.pact.consumer.ConsumerPactBuilder`.
@@ -133,30 +133,30 @@ public distinct class ConsumerPactBuilder {
 
 # The constructor function to generate an object of `au.com.dius.pact.consumer.ConsumerPactBuilder`.
 #
-# + arg0 - The `string?` value required to map with the Java constructor parameter.
+# + arg0 - The `string` value required to map with the Java constructor parameter.
 # + return - The new `ConsumerPactBuilder` class generated.
-public function newConsumerPactBuilder1(string? arg0) returns ConsumerPactBuilder {
-    handle externalObj = au_com_dius_pact_consumer_ConsumerPactBuilder_newConsumerPactBuilder1(arg0 is () ? java:createNull() : java:fromString(arg0));
+public function newConsumerPactBuilder1(string arg0) returns ConsumerPactBuilder {
+    handle externalObj = au_com_dius_pact_consumer_ConsumerPactBuilder_newConsumerPactBuilder1(java:fromString(arg0));
     ConsumerPactBuilder newObj = new (externalObj);
     return newObj;
 }
 
 # The function that maps to the `consumer` method of `au.com.dius.pact.consumer.ConsumerPactBuilder`.
 #
-# + arg0 - The `string?` value required to map with the Java method parameter.
-# + return - The `ConsumerPactBuilder?` value returning from the Java mapping.
-public function ConsumerPactBuilder_consumer(string? arg0) returns ConsumerPactBuilder? {
-    handle externalObj = au_com_dius_pact_consumer_ConsumerPactBuilder_consumer(arg0 is () ? java:createNull() : java:fromString(arg0));
+# + arg0 - The `string` value required to map with the Java method parameter.
+# + return - The `ConsumerPactBuilder` value returning from the Java mapping.
+public function ConsumerPactBuilder_consumer(string arg0) returns ConsumerPactBuilder {
+    handle externalObj = au_com_dius_pact_consumer_ConsumerPactBuilder_consumer(java:fromString(arg0));
     ConsumerPactBuilder newObj = new (externalObj);
-    return java:isNull(newObj.jObj) ? () : newObj;
+    return newObj;
 }
 
 # The function that retrieves the value of the public field `Companion`.
 #
-# + return - The `Companion?` value of the field.
-public function ConsumerPactBuilder_getCompanion() returns Companion? {
+# + return - The `Companion` value of the field.
+public function ConsumerPactBuilder_getCompanion() returns Companion {
     handle externalObj = au_com_dius_pact_consumer_ConsumerPactBuilder_getCompanion();
-    Companion? newObj = new (externalObj);
+    Companion newObj = new (externalObj);
     return newObj;
 }
 
@@ -247,4 +247,3 @@ function au_com_dius_pact_consumer_ConsumerPactBuilder_newConsumerPactBuilder1(h
     'class: "au.com.dius.pact.consumer.ConsumerPactBuilder",
     paramTypes: ["java.lang.String"]
 } external;
-

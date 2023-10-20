@@ -14,7 +14,7 @@ import ballerina/jballerina.java;
 
 # Ballerina class mapping for the Java `kotlin.jvm.internal.DefaultConstructorMarker` class.
 @java:Binding {'class: "kotlin.jvm.internal.DefaultConstructorMarker"}
-distinct class DefaultConstructorMarker {
+public distinct class DefaultConstructorMarker {
 
     *java:JObject;
 

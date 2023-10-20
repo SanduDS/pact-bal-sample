@@ -20,116 +20,116 @@ public distinct class BasePact {
     # The function to retrieve the string representation of the Ballerina class mapping the `au.com.dius.pact.core.model.BasePact` Java class.
     #
     # + return - The `string` form of the Java object instance.
-    public function toString() returns string? {
-        return java:toString(self.jObj);
+    public function toString() returns string {
+        return java:toString(self.jObj) ?: "";
     }
     # The function that maps to the `asMessagePact` method of `au.com.dius.pact.core.model.BasePact`.
     #
-    # + return - The `Result?` value returning from the Java mapping.
-    public function asMessagePact() returns Result? {
+    # + return - The `Result` value returning from the Java mapping.
+    public function asMessagePact() returns Result {
         handle externalObj = au_com_dius_pact_core_model_BasePact_asMessagePact(self.jObj);
         Result newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `asRequestResponsePact` method of `au.com.dius.pact.core.model.BasePact`.
     #
-    # + return - The `Result?` value returning from the Java mapping.
-    public function asRequestResponsePact() returns Result? {
+    # + return - The `Result` value returning from the Java mapping.
+    public function asRequestResponsePact() returns Result {
         handle externalObj = au_com_dius_pact_core_model_BasePact_asRequestResponsePact(self.jObj);
         Result newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `asV4Pact` method of `au.com.dius.pact.core.model.BasePact`.
     #
-    # + return - The `Result?` value returning from the Java mapping.
-    public function asV4Pact() returns Result? {
+    # + return - The `Result` value returning from the Java mapping.
+    public function asV4Pact() returns Result {
         handle externalObj = au_com_dius_pact_core_model_BasePact_asV4Pact(self.jObj);
         Result newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `compatibleTo` method of `au.com.dius.pact.core.model.BasePact`.
     #
-    # + arg0 - The `Pact?` value required to map with the Java method parameter.
-    # + return - The `Result?` value returning from the Java mapping.
-    public function compatibleTo(Pact? arg0) returns Result? {
-        handle externalObj = au_com_dius_pact_core_model_BasePact_compatibleTo(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    # + arg0 - The `Pact` value required to map with the Java method parameter.
+    # + return - The `Result` value returning from the Java mapping.
+    public function compatibleTo(Pact arg0) returns Result {
+        handle externalObj = au_com_dius_pact_core_model_BasePact_compatibleTo(self.jObj, arg0.jObj);
         Result newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `equals` method of `au.com.dius.pact.core.model.BasePact`.
     #
-    # + arg0 - The `Object?` value required to map with the Java method parameter.
+    # + arg0 - The `Object` value required to map with the Java method parameter.
     # + return - The `boolean` value returning from the Java mapping.
-    public function 'equals(Object? arg0) returns boolean {
-        return au_com_dius_pact_core_model_BasePact_equals(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    public function 'equals(Object arg0) returns boolean {
+        return au_com_dius_pact_core_model_BasePact_equals(self.jObj, arg0.jObj);
     }
 
     # The function that maps to the `fileForPact` method of `au.com.dius.pact.core.model.BasePact`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    # + return - The `File?` value returning from the Java mapping.
-    public function fileForPact(string? arg0) returns File? {
-        handle externalObj = au_com_dius_pact_core_model_BasePact_fileForPact(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0));
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    # + return - The `File` value returning from the Java mapping.
+    public function fileForPact(string arg0) returns File {
+        handle externalObj = au_com_dius_pact_core_model_BasePact_fileForPact(self.jObj, java:fromString(arg0));
         File newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `getClass` method of `au.com.dius.pact.core.model.BasePact`.
     #
-    # + return - The `Class?` value returning from the Java mapping.
-    public function getClass() returns Class? {
+    # + return - The `Class` value returning from the Java mapping.
+    public function getClass() returns Class {
         handle externalObj = au_com_dius_pact_core_model_BasePact_getClass(self.jObj);
         Class newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `getConsumer` method of `au.com.dius.pact.core.model.BasePact`.
     #
-    # + return - The `Consumer?` value returning from the Java mapping.
-    public function getConsumer() returns Consumer? {
+    # + return - The `Consumer` value returning from the Java mapping.
+    public function getConsumer() returns Consumer {
         handle externalObj = au_com_dius_pact_core_model_BasePact_getConsumer(self.jObj);
         Consumer newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `getInteractions` method of `au.com.dius.pact.core.model.BasePact`.
     #
-    # + return - The `List?` value returning from the Java mapping.
-    public function getInteractions() returns List? {
+    # + return - The `List` value returning from the Java mapping.
+    public function getInteractions() returns List {
         handle externalObj = au_com_dius_pact_core_model_BasePact_getInteractions(self.jObj);
         List newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `getMetadata` method of `au.com.dius.pact.core.model.BasePact`.
     #
-    # + return - The `Map?` value returning from the Java mapping.
-    public function getMetadata() returns Map? {
+    # + return - The `Map` value returning from the Java mapping.
+    public function getMetadata() returns Map {
         handle externalObj = au_com_dius_pact_core_model_BasePact_getMetadata(self.jObj);
         Map newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `getProvider` method of `au.com.dius.pact.core.model.BasePact`.
     #
-    # + return - The `Provider?` value returning from the Java mapping.
-    public function getProvider() returns Provider? {
+    # + return - The `Provider` value returning from the Java mapping.
+    public function getProvider() returns Provider {
         handle externalObj = au_com_dius_pact_core_model_BasePact_getProvider(self.jObj);
         Provider newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `getSource` method of `au.com.dius.pact.core.model.BasePact`.
     #
-    # + return - The `PactSource?` value returning from the Java mapping.
-    public function getSource() returns PactSource? {
+    # + return - The `PactSource` value returning from the Java mapping.
+    public function getSource() returns PactSource {
         handle externalObj = au_com_dius_pact_core_model_BasePact_getSource(self.jObj);
         PactSource newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `hashCode` method of `au.com.dius.pact.core.model.BasePact`.
@@ -155,12 +155,12 @@ public distinct class BasePact {
 
     # The function that maps to the `mergeInteractions` method of `au.com.dius.pact.core.model.BasePact`.
     #
-    # + arg0 - The `List?` value required to map with the Java method parameter.
-    # + return - The `Pact?` value returning from the Java mapping.
-    public function mergeInteractions(List? arg0) returns Pact? {
-        handle externalObj = au_com_dius_pact_core_model_BasePact_mergeInteractions(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    # + arg0 - The `List` value required to map with the Java method parameter.
+    # + return - The `Pact` value returning from the Java mapping.
+    public function mergeInteractions(List arg0) returns Pact {
+        handle externalObj = au_com_dius_pact_core_model_BasePact_mergeInteractions(self.jObj, arg0.jObj);
         Pact newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `notify` method of `au.com.dius.pact.core.model.BasePact`.
@@ -175,45 +175,45 @@ public distinct class BasePact {
 
     # The function that maps to the `setConsumer` method of `au.com.dius.pact.core.model.BasePact`.
     #
-    # + arg0 - The `Consumer?` value required to map with the Java method parameter.
-    public function setConsumer(Consumer? arg0) {
-        au_com_dius_pact_core_model_BasePact_setConsumer(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    # + arg0 - The `Consumer` value required to map with the Java method parameter.
+    public function setConsumer(Consumer arg0) {
+        au_com_dius_pact_core_model_BasePact_setConsumer(self.jObj, arg0.jObj);
     }
 
     # The function that maps to the `setProvider` method of `au.com.dius.pact.core.model.BasePact`.
     #
-    # + arg0 - The `Provider?` value required to map with the Java method parameter.
-    public function setProvider(Provider? arg0) {
-        au_com_dius_pact_core_model_BasePact_setProvider(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    # + arg0 - The `Provider` value required to map with the Java method parameter.
+    public function setProvider(Provider arg0) {
+        au_com_dius_pact_core_model_BasePact_setProvider(self.jObj, arg0.jObj);
     }
 
     # The function that maps to the `sortInteractions` method of `au.com.dius.pact.core.model.BasePact`.
     #
-    # + return - The `Pact?` value returning from the Java mapping.
-    public function sortInteractions() returns Pact? {
+    # + return - The `Pact` value returning from the Java mapping.
+    public function sortInteractions() returns Pact {
         handle externalObj = au_com_dius_pact_core_model_BasePact_sortInteractions(self.jObj);
         Pact newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `toMap` method of `au.com.dius.pact.core.model.BasePact`.
     #
-    # + arg0 - The `PactSpecVersion?` value required to map with the Java method parameter.
-    # + return - The `Map?` value returning from the Java mapping.
-    public function toMap(PactSpecVersion? arg0) returns Map? {
-        handle externalObj = au_com_dius_pact_core_model_BasePact_toMap(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    # + arg0 - The `PactSpecVersion` value required to map with the Java method parameter.
+    # + return - The `Map` value returning from the Java mapping.
+    public function toMap(PactSpecVersion arg0) returns Map {
+        handle externalObj = au_com_dius_pact_core_model_BasePact_toMap(self.jObj, arg0.jObj);
         Map newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `validateForVersion` method of `au.com.dius.pact.core.model.BasePact`.
     #
-    # + arg0 - The `PactSpecVersion?` value required to map with the Java method parameter.
-    # + return - The `List?` value returning from the Java mapping.
-    public function validateForVersion(PactSpecVersion? arg0) returns List? {
-        handle externalObj = au_com_dius_pact_core_model_BasePact_validateForVersion(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    # + arg0 - The `PactSpecVersion` value required to map with the Java method parameter.
+    # + return - The `List` value returning from the Java mapping.
+    public function validateForVersion(PactSpecVersion arg0) returns List {
+        handle externalObj = au_com_dius_pact_core_model_BasePact_validateForVersion(self.jObj, arg0.jObj);
         List newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `wait` method of `au.com.dius.pact.core.model.BasePact`.
@@ -254,101 +254,101 @@ public distinct class BasePact {
 
     # The function that maps to the `write` method of `au.com.dius.pact.core.model.BasePact`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    # + arg1 - The `PactSpecVersion?` value required to map with the Java method parameter.
-    # + return - The `Result?` value returning from the Java mapping.
-    public function write(string? arg0, PactSpecVersion? arg1) returns Result? {
-        handle externalObj = au_com_dius_pact_core_model_BasePact_write(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : arg1.jObj);
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    # + arg1 - The `PactSpecVersion` value required to map with the Java method parameter.
+    # + return - The `Result` value returning from the Java mapping.
+    public function write(string arg0, PactSpecVersion arg1) returns Result {
+        handle externalObj = au_com_dius_pact_core_model_BasePact_write(self.jObj, java:fromString(arg0), arg1.jObj);
         Result newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
 }
 
 # The constructor function to generate an object of `au.com.dius.pact.core.model.BasePact`.
 #
-# + arg0 - The `Consumer?` value required to map with the Java constructor parameter.
-# + arg1 - The `Provider?` value required to map with the Java constructor parameter.
+# + arg0 - The `Consumer` value required to map with the Java constructor parameter.
+# + arg1 - The `Provider` value required to map with the Java constructor parameter.
 # + return - The new `BasePact` class generated.
-public function newBasePact1(Consumer? arg0, Provider? arg1) returns BasePact {
-    handle externalObj = au_com_dius_pact_core_model_BasePact_newBasePact1(arg0 is () ? java:createNull() : arg0.jObj, arg1 is () ? java:createNull() : arg1.jObj);
+public function newBasePact1(Consumer arg0, Provider arg1) returns BasePact {
+    handle externalObj = au_com_dius_pact_core_model_BasePact_newBasePact1(arg0.jObj, arg1.jObj);
     BasePact newObj = new (externalObj);
     return newObj;
 }
 
 # The constructor function to generate an object of `au.com.dius.pact.core.model.BasePact`.
 #
-# + arg0 - The `Consumer?` value required to map with the Java constructor parameter.
-# + arg1 - The `Provider?` value required to map with the Java constructor parameter.
-# + arg2 - The `Map?` value required to map with the Java constructor parameter.
+# + arg0 - The `Consumer` value required to map with the Java constructor parameter.
+# + arg1 - The `Provider` value required to map with the Java constructor parameter.
+# + arg2 - The `Map` value required to map with the Java constructor parameter.
 # + return - The new `BasePact` class generated.
-public function newBasePact2(Consumer? arg0, Provider? arg1, Map? arg2) returns BasePact {
-    handle externalObj = au_com_dius_pact_core_model_BasePact_newBasePact2(arg0 is () ? java:createNull() : arg0.jObj, arg1 is () ? java:createNull() : arg1.jObj, arg2 is () ? java:createNull() : arg2.jObj);
+public function newBasePact2(Consumer arg0, Provider arg1, Map arg2) returns BasePact {
+    handle externalObj = au_com_dius_pact_core_model_BasePact_newBasePact2(arg0.jObj, arg1.jObj, arg2.jObj);
     BasePact newObj = new (externalObj);
     return newObj;
 }
 
 # The constructor function to generate an object of `au.com.dius.pact.core.model.BasePact`.
 #
-# + arg0 - The `Consumer?` value required to map with the Java constructor parameter.
-# + arg1 - The `Provider?` value required to map with the Java constructor parameter.
-# + arg2 - The `Map?` value required to map with the Java constructor parameter.
-# + arg3 - The `PactSource?` value required to map with the Java constructor parameter.
+# + arg0 - The `Consumer` value required to map with the Java constructor parameter.
+# + arg1 - The `Provider` value required to map with the Java constructor parameter.
+# + arg2 - The `Map` value required to map with the Java constructor parameter.
+# + arg3 - The `PactSource` value required to map with the Java constructor parameter.
 # + return - The new `BasePact` class generated.
-public function newBasePact3(Consumer? arg0, Provider? arg1, Map? arg2, PactSource? arg3) returns BasePact {
-    handle externalObj = au_com_dius_pact_core_model_BasePact_newBasePact3(arg0 is () ? java:createNull() : arg0.jObj, arg1 is () ? java:createNull() : arg1.jObj, arg2 is () ? java:createNull() : arg2.jObj, arg3 is () ? java:createNull() : arg3.jObj);
+public function newBasePact3(Consumer arg0, Provider arg1, Map arg2, PactSource arg3) returns BasePact {
+    handle externalObj = au_com_dius_pact_core_model_BasePact_newBasePact3(arg0.jObj, arg1.jObj, arg2.jObj, arg3.jObj);
     BasePact newObj = new (externalObj);
     return newObj;
 }
 
 # The constructor function to generate an object of `au.com.dius.pact.core.model.BasePact`.
 #
-# + arg0 - The `Consumer?` value required to map with the Java constructor parameter.
-# + arg1 - The `Provider?` value required to map with the Java constructor parameter.
-# + arg2 - The `Map?` value required to map with the Java constructor parameter.
-# + arg3 - The `PactSource?` value required to map with the Java constructor parameter.
+# + arg0 - The `Consumer` value required to map with the Java constructor parameter.
+# + arg1 - The `Provider` value required to map with the Java constructor parameter.
+# + arg2 - The `Map` value required to map with the Java constructor parameter.
+# + arg3 - The `PactSource` value required to map with the Java constructor parameter.
 # + arg4 - The `int` value required to map with the Java constructor parameter.
-# + arg5 - The `DefaultConstructorMarker?` value required to map with the Java constructor parameter.
+# + arg5 - The `DefaultConstructorMarker` value required to map with the Java constructor parameter.
 # + return - The new `BasePact` class generated.
-public function newBasePact4(Consumer? arg0, Provider? arg1, Map? arg2, PactSource? arg3, int arg4, DefaultConstructorMarker? arg5) returns BasePact {
-    handle externalObj = au_com_dius_pact_core_model_BasePact_newBasePact4(arg0 is () ? java:createNull() : arg0.jObj, arg1 is () ? java:createNull() : arg1.jObj, arg2 is () ? java:createNull() : arg2.jObj, arg3 is () ? java:createNull() : arg3.jObj, arg4, arg5 is () ? java:createNull() : arg5.jObj);
+public function newBasePact4(Consumer arg0, Provider arg1, Map arg2, PactSource arg3, int arg4, DefaultConstructorMarker arg5) returns BasePact {
+    handle externalObj = au_com_dius_pact_core_model_BasePact_newBasePact4(arg0.jObj, arg1.jObj, arg2.jObj, arg3.jObj, arg4, arg5.jObj);
     BasePact newObj = new (externalObj);
     return newObj;
 }
 
 # The function that maps to the `getDEFAULT_METADATA` method of `au.com.dius.pact.core.model.BasePact`.
 #
-# + return - The `Map?` value returning from the Java mapping.
-public function BasePact_getDEFAULT_METADATA() returns Map? {
+# + return - The `Map` value returning from the Java mapping.
+public function BasePact_getDEFAULT_METADATA() returns Map {
     handle externalObj = au_com_dius_pact_core_model_BasePact_getDEFAULT_METADATA();
     Map newObj = new (externalObj);
-    return java:isNull(newObj.jObj) ? () : newObj;
+    return newObj;
 }
 
 # The function that maps to the `lookupVersion` method of `au.com.dius.pact.core.model.BasePact`.
 #
-# + return - The `string?` value returning from the Java mapping.
-public function BasePact_lookupVersion() returns string? {
-    return java:toString(au_com_dius_pact_core_model_BasePact_lookupVersion());
+# + return - The `string` value returning from the Java mapping.
+public function BasePact_lookupVersion() returns string {
+    return java:toString(au_com_dius_pact_core_model_BasePact_lookupVersion()) ?: "";
 }
 
 # The function that maps to the `metaData` method of `au.com.dius.pact.core.model.BasePact`.
 #
-# + arg0 - The `JsonValue?` value required to map with the Java method parameter.
-# + arg1 - The `PactSpecVersion?` value required to map with the Java method parameter.
-# + return - The `Map?` value returning from the Java mapping.
-public function BasePact_metaData(JsonValue? arg0, PactSpecVersion? arg1) returns Map? {
-    handle externalObj = au_com_dius_pact_core_model_BasePact_metaData(arg0 is () ? java:createNull() : arg0.jObj, arg1 is () ? java:createNull() : arg1.jObj);
+# + arg0 - The `JsonValue` value required to map with the Java method parameter.
+# + arg1 - The `PactSpecVersion` value required to map with the Java method parameter.
+# + return - The `Map` value returning from the Java mapping.
+public function BasePact_metaData(JsonValue arg0, PactSpecVersion arg1) returns Map {
+    handle externalObj = au_com_dius_pact_core_model_BasePact_metaData(arg0.jObj, arg1.jObj);
     Map newObj = new (externalObj);
-    return java:isNull(newObj.jObj) ? () : newObj;
+    return newObj;
 }
 
 # The function that retrieves the value of the public field `Companion`.
 #
-# + return - The `Companion?` value of the field.
-public function BasePact_getCompanion() returns Companion? {
+# + return - The `Companion` value of the field.
+public function BasePact_getCompanion() returns Companion {
     handle externalObj = au_com_dius_pact_core_model_BasePact_getCompanion();
-    Companion? newObj = new (externalObj);
+    Companion newObj = new (externalObj);
     return newObj;
 }
 

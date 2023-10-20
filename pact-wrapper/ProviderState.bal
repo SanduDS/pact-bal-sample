@@ -20,67 +20,67 @@ public distinct class ProviderState {
     # The function to retrieve the string representation of the Ballerina class mapping the `au.com.dius.pact.core.model.ProviderState` Java class.
     #
     # + return - The `string` form of the Java object instance.
-    public function toString() returns string? {
-        return java:toString(self.jObj);
+    public function toString() returns string {
+        return java:toString(self.jObj) ?: "";
     }
     # The function that maps to the `component1` method of `au.com.dius.pact.core.model.ProviderState`.
     #
-    # + return - The `string?` value returning from the Java mapping.
-    public function component1() returns string? {
-        return java:toString(au_com_dius_pact_core_model_ProviderState_component1(self.jObj));
+    # + return - The `string` value returning from the Java mapping.
+    public function component1() returns string {
+        return java:toString(au_com_dius_pact_core_model_ProviderState_component1(self.jObj)) ?: "";
     }
 
     # The function that maps to the `component2` method of `au.com.dius.pact.core.model.ProviderState`.
     #
-    # + return - The `Map?` value returning from the Java mapping.
-    public function component2() returns Map? {
+    # + return - The `Map` value returning from the Java mapping.
+    public function component2() returns Map {
         handle externalObj = au_com_dius_pact_core_model_ProviderState_component2(self.jObj);
         Map newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `copy` method of `au.com.dius.pact.core.model.ProviderState`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    # + arg1 - The `Map?` value required to map with the Java method parameter.
-    # + return - The `ProviderState?` value returning from the Java mapping.
-    public function copy(string? arg0, Map? arg1) returns ProviderState? {
-        handle externalObj = au_com_dius_pact_core_model_ProviderState_copy(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : arg1.jObj);
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    # + arg1 - The `Map` value required to map with the Java method parameter.
+    # + return - The `ProviderState` value returning from the Java mapping.
+    public function copy(string arg0, Map arg1) returns ProviderState {
+        handle externalObj = au_com_dius_pact_core_model_ProviderState_copy(self.jObj, java:fromString(arg0), arg1.jObj);
         ProviderState newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `equals` method of `au.com.dius.pact.core.model.ProviderState`.
     #
-    # + arg0 - The `Object?` value required to map with the Java method parameter.
+    # + arg0 - The `Object` value required to map with the Java method parameter.
     # + return - The `boolean` value returning from the Java mapping.
-    public function 'equals(Object? arg0) returns boolean {
-        return au_com_dius_pact_core_model_ProviderState_equals(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    public function 'equals(Object arg0) returns boolean {
+        return au_com_dius_pact_core_model_ProviderState_equals(self.jObj, arg0.jObj);
     }
 
     # The function that maps to the `getClass` method of `au.com.dius.pact.core.model.ProviderState`.
     #
-    # + return - The `Class?` value returning from the Java mapping.
-    public function getClass() returns Class? {
+    # + return - The `Class` value returning from the Java mapping.
+    public function getClass() returns Class {
         handle externalObj = au_com_dius_pact_core_model_ProviderState_getClass(self.jObj);
         Class newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `getName` method of `au.com.dius.pact.core.model.ProviderState`.
     #
-    # + return - The `string?` value returning from the Java mapping.
-    public function getName() returns string? {
-        return java:toString(au_com_dius_pact_core_model_ProviderState_getName(self.jObj));
+    # + return - The `string` value returning from the Java mapping.
+    public function getName() returns string {
+        return java:toString(au_com_dius_pact_core_model_ProviderState_getName(self.jObj)) ?: "";
     }
 
     # The function that maps to the `getParams` method of `au.com.dius.pact.core.model.ProviderState`.
     #
-    # + return - The `Map?` value returning from the Java mapping.
-    public function getParams() returns Map? {
+    # + return - The `Map` value returning from the Java mapping.
+    public function getParams() returns Map {
         handle externalObj = au_com_dius_pact_core_model_ProviderState_getParams(self.jObj);
         Map newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `hashCode` method of `au.com.dius.pact.core.model.ProviderState`.
@@ -92,10 +92,10 @@ public distinct class ProviderState {
 
     # The function that maps to the `matches` method of `au.com.dius.pact.core.model.ProviderState`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
+    # + arg0 - The `string` value required to map with the Java method parameter.
     # + return - The `boolean` value returning from the Java mapping.
-    public function matches(string? arg0) returns boolean {
-        return au_com_dius_pact_core_model_ProviderState_matches(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0));
+    public function matches(string arg0) returns boolean {
+        return au_com_dius_pact_core_model_ProviderState_matches(self.jObj, java:fromString(arg0));
     }
 
     # The function that maps to the `notify` method of `au.com.dius.pact.core.model.ProviderState`.
@@ -110,11 +110,11 @@ public distinct class ProviderState {
 
     # The function that maps to the `toMap` method of `au.com.dius.pact.core.model.ProviderState`.
     #
-    # + return - The `Map?` value returning from the Java mapping.
-    public function toMap() returns Map? {
+    # + return - The `Map` value returning from the Java mapping.
+    public function toMap() returns Map {
         handle externalObj = au_com_dius_pact_core_model_ProviderState_toMap(self.jObj);
         Map newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `uniqueKey` method of `au.com.dius.pact.core.model.ProviderState`.
@@ -164,54 +164,54 @@ public distinct class ProviderState {
 
 # The constructor function to generate an object of `au.com.dius.pact.core.model.ProviderState`.
 #
-# + arg0 - The `string?` value required to map with the Java constructor parameter.
+# + arg0 - The `string` value required to map with the Java constructor parameter.
 # + return - The new `ProviderState` class generated.
-public function newProviderState1(string? arg0) returns ProviderState {
-    handle externalObj = au_com_dius_pact_core_model_ProviderState_newProviderState1(arg0 is () ? java:createNull() : java:fromString(arg0));
+public function newProviderState1(string arg0) returns ProviderState {
+    handle externalObj = au_com_dius_pact_core_model_ProviderState_newProviderState1(java:fromString(arg0));
     ProviderState newObj = new (externalObj);
     return newObj;
 }
 
 # The constructor function to generate an object of `au.com.dius.pact.core.model.ProviderState`.
 #
-# + arg0 - The `string?` value required to map with the Java constructor parameter.
-# + arg1 - The `Map?` value required to map with the Java constructor parameter.
+# + arg0 - The `string` value required to map with the Java constructor parameter.
+# + arg1 - The `Map` value required to map with the Java constructor parameter.
 # + return - The new `ProviderState` class generated.
-public function newProviderState2(string? arg0, Map? arg1) returns ProviderState {
-    handle externalObj = au_com_dius_pact_core_model_ProviderState_newProviderState2(arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : arg1.jObj);
+public function newProviderState2(string arg0, Map arg1) returns ProviderState {
+    handle externalObj = au_com_dius_pact_core_model_ProviderState_newProviderState2(java:fromString(arg0), arg1.jObj);
     ProviderState newObj = new (externalObj);
     return newObj;
 }
 
 # The constructor function to generate an object of `au.com.dius.pact.core.model.ProviderState`.
 #
-# + arg0 - The `string?` value required to map with the Java constructor parameter.
-# + arg1 - The `Map?` value required to map with the Java constructor parameter.
+# + arg0 - The `string` value required to map with the Java constructor parameter.
+# + arg1 - The `Map` value required to map with the Java constructor parameter.
 # + arg2 - The `int` value required to map with the Java constructor parameter.
-# + arg3 - The `DefaultConstructorMarker?` value required to map with the Java constructor parameter.
+# + arg3 - The `DefaultConstructorMarker` value required to map with the Java constructor parameter.
 # + return - The new `ProviderState` class generated.
-public function newProviderState3(string? arg0, Map? arg1, int arg2, DefaultConstructorMarker? arg3) returns ProviderState {
-    handle externalObj = au_com_dius_pact_core_model_ProviderState_newProviderState3(arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : arg1.jObj, arg2, arg3 is () ? java:createNull() : arg3.jObj);
+public function newProviderState3(string arg0, Map arg1, int arg2, DefaultConstructorMarker arg3) returns ProviderState {
+    handle externalObj = au_com_dius_pact_core_model_ProviderState_newProviderState3(java:fromString(arg0), arg1.jObj, arg2, arg3.jObj);
     ProviderState newObj = new (externalObj);
     return newObj;
 }
 
 # The function that maps to the `fromJson` method of `au.com.dius.pact.core.model.ProviderState`.
 #
-# + arg0 - The `JsonValue?` value required to map with the Java method parameter.
-# + return - The `ProviderState?` value returning from the Java mapping.
-public function ProviderState_fromJson(JsonValue? arg0) returns ProviderState? {
-    handle externalObj = au_com_dius_pact_core_model_ProviderState_fromJson(arg0 is () ? java:createNull() : arg0.jObj);
+# + arg0 - The `JsonValue` value required to map with the Java method parameter.
+# + return - The `ProviderState` value returning from the Java mapping.
+public function ProviderState_fromJson(JsonValue arg0) returns ProviderState {
+    handle externalObj = au_com_dius_pact_core_model_ProviderState_fromJson(arg0.jObj);
     ProviderState newObj = new (externalObj);
-    return java:isNull(newObj.jObj) ? () : newObj;
+    return newObj;
 }
 
 # The function that retrieves the value of the public field `Companion`.
 #
-# + return - The `Companion?` value of the field.
-public function ProviderState_getCompanion() returns Companion? {
+# + return - The `Companion` value of the field.
+public function ProviderState_getCompanion() returns Companion {
     handle externalObj = au_com_dius_pact_core_model_ProviderState_getCompanion();
-    Companion? newObj = new (externalObj);
+    Companion newObj = new (externalObj);
     return newObj;
 }
 

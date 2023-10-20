@@ -20,51 +20,51 @@ public distinct class PactDslRequestBase {
     # The function to retrieve the string representation of the Ballerina class mapping the `au.com.dius.pact.consumer.dsl.PactDslRequestBase` Java class.
     #
     # + return - The `string` form of the Java object instance.
-    public function toString() returns string? {
-        return java:toString(self.jObj);
+    public function toString() returns string {
+        return java:toString(self.jObj) ?: "";
     }
     # The function that maps to the `equals` method of `au.com.dius.pact.consumer.dsl.PactDslRequestBase`.
     #
-    # + arg0 - The `Object?` value required to map with the Java method parameter.
+    # + arg0 - The `Object` value required to map with the Java method parameter.
     # + return - The `boolean` value returning from the Java mapping.
-    public function 'equals(Object? arg0) returns boolean {
-        return au_com_dius_pact_consumer_dsl_PactDslRequestBase_equals(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    public function 'equals(Object arg0) returns boolean {
+        return au_com_dius_pact_consumer_dsl_PactDslRequestBase_equals(self.jObj, arg0.jObj);
     }
 
     # The function that maps to the `getClass` method of `au.com.dius.pact.consumer.dsl.PactDslRequestBase`.
     #
-    # + return - The `Class?` value returning from the Java mapping.
-    public function getClass() returns Class? {
+    # + return - The `Class` value returning from the Java mapping.
+    public function getClass() returns Class {
         handle externalObj = au_com_dius_pact_consumer_dsl_PactDslRequestBase_getClass(self.jObj);
         Class newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `getComments` method of `au.com.dius.pact.consumer.dsl.PactDslRequestBase`.
     #
-    # + return - The `List?` value returning from the Java mapping.
-    public function getComments() returns List? {
+    # + return - The `List` value returning from the Java mapping.
+    public function getComments() returns List {
         handle externalObj = au_com_dius_pact_consumer_dsl_PactDslRequestBase_getComments(self.jObj);
         List newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `getMultipartBuilder` method of `au.com.dius.pact.consumer.dsl.PactDslRequestBase`.
     #
-    # + return - The `MultipartEntityBuilder?` value returning from the Java mapping.
-    public function getMultipartBuilder() returns MultipartEntityBuilder? {
+    # + return - The `MultipartEntityBuilder` value returning from the Java mapping.
+    public function getMultipartBuilder() returns MultipartEntityBuilder {
         handle externalObj = au_com_dius_pact_consumer_dsl_PactDslRequestBase_getMultipartBuilder(self.jObj);
         MultipartEntityBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `getVersion` method of `au.com.dius.pact.consumer.dsl.PactDslRequestBase`.
     #
-    # + return - The `PactSpecVersion?` value returning from the Java mapping.
-    public function getVersion() returns PactSpecVersion? {
+    # + return - The `PactSpecVersion` value returning from the Java mapping.
+    public function getVersion() returns PactSpecVersion {
         handle externalObj = au_com_dius_pact_consumer_dsl_PactDslRequestBase_getVersion(self.jObj);
         PactSpecVersion newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `hashCode` method of `au.com.dius.pact.consumer.dsl.PactDslRequestBase`.
@@ -86,30 +86,30 @@ public distinct class PactDslRequestBase {
 
     # The function that maps to the `setComments` method of `au.com.dius.pact.consumer.dsl.PactDslRequestBase`.
     #
-    # + arg0 - The `List?` value required to map with the Java method parameter.
-    public function setComments(List? arg0) {
-        au_com_dius_pact_consumer_dsl_PactDslRequestBase_setComments(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    # + arg0 - The `List` value required to map with the Java method parameter.
+    public function setComments(List arg0) {
+        au_com_dius_pact_consumer_dsl_PactDslRequestBase_setComments(self.jObj, arg0.jObj);
     }
 
     # The function that maps to the `setMultipartBuilder` method of `au.com.dius.pact.consumer.dsl.PactDslRequestBase`.
     #
-    # + arg0 - The `MultipartEntityBuilder?` value required to map with the Java method parameter.
-    public function setMultipartBuilder(MultipartEntityBuilder? arg0) {
-        au_com_dius_pact_consumer_dsl_PactDslRequestBase_setMultipartBuilder(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    # + arg0 - The `MultipartEntityBuilder` value required to map with the Java method parameter.
+    public function setMultipartBuilder(MultipartEntityBuilder arg0) {
+        au_com_dius_pact_consumer_dsl_PactDslRequestBase_setMultipartBuilder(self.jObj, arg0.jObj);
     }
 
     # The function that maps to the `setVersion` method of `au.com.dius.pact.consumer.dsl.PactDslRequestBase`.
     #
-    # + arg0 - The `PactSpecVersion?` value required to map with the Java method parameter.
-    public function setVersion(PactSpecVersion? arg0) {
-        au_com_dius_pact_consumer_dsl_PactDslRequestBase_setVersion(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    # + arg0 - The `PactSpecVersion` value required to map with the Java method parameter.
+    public function setVersion(PactSpecVersion arg0) {
+        au_com_dius_pact_consumer_dsl_PactDslRequestBase_setVersion(self.jObj, arg0.jObj);
     }
 
     # The function that maps to the `setupMultipart` method of `au.com.dius.pact.consumer.dsl.PactDslRequestBase`.
     #
-    # + arg0 - The `MultipartEntityBuilder?` value required to map with the Java method parameter.
-    public function setupMultipart(MultipartEntityBuilder? arg0) {
-        au_com_dius_pact_consumer_dsl_PactDslRequestBase_setupMultipart(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    # + arg0 - The `MultipartEntityBuilder` value required to map with the Java method parameter.
+    public function setupMultipart(MultipartEntityBuilder arg0) {
+        au_com_dius_pact_consumer_dsl_PactDslRequestBase_setupMultipart(self.jObj, arg0.jObj);
     }
 
     # The function that maps to the `wait` method of `au.com.dius.pact.consumer.dsl.PactDslRequestBase`.
@@ -150,140 +150,140 @@ public distinct class PactDslRequestBase {
 
     # The function that retrieves the value of the public field `requestMethod`.
     #
-    # + return - The `string?` value of the field.
-    public function getRequestMethod() returns string? {
-        return java:toString(au_com_dius_pact_consumer_dsl_PactDslRequestBase_getRequestMethod(self.jObj));
+    # + return - The `string` value of the field.
+    public function getRequestMethod() returns string {
+        return java:toString(au_com_dius_pact_consumer_dsl_PactDslRequestBase_getRequestMethod(self.jObj)) ?: "";
     }
 
     # The function to set the value of the public field `requestMethod`.
     #
-    # + arg - The `string?` value that is to be set for the field.
-    public function setRequestMethod(string? arg) {
-        au_com_dius_pact_consumer_dsl_PactDslRequestBase_setRequestMethod(self.jObj, arg is () ? java:createNull() : java:fromString(arg));
+    # + arg - The `string` value that is to be set for the field.
+    public function setRequestMethod(string arg) {
+        au_com_dius_pact_consumer_dsl_PactDslRequestBase_setRequestMethod(self.jObj, java:fromString(arg));
     }
 
     # The function that retrieves the value of the public field `requestHeaders`.
     #
-    # + return - The `Map?` value of the field.
-    public function getRequestHeaders() returns Map? {
+    # + return - The `Map` value of the field.
+    public function getRequestHeaders() returns Map {
         handle externalObj = au_com_dius_pact_consumer_dsl_PactDslRequestBase_getRequestHeaders(self.jObj);
-        Map? newObj = new (externalObj);
+        Map newObj = new (externalObj);
         return newObj;
     }
 
     # The function to set the value of the public field `requestHeaders`.
     #
-    # + arg - The `Map?` value that is to be set for the field.
-    public function setRequestHeaders(Map? arg) {
-        au_com_dius_pact_consumer_dsl_PactDslRequestBase_setRequestHeaders(self.jObj, arg is () ? java:createNull() : arg.jObj);
+    # + arg - The `Map` value that is to be set for the field.
+    public function setRequestHeaders(Map arg) {
+        au_com_dius_pact_consumer_dsl_PactDslRequestBase_setRequestHeaders(self.jObj, arg.jObj);
     }
 
     # The function that retrieves the value of the public field `query`.
     #
-    # + return - The `Map?` value of the field.
-    public function getQuery() returns Map? {
+    # + return - The `Map` value of the field.
+    public function getQuery() returns Map {
         handle externalObj = au_com_dius_pact_consumer_dsl_PactDslRequestBase_getQuery(self.jObj);
-        Map? newObj = new (externalObj);
+        Map newObj = new (externalObj);
         return newObj;
     }
 
     # The function to set the value of the public field `query`.
     #
-    # + arg - The `Map?` value that is to be set for the field.
-    public function setQuery(Map? arg) {
-        au_com_dius_pact_consumer_dsl_PactDslRequestBase_setQuery(self.jObj, arg is () ? java:createNull() : arg.jObj);
+    # + arg - The `Map` value that is to be set for the field.
+    public function setQuery(Map arg) {
+        au_com_dius_pact_consumer_dsl_PactDslRequestBase_setQuery(self.jObj, arg.jObj);
     }
 
     # The function that retrieves the value of the public field `requestBody`.
     #
-    # + return - The `OptionalBody?` value of the field.
-    public function getRequestBody() returns OptionalBody? {
+    # + return - The `OptionalBody` value of the field.
+    public function getRequestBody() returns OptionalBody {
         handle externalObj = au_com_dius_pact_consumer_dsl_PactDslRequestBase_getRequestBody(self.jObj);
-        OptionalBody? newObj = new (externalObj);
+        OptionalBody newObj = new (externalObj);
         return newObj;
     }
 
     # The function to set the value of the public field `requestBody`.
     #
-    # + arg - The `OptionalBody?` value that is to be set for the field.
-    public function setRequestBody(OptionalBody? arg) {
-        au_com_dius_pact_consumer_dsl_PactDslRequestBase_setRequestBody(self.jObj, arg is () ? java:createNull() : arg.jObj);
+    # + arg - The `OptionalBody` value that is to be set for the field.
+    public function setRequestBody(OptionalBody arg) {
+        au_com_dius_pact_consumer_dsl_PactDslRequestBase_setRequestBody(self.jObj, arg.jObj);
     }
 
     # The function that retrieves the value of the public field `requestMatchers`.
     #
-    # + return - The `MatchingRules?` value of the field.
-    public function getRequestMatchers() returns MatchingRules? {
+    # + return - The `MatchingRules` value of the field.
+    public function getRequestMatchers() returns MatchingRules {
         handle externalObj = au_com_dius_pact_consumer_dsl_PactDslRequestBase_getRequestMatchers(self.jObj);
-        MatchingRules? newObj = new (externalObj);
+        MatchingRules newObj = new (externalObj);
         return newObj;
     }
 
     # The function to set the value of the public field `requestMatchers`.
     #
-    # + arg - The `MatchingRules?` value that is to be set for the field.
-    public function setRequestMatchers(MatchingRules? arg) {
-        au_com_dius_pact_consumer_dsl_PactDslRequestBase_setRequestMatchers(self.jObj, arg is () ? java:createNull() : arg.jObj);
+    # + arg - The `MatchingRules` value that is to be set for the field.
+    public function setRequestMatchers(MatchingRules arg) {
+        au_com_dius_pact_consumer_dsl_PactDslRequestBase_setRequestMatchers(self.jObj, arg.jObj);
     }
 
     # The function that retrieves the value of the public field `requestGenerators`.
     #
-    # + return - The `Generators?` value of the field.
-    public function getRequestGenerators() returns Generators? {
+    # + return - The `Generators` value of the field.
+    public function getRequestGenerators() returns Generators {
         handle externalObj = au_com_dius_pact_consumer_dsl_PactDslRequestBase_getRequestGenerators(self.jObj);
-        Generators? newObj = new (externalObj);
+        Generators newObj = new (externalObj);
         return newObj;
     }
 
     # The function to set the value of the public field `requestGenerators`.
     #
-    # + arg - The `Generators?` value that is to be set for the field.
-    public function setRequestGenerators(Generators? arg) {
-        au_com_dius_pact_consumer_dsl_PactDslRequestBase_setRequestGenerators(self.jObj, arg is () ? java:createNull() : arg.jObj);
+    # + arg - The `Generators` value that is to be set for the field.
+    public function setRequestGenerators(Generators arg) {
+        au_com_dius_pact_consumer_dsl_PactDslRequestBase_setRequestGenerators(self.jObj, arg.jObj);
     }
 
 }
 
 # The constructor function to generate an object of `au.com.dius.pact.consumer.dsl.PactDslRequestBase`.
 #
-# + arg0 - The `PactDslRequestWithoutPath?` value required to map with the Java constructor parameter.
-# + arg1 - The `List?` value required to map with the Java constructor parameter.
-# + arg2 - The `PactSpecVersion?` value required to map with the Java constructor parameter.
+# + arg0 - The `PactDslRequestWithoutPath` value required to map with the Java constructor parameter.
+# + arg1 - The `List` value required to map with the Java constructor parameter.
+# + arg2 - The `PactSpecVersion` value required to map with the Java constructor parameter.
 # + return - The new `PactDslRequestBase` class generated.
-public function newPactDslRequestBase1(PactDslRequestWithoutPath? arg0, List? arg1, PactSpecVersion? arg2) returns PactDslRequestBase {
-    handle externalObj = au_com_dius_pact_consumer_dsl_PactDslRequestBase_newPactDslRequestBase1(arg0 is () ? java:createNull() : arg0.jObj, arg1 is () ? java:createNull() : arg1.jObj, arg2 is () ? java:createNull() : arg2.jObj);
+public function newPactDslRequestBase1(PactDslRequestWithoutPath arg0, List arg1, PactSpecVersion arg2) returns PactDslRequestBase {
+    handle externalObj = au_com_dius_pact_consumer_dsl_PactDslRequestBase_newPactDslRequestBase1(arg0.jObj, arg1.jObj, arg2.jObj);
     PactDslRequestBase newObj = new (externalObj);
     return newObj;
 }
 
 # The constructor function to generate an object of `au.com.dius.pact.consumer.dsl.PactDslRequestBase`.
 #
-# + arg0 - The `PactDslRequestWithoutPath?` value required to map with the Java constructor parameter.
-# + arg1 - The `List?` value required to map with the Java constructor parameter.
-# + arg2 - The `PactSpecVersion?` value required to map with the Java constructor parameter.
+# + arg0 - The `PactDslRequestWithoutPath` value required to map with the Java constructor parameter.
+# + arg1 - The `List` value required to map with the Java constructor parameter.
+# + arg2 - The `PactSpecVersion` value required to map with the Java constructor parameter.
 # + arg3 - The `int` value required to map with the Java constructor parameter.
-# + arg4 - The `DefaultConstructorMarker?` value required to map with the Java constructor parameter.
+# + arg4 - The `DefaultConstructorMarker` value required to map with the Java constructor parameter.
 # + return - The new `PactDslRequestBase` class generated.
-public function newPactDslRequestBase2(PactDslRequestWithoutPath? arg0, List? arg1, PactSpecVersion? arg2, int arg3, DefaultConstructorMarker? arg4) returns PactDslRequestBase {
-    handle externalObj = au_com_dius_pact_consumer_dsl_PactDslRequestBase_newPactDslRequestBase2(arg0 is () ? java:createNull() : arg0.jObj, arg1 is () ? java:createNull() : arg1.jObj, arg2 is () ? java:createNull() : arg2.jObj, arg3, arg4 is () ? java:createNull() : arg4.jObj);
+public function newPactDslRequestBase2(PactDslRequestWithoutPath arg0, List arg1, PactSpecVersion arg2, int arg3, DefaultConstructorMarker arg4) returns PactDslRequestBase {
+    handle externalObj = au_com_dius_pact_consumer_dsl_PactDslRequestBase_newPactDslRequestBase2(arg0.jObj, arg1.jObj, arg2.jObj, arg3, arg4.jObj);
     PactDslRequestBase newObj = new (externalObj);
     return newObj;
 }
 
 # The function that retrieves the value of the public field `Companion`.
 #
-# + return - The `Companion?` value of the field.
-public function PactDslRequestBase_getCompanion() returns Companion? {
+# + return - The `Companion` value of the field.
+public function PactDslRequestBase_getCompanion() returns Companion {
     handle externalObj = au_com_dius_pact_consumer_dsl_PactDslRequestBase_getCompanion();
-    Companion? newObj = new (externalObj);
+    Companion newObj = new (externalObj);
     return newObj;
 }
 
 # The function that retrieves the value of the public field `CONTENT_TYPE`.
 #
-# + return - The `string?` value of the field.
-public function PactDslRequestBase_getCONTENT_TYPE() returns string? {
-    return java:toString(au_com_dius_pact_consumer_dsl_PactDslRequestBase_getCONTENT_TYPE());
+# + return - The `string` value of the field.
+public function PactDslRequestBase_getCONTENT_TYPE() returns string {
+    return java:toString(au_com_dius_pact_consumer_dsl_PactDslRequestBase_getCONTENT_TYPE()) ?: "";
 }
 
 # The function that retrieves the value of the public field `DATE_2000`.

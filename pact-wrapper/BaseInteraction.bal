@@ -20,116 +20,116 @@ public distinct class BaseInteraction {
     # The function to retrieve the string representation of the Ballerina class mapping the `au.com.dius.pact.core.model.BaseInteraction` Java class.
     #
     # + return - The `string` form of the Java object instance.
-    public function toString() returns string? {
-        return java:toString(self.jObj);
+    public function toString() returns string {
+        return java:toString(self.jObj) ?: "";
     }
     # The function that maps to the `asAsynchronousMessage` method of `au.com.dius.pact.core.model.BaseInteraction`.
     #
-    # + return - The `AsynchronousMessage?` value returning from the Java mapping.
-    public function asAsynchronousMessage() returns AsynchronousMessage? {
+    # + return - The `AsynchronousMessage` value returning from the Java mapping.
+    public function asAsynchronousMessage() returns AsynchronousMessage {
         handle externalObj = au_com_dius_pact_core_model_BaseInteraction_asAsynchronousMessage(self.jObj);
         AsynchronousMessage newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `asMessage` method of `au.com.dius.pact.core.model.BaseInteraction`.
     #
-    # + return - The `Message?` value returning from the Java mapping.
-    public function asMessage() returns Message? {
+    # + return - The `Message` value returning from the Java mapping.
+    public function asMessage() returns Message {
         handle externalObj = au_com_dius_pact_core_model_BaseInteraction_asMessage(self.jObj);
         Message newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `asSynchronousMessages` method of `au.com.dius.pact.core.model.BaseInteraction`.
     #
-    # + return - The `SynchronousMessages?` value returning from the Java mapping.
-    public function asSynchronousMessages() returns SynchronousMessages? {
+    # + return - The `SynchronousMessages` value returning from the Java mapping.
+    public function asSynchronousMessages() returns SynchronousMessages {
         handle externalObj = au_com_dius_pact_core_model_BaseInteraction_asSynchronousMessages(self.jObj);
         SynchronousMessages newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `asSynchronousRequestResponse` method of `au.com.dius.pact.core.model.BaseInteraction`.
     #
-    # + return - The `SynchronousRequestResponse?` value returning from the Java mapping.
-    public function asSynchronousRequestResponse() returns SynchronousRequestResponse? {
+    # + return - The `SynchronousRequestResponse` value returning from the Java mapping.
+    public function asSynchronousRequestResponse() returns SynchronousRequestResponse {
         handle externalObj = au_com_dius_pact_core_model_BaseInteraction_asSynchronousRequestResponse(self.jObj);
         SynchronousRequestResponse newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `asV4Interaction` method of `au.com.dius.pact.core.model.BaseInteraction`.
     #
-    # + return - The `V4Interaction?` value returning from the Java mapping.
-    public function asV4Interaction() returns V4Interaction? {
+    # + return - The `V4Interaction` value returning from the Java mapping.
+    public function asV4Interaction() returns V4Interaction {
         handle externalObj = au_com_dius_pact_core_model_BaseInteraction_asV4Interaction(self.jObj);
         V4Interaction newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `conflictsWith` method of `au.com.dius.pact.core.model.BaseInteraction`.
     #
-    # + arg0 - The `Interaction?` value required to map with the Java method parameter.
+    # + arg0 - The `Interaction` value required to map with the Java method parameter.
     # + return - The `boolean` value returning from the Java mapping.
-    public function conflictsWith(Interaction? arg0) returns boolean {
-        return au_com_dius_pact_core_model_BaseInteraction_conflictsWith(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    public function conflictsWith(Interaction arg0) returns boolean {
+        return au_com_dius_pact_core_model_BaseInteraction_conflictsWith(self.jObj, arg0.jObj);
     }
 
     # The function that maps to the `displayState` method of `au.com.dius.pact.core.model.BaseInteraction`.
     #
-    # + return - The `string?` value returning from the Java mapping.
-    public function displayState() returns string? {
-        return java:toString(au_com_dius_pact_core_model_BaseInteraction_displayState(self.jObj));
+    # + return - The `string` value returning from the Java mapping.
+    public function displayState() returns string {
+        return java:toString(au_com_dius_pact_core_model_BaseInteraction_displayState(self.jObj)) ?: "";
     }
 
     # The function that maps to the `equals` method of `au.com.dius.pact.core.model.BaseInteraction`.
     #
-    # + arg0 - The `Object?` value required to map with the Java method parameter.
+    # + arg0 - The `Object` value required to map with the Java method parameter.
     # + return - The `boolean` value returning from the Java mapping.
-    public function 'equals(Object? arg0) returns boolean {
-        return au_com_dius_pact_core_model_BaseInteraction_equals(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    public function 'equals(Object arg0) returns boolean {
+        return au_com_dius_pact_core_model_BaseInteraction_equals(self.jObj, arg0.jObj);
     }
 
     # The function that maps to the `getClass` method of `au.com.dius.pact.core.model.BaseInteraction`.
     #
-    # + return - The `Class?` value returning from the Java mapping.
-    public function getClass() returns Class? {
+    # + return - The `Class` value returning from the Java mapping.
+    public function getClass() returns Class {
         handle externalObj = au_com_dius_pact_core_model_BaseInteraction_getClass(self.jObj);
         Class newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `getComments` method of `au.com.dius.pact.core.model.BaseInteraction`.
     #
-    # + return - The `Map?` value returning from the Java mapping.
-    public function getComments() returns Map? {
+    # + return - The `Map` value returning from the Java mapping.
+    public function getComments() returns Map {
         handle externalObj = au_com_dius_pact_core_model_BaseInteraction_getComments(self.jObj);
         Map newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `getDescription` method of `au.com.dius.pact.core.model.BaseInteraction`.
     #
-    # + return - The `string?` value returning from the Java mapping.
-    public function getDescription() returns string? {
-        return java:toString(au_com_dius_pact_core_model_BaseInteraction_getDescription(self.jObj));
+    # + return - The `string` value returning from the Java mapping.
+    public function getDescription() returns string {
+        return java:toString(au_com_dius_pact_core_model_BaseInteraction_getDescription(self.jObj)) ?: "";
     }
 
     # The function that maps to the `getInteractionId` method of `au.com.dius.pact.core.model.BaseInteraction`.
     #
-    # + return - The `string?` value returning from the Java mapping.
-    public function getInteractionId() returns string? {
-        return java:toString(au_com_dius_pact_core_model_BaseInteraction_getInteractionId(self.jObj));
+    # + return - The `string` value returning from the Java mapping.
+    public function getInteractionId() returns string {
+        return java:toString(au_com_dius_pact_core_model_BaseInteraction_getInteractionId(self.jObj)) ?: "";
     }
 
     # The function that maps to the `getProviderStates` method of `au.com.dius.pact.core.model.BaseInteraction`.
     #
-    # + return - The `List?` value returning from the Java mapping.
-    public function getProviderStates() returns List? {
+    # + return - The `List` value returning from the Java mapping.
+    public function getProviderStates() returns List {
         handle externalObj = au_com_dius_pact_core_model_BaseInteraction_getProviderStates(self.jObj);
         List newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `hashCode` method of `au.com.dius.pact.core.model.BaseInteraction`.
@@ -179,36 +179,36 @@ public distinct class BaseInteraction {
 
     # The function that maps to the `setDescription` method of `au.com.dius.pact.core.model.BaseInteraction`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    public function setDescription(string? arg0) {
-        au_com_dius_pact_core_model_BaseInteraction_setDescription(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0));
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    public function setDescription(string arg0) {
+        au_com_dius_pact_core_model_BaseInteraction_setDescription(self.jObj, java:fromString(arg0));
     }
 
     # The function that maps to the `toMap` method of `au.com.dius.pact.core.model.BaseInteraction`.
     #
-    # + arg0 - The `PactSpecVersion?` value required to map with the Java method parameter.
-    # + return - The `Map?` value returning from the Java mapping.
-    public function toMap(PactSpecVersion? arg0) returns Map? {
-        handle externalObj = au_com_dius_pact_core_model_BaseInteraction_toMap(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    # + arg0 - The `PactSpecVersion` value required to map with the Java method parameter.
+    # + return - The `Map` value returning from the Java mapping.
+    public function toMap(PactSpecVersion arg0) returns Map {
+        handle externalObj = au_com_dius_pact_core_model_BaseInteraction_toMap(self.jObj, arg0.jObj);
         Map newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `uniqueKey` method of `au.com.dius.pact.core.model.BaseInteraction`.
     #
-    # + return - The `string?` value returning from the Java mapping.
-    public function uniqueKey() returns string? {
-        return java:toString(au_com_dius_pact_core_model_BaseInteraction_uniqueKey(self.jObj));
+    # + return - The `string` value returning from the Java mapping.
+    public function uniqueKey() returns string {
+        return java:toString(au_com_dius_pact_core_model_BaseInteraction_uniqueKey(self.jObj)) ?: "";
     }
 
     # The function that maps to the `validateForVersion` method of `au.com.dius.pact.core.model.BaseInteraction`.
     #
-    # + arg0 - The `PactSpecVersion?` value required to map with the Java method parameter.
-    # + return - The `List?` value returning from the Java mapping.
-    public function validateForVersion(PactSpecVersion? arg0) returns List? {
-        handle externalObj = au_com_dius_pact_core_model_BaseInteraction_validateForVersion(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    # + arg0 - The `PactSpecVersion` value required to map with the Java method parameter.
+    # + return - The `List` value returning from the Java mapping.
+    public function validateForVersion(PactSpecVersion arg0) returns List {
+        handle externalObj = au_com_dius_pact_core_model_BaseInteraction_validateForVersion(self.jObj, arg0.jObj);
         List newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `wait` method of `au.com.dius.pact.core.model.BaseInteraction`.
@@ -251,28 +251,28 @@ public distinct class BaseInteraction {
 
 # The constructor function to generate an object of `au.com.dius.pact.core.model.BaseInteraction`.
 #
-# + arg0 - The `string?` value required to map with the Java constructor parameter.
-# + arg1 - The `string?` value required to map with the Java constructor parameter.
-# + arg2 - The `List?` value required to map with the Java constructor parameter.
-# + arg3 - The `Map?` value required to map with the Java constructor parameter.
+# + arg0 - The `string` value required to map with the Java constructor parameter.
+# + arg1 - The `string` value required to map with the Java constructor parameter.
+# + arg2 - The `List` value required to map with the Java constructor parameter.
+# + arg3 - The `Map` value required to map with the Java constructor parameter.
 # + return - The new `BaseInteraction` class generated.
-public function newBaseInteraction1(string? arg0, string? arg1, List? arg2, Map? arg3) returns BaseInteraction {
-    handle externalObj = au_com_dius_pact_core_model_BaseInteraction_newBaseInteraction1(arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : java:fromString(arg1), arg2 is () ? java:createNull() : arg2.jObj, arg3 is () ? java:createNull() : arg3.jObj);
+public function newBaseInteraction1(string arg0, string arg1, List arg2, Map arg3) returns BaseInteraction {
+    handle externalObj = au_com_dius_pact_core_model_BaseInteraction_newBaseInteraction1(java:fromString(arg0), java:fromString(arg1), arg2.jObj, arg3.jObj);
     BaseInteraction newObj = new (externalObj);
     return newObj;
 }
 
 # The constructor function to generate an object of `au.com.dius.pact.core.model.BaseInteraction`.
 #
-# + arg0 - The `string?` value required to map with the Java constructor parameter.
-# + arg1 - The `string?` value required to map with the Java constructor parameter.
-# + arg2 - The `List?` value required to map with the Java constructor parameter.
-# + arg3 - The `Map?` value required to map with the Java constructor parameter.
+# + arg0 - The `string` value required to map with the Java constructor parameter.
+# + arg1 - The `string` value required to map with the Java constructor parameter.
+# + arg2 - The `List` value required to map with the Java constructor parameter.
+# + arg3 - The `Map` value required to map with the Java constructor parameter.
 # + arg4 - The `int` value required to map with the Java constructor parameter.
-# + arg5 - The `DefaultConstructorMarker?` value required to map with the Java constructor parameter.
+# + arg5 - The `DefaultConstructorMarker` value required to map with the Java constructor parameter.
 # + return - The new `BaseInteraction` class generated.
-public function newBaseInteraction2(string? arg0, string? arg1, List? arg2, Map? arg3, int arg4, DefaultConstructorMarker? arg5) returns BaseInteraction {
-    handle externalObj = au_com_dius_pact_core_model_BaseInteraction_newBaseInteraction2(arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : java:fromString(arg1), arg2 is () ? java:createNull() : arg2.jObj, arg3 is () ? java:createNull() : arg3.jObj, arg4, arg5 is () ? java:createNull() : arg5.jObj);
+public function newBaseInteraction2(string arg0, string arg1, List arg2, Map arg3, int arg4, DefaultConstructorMarker arg5) returns BaseInteraction {
+    handle externalObj = au_com_dius_pact_core_model_BaseInteraction_newBaseInteraction2(java:fromString(arg0), java:fromString(arg1), arg2.jObj, arg3.jObj, arg4, arg5.jObj);
     BaseInteraction newObj = new (externalObj);
     return newObj;
 }

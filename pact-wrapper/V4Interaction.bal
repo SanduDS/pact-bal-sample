@@ -20,145 +20,145 @@ public distinct class V4Interaction {
     # The function to retrieve the string representation of the Ballerina class mapping the `au.com.dius.pact.core.model.V4Interaction` Java class.
     #
     # + return - The `string` form of the Java object instance.
-    public function toString() returns string? {
-        return java:toString(self.jObj);
+    public function toString() returns string {
+        return java:toString(self.jObj) ?: "";
     }
     # The function that maps to the `addPluginConfiguration` method of `au.com.dius.pact.core.model.V4Interaction`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    # + arg1 - The `Map?` value required to map with the Java method parameter.
-    public function addPluginConfiguration(string? arg0, Map? arg1) {
-        au_com_dius_pact_core_model_V4Interaction_addPluginConfiguration(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : arg1.jObj);
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    # + arg1 - The `Map` value required to map with the Java method parameter.
+    public function addPluginConfiguration(string arg0, Map arg1) {
+        au_com_dius_pact_core_model_V4Interaction_addPluginConfiguration(self.jObj, java:fromString(arg0), arg1.jObj);
     }
 
     # The function that maps to the `addTextComment` method of `au.com.dius.pact.core.model.V4Interaction`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    public function addTextComment(string? arg0) {
-        au_com_dius_pact_core_model_V4Interaction_addTextComment(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0));
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    public function addTextComment(string arg0) {
+        au_com_dius_pact_core_model_V4Interaction_addTextComment(self.jObj, java:fromString(arg0));
     }
 
     # The function that maps to the `asAsynchronousMessage` method of `au.com.dius.pact.core.model.V4Interaction`.
     #
-    # + return - The `AsynchronousMessage?` value returning from the Java mapping.
-    public function asAsynchronousMessage() returns AsynchronousMessage? {
+    # + return - The `AsynchronousMessage` value returning from the Java mapping.
+    public function asAsynchronousMessage() returns AsynchronousMessage {
         handle externalObj = au_com_dius_pact_core_model_V4Interaction_asAsynchronousMessage(self.jObj);
         AsynchronousMessage newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `asMessage` method of `au.com.dius.pact.core.model.V4Interaction`.
     #
-    # + return - The `Message?` value returning from the Java mapping.
-    public function asMessage() returns Message? {
+    # + return - The `Message` value returning from the Java mapping.
+    public function asMessage() returns Message {
         handle externalObj = au_com_dius_pact_core_model_V4Interaction_asMessage(self.jObj);
         Message newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `asSynchronousMessages` method of `au.com.dius.pact.core.model.V4Interaction`.
     #
-    # + return - The `SynchronousMessages?` value returning from the Java mapping.
-    public function asSynchronousMessages() returns SynchronousMessages? {
+    # + return - The `SynchronousMessages` value returning from the Java mapping.
+    public function asSynchronousMessages() returns SynchronousMessages {
         handle externalObj = au_com_dius_pact_core_model_V4Interaction_asSynchronousMessages(self.jObj);
         SynchronousMessages newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `asSynchronousRequestResponse` method of `au.com.dius.pact.core.model.V4Interaction`.
     #
-    # + return - The `SynchronousRequestResponse?` value returning from the Java mapping.
-    public function asSynchronousRequestResponse() returns SynchronousRequestResponse? {
+    # + return - The `SynchronousRequestResponse` value returning from the Java mapping.
+    public function asSynchronousRequestResponse() returns SynchronousRequestResponse {
         handle externalObj = au_com_dius_pact_core_model_V4Interaction_asSynchronousRequestResponse(self.jObj);
         SynchronousRequestResponse newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `asV4Interaction` method of `au.com.dius.pact.core.model.V4Interaction`.
     #
-    # + return - The `V4Interaction?` value returning from the Java mapping.
-    public function asV4Interaction() returns V4Interaction? {
+    # + return - The `V4Interaction` value returning from the Java mapping.
+    public function asV4Interaction() returns V4Interaction {
         handle externalObj = au_com_dius_pact_core_model_V4Interaction_asV4Interaction(self.jObj);
         V4Interaction newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `conflictsWith` method of `au.com.dius.pact.core.model.V4Interaction`.
     #
-    # + arg0 - The `Interaction?` value required to map with the Java method parameter.
+    # + arg0 - The `Interaction` value required to map with the Java method parameter.
     # + return - The `boolean` value returning from the Java mapping.
-    public function conflictsWith(Interaction? arg0) returns boolean {
-        return au_com_dius_pact_core_model_V4Interaction_conflictsWith(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    public function conflictsWith(Interaction arg0) returns boolean {
+        return au_com_dius_pact_core_model_V4Interaction_conflictsWith(self.jObj, arg0.jObj);
     }
 
     # The function that maps to the `displayState` method of `au.com.dius.pact.core.model.V4Interaction`.
     #
-    # + return - The `string?` value returning from the Java mapping.
-    public function displayState() returns string? {
-        return java:toString(au_com_dius_pact_core_model_V4Interaction_displayState(self.jObj));
+    # + return - The `string` value returning from the Java mapping.
+    public function displayState() returns string {
+        return java:toString(au_com_dius_pact_core_model_V4Interaction_displayState(self.jObj)) ?: "";
     }
 
     # The function that maps to the `equals` method of `au.com.dius.pact.core.model.V4Interaction`.
     #
-    # + arg0 - The `Object?` value required to map with the Java method parameter.
+    # + arg0 - The `Object` value required to map with the Java method parameter.
     # + return - The `boolean` value returning from the Java mapping.
-    public function 'equals(Object? arg0) returns boolean {
-        return au_com_dius_pact_core_model_V4Interaction_equals(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    public function 'equals(Object arg0) returns boolean {
+        return au_com_dius_pact_core_model_V4Interaction_equals(self.jObj, arg0.jObj);
     }
 
     # The function that maps to the `generateKey` method of `au.com.dius.pact.core.model.V4Interaction`.
     #
-    # + return - The `string?` value returning from the Java mapping.
-    public function generateKey() returns string? {
-        return java:toString(au_com_dius_pact_core_model_V4Interaction_generateKey(self.jObj));
+    # + return - The `string` value returning from the Java mapping.
+    public function generateKey() returns string {
+        return java:toString(au_com_dius_pact_core_model_V4Interaction_generateKey(self.jObj)) ?: "";
     }
 
     # The function that maps to the `getClass` method of `au.com.dius.pact.core.model.V4Interaction`.
     #
-    # + return - The `Class?` value returning from the Java mapping.
-    public function getClass() returns Class? {
+    # + return - The `Class` value returning from the Java mapping.
+    public function getClass() returns Class {
         handle externalObj = au_com_dius_pact_core_model_V4Interaction_getClass(self.jObj);
         Class newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `getComments` method of `au.com.dius.pact.core.model.V4Interaction`.
     #
-    # + return - The `Map?` value returning from the Java mapping.
-    public function getComments() returns Map? {
+    # + return - The `Map` value returning from the Java mapping.
+    public function getComments() returns Map {
         handle externalObj = au_com_dius_pact_core_model_V4Interaction_getComments(self.jObj);
         Map newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `getDescription` method of `au.com.dius.pact.core.model.V4Interaction`.
     #
-    # + return - The `string?` value returning from the Java mapping.
-    public function getDescription() returns string? {
-        return java:toString(au_com_dius_pact_core_model_V4Interaction_getDescription(self.jObj));
+    # + return - The `string` value returning from the Java mapping.
+    public function getDescription() returns string {
+        return java:toString(au_com_dius_pact_core_model_V4Interaction_getDescription(self.jObj)) ?: "";
     }
 
     # The function that maps to the `getInteractionId` method of `au.com.dius.pact.core.model.V4Interaction`.
     #
-    # + return - The `string?` value returning from the Java mapping.
-    public function getInteractionId() returns string? {
-        return java:toString(au_com_dius_pact_core_model_V4Interaction_getInteractionId(self.jObj));
+    # + return - The `string` value returning from the Java mapping.
+    public function getInteractionId() returns string {
+        return java:toString(au_com_dius_pact_core_model_V4Interaction_getInteractionId(self.jObj)) ?: "";
     }
 
     # The function that maps to the `getInteractionMarkup` method of `au.com.dius.pact.core.model.V4Interaction`.
     #
-    # + return - The `InteractionMarkup?` value returning from the Java mapping.
-    public function getInteractionMarkup() returns InteractionMarkup? {
+    # + return - The `InteractionMarkup` value returning from the Java mapping.
+    public function getInteractionMarkup() returns InteractionMarkup {
         handle externalObj = au_com_dius_pact_core_model_V4Interaction_getInteractionMarkup(self.jObj);
         InteractionMarkup newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `getKey` method of `au.com.dius.pact.core.model.V4Interaction`.
     #
-    # + return - The `string?` value returning from the Java mapping.
-    public function getKey() returns string? {
-        return java:toString(au_com_dius_pact_core_model_V4Interaction_getKey(self.jObj));
+    # + return - The `string` value returning from the Java mapping.
+    public function getKey() returns string {
+        return java:toString(au_com_dius_pact_core_model_V4Interaction_getKey(self.jObj)) ?: "";
     }
 
     # The function that maps to the `getPending` method of `au.com.dius.pact.core.model.V4Interaction`.
@@ -170,27 +170,27 @@ public distinct class V4Interaction {
 
     # The function that maps to the `getPluginConfiguration` method of `au.com.dius.pact.core.model.V4Interaction`.
     #
-    # + return - The `Map?` value returning from the Java mapping.
-    public function getPluginConfiguration() returns Map? {
+    # + return - The `Map` value returning from the Java mapping.
+    public function getPluginConfiguration() returns Map {
         handle externalObj = au_com_dius_pact_core_model_V4Interaction_getPluginConfiguration(self.jObj);
         Map newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `getProviderStates` method of `au.com.dius.pact.core.model.V4Interaction`.
     #
-    # + return - The `List?` value returning from the Java mapping.
-    public function getProviderStates() returns List? {
+    # + return - The `List` value returning from the Java mapping.
+    public function getProviderStates() returns List {
         handle externalObj = au_com_dius_pact_core_model_V4Interaction_getProviderStates(self.jObj);
         List newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `getTransport` method of `au.com.dius.pact.core.model.V4Interaction`.
     #
-    # + return - The `string?` value returning from the Java mapping.
-    public function getTransport() returns string? {
-        return java:toString(au_com_dius_pact_core_model_V4Interaction_getTransport(self.jObj));
+    # + return - The `string` value returning from the Java mapping.
+    public function getTransport() returns string {
+        return java:toString(au_com_dius_pact_core_model_V4Interaction_getTransport(self.jObj)) ?: "";
     }
 
     # The function that maps to the `hashCode` method of `au.com.dius.pact.core.model.V4Interaction`.
@@ -209,10 +209,10 @@ public distinct class V4Interaction {
 
     # The function that maps to the `isInteractionType` method of `au.com.dius.pact.core.model.V4Interaction`.
     #
-    # + arg0 - The `V4InteractionType?` value required to map with the Java method parameter.
+    # + arg0 - The `V4InteractionType` value required to map with the Java method parameter.
     # + return - The `boolean` value returning from the Java mapping.
-    public function isInteractionType(V4InteractionType? arg0) returns boolean {
-        return au_com_dius_pact_core_model_V4Interaction_isInteractionType(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    public function isInteractionType(V4InteractionType arg0) returns boolean {
+        return au_com_dius_pact_core_model_V4Interaction_isInteractionType(self.jObj, arg0.jObj);
     }
 
     # The function that maps to the `isSynchronousMessages` method of `au.com.dius.pact.core.model.V4Interaction`.
@@ -248,23 +248,23 @@ public distinct class V4Interaction {
 
     # The function that maps to the `setDescription` method of `au.com.dius.pact.core.model.V4Interaction`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    public function setDescription(string? arg0) {
-        au_com_dius_pact_core_model_V4Interaction_setDescription(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0));
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    public function setDescription(string arg0) {
+        au_com_dius_pact_core_model_V4Interaction_setDescription(self.jObj, java:fromString(arg0));
     }
 
     # The function that maps to the `setInteractionMarkup` method of `au.com.dius.pact.core.model.V4Interaction`.
     #
-    # + arg0 - The `InteractionMarkup?` value required to map with the Java method parameter.
-    public function setInteractionMarkup(InteractionMarkup? arg0) {
-        au_com_dius_pact_core_model_V4Interaction_setInteractionMarkup(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    # + arg0 - The `InteractionMarkup` value required to map with the Java method parameter.
+    public function setInteractionMarkup(InteractionMarkup arg0) {
+        au_com_dius_pact_core_model_V4Interaction_setInteractionMarkup(self.jObj, arg0.jObj);
     }
 
     # The function that maps to the `setKey` method of `au.com.dius.pact.core.model.V4Interaction`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    public function setKey(string? arg0) {
-        au_com_dius_pact_core_model_V4Interaction_setKey(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0));
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    public function setKey(string arg0) {
+        au_com_dius_pact_core_model_V4Interaction_setKey(self.jObj, java:fromString(arg0));
     }
 
     # The function that maps to the `setPending` method of `au.com.dius.pact.core.model.V4Interaction`.
@@ -276,50 +276,50 @@ public distinct class V4Interaction {
 
     # The function that maps to the `setTestName` method of `au.com.dius.pact.core.model.V4Interaction`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    public function setTestName(string? arg0) {
-        au_com_dius_pact_core_model_V4Interaction_setTestName(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0));
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    public function setTestName(string arg0) {
+        au_com_dius_pact_core_model_V4Interaction_setTestName(self.jObj, java:fromString(arg0));
     }
 
     # The function that maps to the `setTransport` method of `au.com.dius.pact.core.model.V4Interaction`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    public function setTransport(string? arg0) {
-        au_com_dius_pact_core_model_V4Interaction_setTransport(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0));
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    public function setTransport(string arg0) {
+        au_com_dius_pact_core_model_V4Interaction_setTransport(self.jObj, java:fromString(arg0));
     }
 
     # The function that maps to the `toMap` method of `au.com.dius.pact.core.model.V4Interaction`.
     #
-    # + arg0 - The `PactSpecVersion?` value required to map with the Java method parameter.
-    # + return - The `Map?` value returning from the Java mapping.
-    public function toMap(PactSpecVersion? arg0) returns Map? {
-        handle externalObj = au_com_dius_pact_core_model_V4Interaction_toMap(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    # + arg0 - The `PactSpecVersion` value required to map with the Java method parameter.
+    # + return - The `Map` value returning from the Java mapping.
+    public function toMap(PactSpecVersion arg0) returns Map {
+        handle externalObj = au_com_dius_pact_core_model_V4Interaction_toMap(self.jObj, arg0.jObj);
         Map newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `uniqueKey` method of `au.com.dius.pact.core.model.V4Interaction`.
     #
-    # + return - The `string?` value returning from the Java mapping.
-    public function uniqueKey() returns string? {
-        return java:toString(au_com_dius_pact_core_model_V4Interaction_uniqueKey(self.jObj));
+    # + return - The `string` value returning from the Java mapping.
+    public function uniqueKey() returns string {
+        return java:toString(au_com_dius_pact_core_model_V4Interaction_uniqueKey(self.jObj)) ?: "";
     }
 
     # The function that maps to the `updateProperties` method of `au.com.dius.pact.core.model.V4Interaction`.
     #
-    # + arg0 - The `Map?` value required to map with the Java method parameter.
-    public function updateProperties(Map? arg0) {
-        au_com_dius_pact_core_model_V4Interaction_updateProperties(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    # + arg0 - The `Map` value required to map with the Java method parameter.
+    public function updateProperties(Map arg0) {
+        au_com_dius_pact_core_model_V4Interaction_updateProperties(self.jObj, arg0.jObj);
     }
 
     # The function that maps to the `validateForVersion` method of `au.com.dius.pact.core.model.V4Interaction`.
     #
-    # + arg0 - The `PactSpecVersion?` value required to map with the Java method parameter.
-    # + return - The `List?` value returning from the Java mapping.
-    public function validateForVersion(PactSpecVersion? arg0) returns List? {
-        handle externalObj = au_com_dius_pact_core_model_V4Interaction_validateForVersion(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    # + arg0 - The `PactSpecVersion` value required to map with the Java method parameter.
+    # + return - The `List` value returning from the Java mapping.
+    public function validateForVersion(PactSpecVersion arg0) returns List {
+        handle externalObj = au_com_dius_pact_core_model_V4Interaction_validateForVersion(self.jObj, arg0.jObj);
         List newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `wait` method of `au.com.dius.pact.core.model.V4Interaction`.
@@ -360,60 +360,60 @@ public distinct class V4Interaction {
 
     # The function that maps to the `withGeneratedKey` method of `au.com.dius.pact.core.model.V4Interaction`.
     #
-    # + return - The `V4Interaction?` value returning from the Java mapping.
-    public function withGeneratedKey() returns V4Interaction? {
+    # + return - The `V4Interaction` value returning from the Java mapping.
+    public function withGeneratedKey() returns V4Interaction {
         handle externalObj = au_com_dius_pact_core_model_V4Interaction_withGeneratedKey(self.jObj);
         V4Interaction newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
 }
 
 # The constructor function to generate an object of `au.com.dius.pact.core.model.V4Interaction`.
 #
-# + arg0 - The `string?` value required to map with the Java constructor parameter.
-# + arg1 - The `string?` value required to map with the Java constructor parameter.
-# + arg2 - The `string?` value required to map with the Java constructor parameter.
-# + arg3 - The `List?` value required to map with the Java constructor parameter.
-# + arg4 - The `Map?` value required to map with the Java constructor parameter.
+# + arg0 - The `string` value required to map with the Java constructor parameter.
+# + arg1 - The `string` value required to map with the Java constructor parameter.
+# + arg2 - The `string` value required to map with the Java constructor parameter.
+# + arg3 - The `List` value required to map with the Java constructor parameter.
+# + arg4 - The `Map` value required to map with the Java constructor parameter.
 # + arg5 - The `boolean` value required to map with the Java constructor parameter.
-# + arg6 - The `Map?` value required to map with the Java constructor parameter.
-# + arg7 - The `InteractionMarkup?` value required to map with the Java constructor parameter.
-# + arg8 - The `string?` value required to map with the Java constructor parameter.
-# + arg9 - The `DefaultConstructorMarker?` value required to map with the Java constructor parameter.
+# + arg6 - The `Map` value required to map with the Java constructor parameter.
+# + arg7 - The `InteractionMarkup` value required to map with the Java constructor parameter.
+# + arg8 - The `string` value required to map with the Java constructor parameter.
+# + arg9 - The `DefaultConstructorMarker` value required to map with the Java constructor parameter.
 # + return - The new `V4Interaction` class generated.
-public function newV4Interaction1(string? arg0, string? arg1, string? arg2, List? arg3, Map? arg4, boolean arg5, Map? arg6, InteractionMarkup? arg7, string? arg8, DefaultConstructorMarker? arg9) returns V4Interaction {
-    handle externalObj = au_com_dius_pact_core_model_V4Interaction_newV4Interaction1(arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : java:fromString(arg1), arg2 is () ? java:createNull() : java:fromString(arg2), arg3 is () ? java:createNull() : arg3.jObj, arg4 is () ? java:createNull() : arg4.jObj, arg5, arg6 is () ? java:createNull() : arg6.jObj, arg7 is () ? java:createNull() : arg7.jObj, arg8 is () ? java:createNull() : java:fromString(arg8), arg9 is () ? java:createNull() : arg9.jObj);
+public function newV4Interaction1(string arg0, string arg1, string arg2, List arg3, Map arg4, boolean arg5, Map arg6, InteractionMarkup arg7, string arg8, DefaultConstructorMarker arg9) returns V4Interaction {
+    handle externalObj = au_com_dius_pact_core_model_V4Interaction_newV4Interaction1(java:fromString(arg0), java:fromString(arg1), java:fromString(arg2), arg3.jObj, arg4.jObj, arg5, arg6.jObj, arg7.jObj, java:fromString(arg8), arg9.jObj);
     V4Interaction newObj = new (externalObj);
     return newObj;
 }
 
 # The constructor function to generate an object of `au.com.dius.pact.core.model.V4Interaction`.
 #
-# + arg0 - The `string?` value required to map with the Java constructor parameter.
-# + arg1 - The `string?` value required to map with the Java constructor parameter.
-# + arg2 - The `string?` value required to map with the Java constructor parameter.
-# + arg3 - The `List?` value required to map with the Java constructor parameter.
-# + arg4 - The `Map?` value required to map with the Java constructor parameter.
+# + arg0 - The `string` value required to map with the Java constructor parameter.
+# + arg1 - The `string` value required to map with the Java constructor parameter.
+# + arg2 - The `string` value required to map with the Java constructor parameter.
+# + arg3 - The `List` value required to map with the Java constructor parameter.
+# + arg4 - The `Map` value required to map with the Java constructor parameter.
 # + arg5 - The `boolean` value required to map with the Java constructor parameter.
-# + arg6 - The `Map?` value required to map with the Java constructor parameter.
-# + arg7 - The `InteractionMarkup?` value required to map with the Java constructor parameter.
-# + arg8 - The `string?` value required to map with the Java constructor parameter.
+# + arg6 - The `Map` value required to map with the Java constructor parameter.
+# + arg7 - The `InteractionMarkup` value required to map with the Java constructor parameter.
+# + arg8 - The `string` value required to map with the Java constructor parameter.
 # + arg9 - The `int` value required to map with the Java constructor parameter.
-# + arg10 - The `DefaultConstructorMarker?` value required to map with the Java constructor parameter.
+# + arg10 - The `DefaultConstructorMarker` value required to map with the Java constructor parameter.
 # + return - The new `V4Interaction` class generated.
-public function newV4Interaction2(string? arg0, string? arg1, string? arg2, List? arg3, Map? arg4, boolean arg5, Map? arg6, InteractionMarkup? arg7, string? arg8, int arg9, DefaultConstructorMarker? arg10) returns V4Interaction {
-    handle externalObj = au_com_dius_pact_core_model_V4Interaction_newV4Interaction2(arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : java:fromString(arg1), arg2 is () ? java:createNull() : java:fromString(arg2), arg3 is () ? java:createNull() : arg3.jObj, arg4 is () ? java:createNull() : arg4.jObj, arg5, arg6 is () ? java:createNull() : arg6.jObj, arg7 is () ? java:createNull() : arg7.jObj, arg8 is () ? java:createNull() : java:fromString(arg8), arg9, arg10 is () ? java:createNull() : arg10.jObj);
+public function newV4Interaction2(string arg0, string arg1, string arg2, List arg3, Map arg4, boolean arg5, Map arg6, InteractionMarkup arg7, string arg8, int arg9, DefaultConstructorMarker arg10) returns V4Interaction {
+    handle externalObj = au_com_dius_pact_core_model_V4Interaction_newV4Interaction2(java:fromString(arg0), java:fromString(arg1), java:fromString(arg2), arg3.jObj, arg4.jObj, arg5, arg6.jObj, arg7.jObj, java:fromString(arg8), arg9, arg10.jObj);
     V4Interaction newObj = new (externalObj);
     return newObj;
 }
 
 # The function that retrieves the value of the public field `Companion`.
 #
-# + return - The `Companion?` value of the field.
-public function V4Interaction_getCompanion() returns Companion? {
+# + return - The `Companion` value of the field.
+public function V4Interaction_getCompanion() returns Companion {
     handle externalObj = au_com_dius_pact_core_model_V4Interaction_getCompanion();
-    Companion? newObj = new (externalObj);
+    Companion newObj = new (externalObj);
     return newObj;
 }
 

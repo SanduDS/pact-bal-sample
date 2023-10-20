@@ -21,16 +21,16 @@ public distinct class OptionalBody {
     # The function to retrieve the string representation of the Ballerina class mapping the `au.com.dius.pact.core.model.OptionalBody` Java class.
     #
     # + return - The `string` form of the Java object instance.
-    public function toString() returns string? {
-        return java:toString(self.jObj);
+    public function toString() returns string {
+        return java:toString(self.jObj) ?: "";
     }
     # The function that maps to the `component1` method of `au.com.dius.pact.core.model.OptionalBody`.
     #
-    # + return - The `State?` value returning from the Java mapping.
-    public function component1() returns State? {
+    # + return - The `State` value returning from the Java mapping.
+    public function component1() returns State {
         handle externalObj = au_com_dius_pact_core_model_OptionalBody_component1(self.jObj);
         State newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `component2` method of `au.com.dius.pact.core.model.OptionalBody`.
@@ -43,95 +43,95 @@ public distinct class OptionalBody {
 
     # The function that maps to the `component3` method of `au.com.dius.pact.core.model.OptionalBody`.
     #
-    # + return - The `ContentType?` value returning from the Java mapping.
-    public function component3() returns ContentType? {
+    # + return - The `ContentType` value returning from the Java mapping.
+    public function component3() returns ContentType {
         handle externalObj = au_com_dius_pact_core_model_OptionalBody_component3(self.jObj);
         ContentType newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `component4` method of `au.com.dius.pact.core.model.OptionalBody`.
     #
-    # + return - The `ContentTypeHint?` value returning from the Java mapping.
-    public function component4() returns ContentTypeHint? {
+    # + return - The `ContentTypeHint` value returning from the Java mapping.
+    public function component4() returns ContentTypeHint {
         handle externalObj = au_com_dius_pact_core_model_OptionalBody_component4(self.jObj);
         ContentTypeHint newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `copy` method of `au.com.dius.pact.core.model.OptionalBody`.
     #
-    # + arg0 - The `State?` value required to map with the Java method parameter.
+    # + arg0 - The `State` value required to map with the Java method parameter.
     # + arg1 - The `byte[]` value required to map with the Java method parameter.
-    # + arg2 - The `ContentType?` value required to map with the Java method parameter.
-    # + arg3 - The `ContentTypeHint?` value required to map with the Java method parameter.
-    # + return - The `OptionalBody?` value returning from the Java mapping.
-    public function copy(State? arg0, byte[] arg1, ContentType? arg2, ContentTypeHint? arg3) returns OptionalBody?|error {
-        handle externalObj = au_com_dius_pact_core_model_OptionalBody_copy(self.jObj, arg0 is () ? java:createNull() : arg0.jObj, check jarrays:toHandle(arg1, "byte"), arg2 is () ? java:createNull() : arg2.jObj, arg3 is () ? java:createNull() : arg3.jObj);
+    # + arg2 - The `ContentType` value required to map with the Java method parameter.
+    # + arg3 - The `ContentTypeHint` value required to map with the Java method parameter.
+    # + return - The `OptionalBody` value returning from the Java mapping.
+    public function copy(State arg0, byte[] arg1, ContentType arg2, ContentTypeHint arg3) returns OptionalBody|error {
+        handle externalObj = au_com_dius_pact_core_model_OptionalBody_copy(self.jObj, arg0.jObj, check jarrays:toHandle(arg1, "byte"), arg2.jObj, arg3.jObj);
         OptionalBody newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `detectContentType` method of `au.com.dius.pact.core.model.OptionalBody`.
     #
-    # + return - The `ContentType?` value returning from the Java mapping.
-    public function detectContentType() returns ContentType? {
+    # + return - The `ContentType` value returning from the Java mapping.
+    public function detectContentType() returns ContentType {
         handle externalObj = au_com_dius_pact_core_model_OptionalBody_detectContentType(self.jObj);
         ContentType newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `detectStandardTextContentType` method of `au.com.dius.pact.core.model.OptionalBody`.
     #
-    # + return - The `ContentType?` value returning from the Java mapping.
-    public function detectStandardTextContentType() returns ContentType? {
+    # + return - The `ContentType` value returning from the Java mapping.
+    public function detectStandardTextContentType() returns ContentType {
         handle externalObj = au_com_dius_pact_core_model_OptionalBody_detectStandardTextContentType(self.jObj);
         ContentType newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `equals` method of `au.com.dius.pact.core.model.OptionalBody`.
     #
-    # + arg0 - The `Object?` value required to map with the Java method parameter.
+    # + arg0 - The `Object` value required to map with the Java method parameter.
     # + return - The `boolean` value returning from the Java mapping.
-    public function 'equals(Object? arg0) returns boolean {
-        return au_com_dius_pact_core_model_OptionalBody_equals(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    public function 'equals(Object arg0) returns boolean {
+        return au_com_dius_pact_core_model_OptionalBody_equals(self.jObj, arg0.jObj);
     }
 
     # The function that maps to the `getClass` method of `au.com.dius.pact.core.model.OptionalBody`.
     #
-    # + return - The `Class?` value returning from the Java mapping.
-    public function getClass() returns Class? {
+    # + return - The `Class` value returning from the Java mapping.
+    public function getClass() returns Class {
         handle externalObj = au_com_dius_pact_core_model_OptionalBody_getClass(self.jObj);
         Class newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `getContentType` method of `au.com.dius.pact.core.model.OptionalBody`.
     #
-    # + return - The `ContentType?` value returning from the Java mapping.
-    public function getContentType() returns ContentType? {
+    # + return - The `ContentType` value returning from the Java mapping.
+    public function getContentType() returns ContentType {
         handle externalObj = au_com_dius_pact_core_model_OptionalBody_getContentType(self.jObj);
         ContentType newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `getContentTypeHint` method of `au.com.dius.pact.core.model.OptionalBody`.
     #
-    # + return - The `ContentTypeHint?` value returning from the Java mapping.
-    public function getContentTypeHint() returns ContentTypeHint? {
+    # + return - The `ContentTypeHint` value returning from the Java mapping.
+    public function getContentTypeHint() returns ContentTypeHint {
         handle externalObj = au_com_dius_pact_core_model_OptionalBody_getContentTypeHint(self.jObj);
         ContentTypeHint newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `getState` method of `au.com.dius.pact.core.model.OptionalBody`.
     #
-    # + return - The `State?` value returning from the Java mapping.
-    public function getState() returns State? {
+    # + return - The `State` value returning from the Java mapping.
+    public function getState() returns State {
         handle externalObj = au_com_dius_pact_core_model_OptionalBody_getState(self.jObj);
         State newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `getValue` method of `au.com.dius.pact.core.model.OptionalBody`.
@@ -213,16 +213,16 @@ public distinct class OptionalBody {
 
     # The function that maps to the `setContentType` method of `au.com.dius.pact.core.model.OptionalBody`.
     #
-    # + arg0 - The `ContentType?` value required to map with the Java method parameter.
-    public function setContentType(ContentType? arg0) {
-        au_com_dius_pact_core_model_OptionalBody_setContentType(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    # + arg0 - The `ContentType` value required to map with the Java method parameter.
+    public function setContentType(ContentType arg0) {
+        au_com_dius_pact_core_model_OptionalBody_setContentType(self.jObj, arg0.jObj);
     }
 
     # The function that maps to the `setContentTypeHint` method of `au.com.dius.pact.core.model.OptionalBody`.
     #
-    # + arg0 - The `ContentTypeHint?` value required to map with the Java method parameter.
-    public function setContentTypeHint(ContentTypeHint? arg0) {
-        au_com_dius_pact_core_model_OptionalBody_setContentTypeHint(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    # + arg0 - The `ContentTypeHint` value required to map with the Java method parameter.
+    public function setContentTypeHint(ContentTypeHint arg0) {
+        au_com_dius_pact_core_model_OptionalBody_setContentTypeHint(self.jObj, arg0.jObj);
     }
 
     # The function that maps to the `slice` method of `au.com.dius.pact.core.model.OptionalBody`.
@@ -236,11 +236,11 @@ public distinct class OptionalBody {
 
     # The function that maps to the `toV4Format` method of `au.com.dius.pact.core.model.OptionalBody`.
     #
-    # + return - The `Map?` value returning from the Java mapping.
-    public function toV4Format() returns Map? {
+    # + return - The `Map` value returning from the Java mapping.
+    public function toV4Format() returns Map {
         handle externalObj = au_com_dius_pact_core_model_OptionalBody_toV4Format(self.jObj);
         Map newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `unwrap` method of `au.com.dius.pact.core.model.OptionalBody`.
@@ -253,16 +253,16 @@ public distinct class OptionalBody {
 
     # The function that maps to the `valueAsBase64` method of `au.com.dius.pact.core.model.OptionalBody`.
     #
-    # + return - The `string?` value returning from the Java mapping.
-    public function valueAsBase64() returns string? {
-        return java:toString(au_com_dius_pact_core_model_OptionalBody_valueAsBase64(self.jObj));
+    # + return - The `string` value returning from the Java mapping.
+    public function valueAsBase64() returns string {
+        return java:toString(au_com_dius_pact_core_model_OptionalBody_valueAsBase64(self.jObj)) ?: "";
     }
 
     # The function that maps to the `valueAsString` method of `au.com.dius.pact.core.model.OptionalBody`.
     #
-    # + return - The `string?` value returning from the Java mapping.
-    public function valueAsString() returns string? {
-        return java:toString(au_com_dius_pact_core_model_OptionalBody_valueAsString(self.jObj));
+    # + return - The `string` value returning from the Java mapping.
+    public function valueAsString() returns string {
+        return java:toString(au_com_dius_pact_core_model_OptionalBody_valueAsString(self.jObj)) ?: "";
     }
 
     # The function that maps to the `wait` method of `au.com.dius.pact.core.model.OptionalBody`.
@@ -305,61 +305,61 @@ public distinct class OptionalBody {
 
 # The constructor function to generate an object of `au.com.dius.pact.core.model.OptionalBody`.
 #
-# + arg0 - The `State?` value required to map with the Java constructor parameter.
+# + arg0 - The `State` value required to map with the Java constructor parameter.
 # + return - The new `OptionalBody` class generated.
-public function newOptionalBody1(State? arg0) returns OptionalBody {
-    handle externalObj = au_com_dius_pact_core_model_OptionalBody_newOptionalBody1(arg0 is () ? java:createNull() : arg0.jObj);
+public function newOptionalBody1(State arg0) returns OptionalBody {
+    handle externalObj = au_com_dius_pact_core_model_OptionalBody_newOptionalBody1(arg0.jObj);
     OptionalBody newObj = new (externalObj);
     return newObj;
 }
 
 # The constructor function to generate an object of `au.com.dius.pact.core.model.OptionalBody`.
 #
-# + arg0 - The `State?` value required to map with the Java constructor parameter.
+# + arg0 - The `State` value required to map with the Java constructor parameter.
 # + arg1 - The `byte[]` value required to map with the Java constructor parameter.
 # + return - The new `OptionalBody` class generated.
-public function newOptionalBody2(State? arg0, byte[] arg1) returns OptionalBody|error {
-    handle externalObj = au_com_dius_pact_core_model_OptionalBody_newOptionalBody2(arg0 is () ? java:createNull() : arg0.jObj, check jarrays:toHandle(arg1, "byte"));
+public function newOptionalBody2(State arg0, byte[] arg1) returns OptionalBody|error {
+    handle externalObj = au_com_dius_pact_core_model_OptionalBody_newOptionalBody2(arg0.jObj, check jarrays:toHandle(arg1, "byte"));
     OptionalBody newObj = new (externalObj);
     return newObj;
 }
 
 # The constructor function to generate an object of `au.com.dius.pact.core.model.OptionalBody`.
 #
-# + arg0 - The `State?` value required to map with the Java constructor parameter.
+# + arg0 - The `State` value required to map with the Java constructor parameter.
 # + arg1 - The `byte[]` value required to map with the Java constructor parameter.
-# + arg2 - The `ContentType?` value required to map with the Java constructor parameter.
+# + arg2 - The `ContentType` value required to map with the Java constructor parameter.
 # + return - The new `OptionalBody` class generated.
-public function newOptionalBody3(State? arg0, byte[] arg1, ContentType? arg2) returns OptionalBody|error {
-    handle externalObj = au_com_dius_pact_core_model_OptionalBody_newOptionalBody3(arg0 is () ? java:createNull() : arg0.jObj, check jarrays:toHandle(arg1, "byte"), arg2 is () ? java:createNull() : arg2.jObj);
+public function newOptionalBody3(State arg0, byte[] arg1, ContentType arg2) returns OptionalBody|error {
+    handle externalObj = au_com_dius_pact_core_model_OptionalBody_newOptionalBody3(arg0.jObj, check jarrays:toHandle(arg1, "byte"), arg2.jObj);
     OptionalBody newObj = new (externalObj);
     return newObj;
 }
 
 # The constructor function to generate an object of `au.com.dius.pact.core.model.OptionalBody`.
 #
-# + arg0 - The `State?` value required to map with the Java constructor parameter.
+# + arg0 - The `State` value required to map with the Java constructor parameter.
 # + arg1 - The `byte[]` value required to map with the Java constructor parameter.
-# + arg2 - The `ContentType?` value required to map with the Java constructor parameter.
-# + arg3 - The `ContentTypeHint?` value required to map with the Java constructor parameter.
+# + arg2 - The `ContentType` value required to map with the Java constructor parameter.
+# + arg3 - The `ContentTypeHint` value required to map with the Java constructor parameter.
 # + return - The new `OptionalBody` class generated.
-public function newOptionalBody4(State? arg0, byte[] arg1, ContentType? arg2, ContentTypeHint? arg3) returns OptionalBody|error {
-    handle externalObj = au_com_dius_pact_core_model_OptionalBody_newOptionalBody4(arg0 is () ? java:createNull() : arg0.jObj, check jarrays:toHandle(arg1, "byte"), arg2 is () ? java:createNull() : arg2.jObj, arg3 is () ? java:createNull() : arg3.jObj);
+public function newOptionalBody4(State arg0, byte[] arg1, ContentType arg2, ContentTypeHint arg3) returns OptionalBody|error {
+    handle externalObj = au_com_dius_pact_core_model_OptionalBody_newOptionalBody4(arg0.jObj, check jarrays:toHandle(arg1, "byte"), arg2.jObj, arg3.jObj);
     OptionalBody newObj = new (externalObj);
     return newObj;
 }
 
 # The constructor function to generate an object of `au.com.dius.pact.core.model.OptionalBody`.
 #
-# + arg0 - The `State?` value required to map with the Java constructor parameter.
+# + arg0 - The `State` value required to map with the Java constructor parameter.
 # + arg1 - The `byte[]` value required to map with the Java constructor parameter.
-# + arg2 - The `ContentType?` value required to map with the Java constructor parameter.
-# + arg3 - The `ContentTypeHint?` value required to map with the Java constructor parameter.
+# + arg2 - The `ContentType` value required to map with the Java constructor parameter.
+# + arg3 - The `ContentTypeHint` value required to map with the Java constructor parameter.
 # + arg4 - The `int` value required to map with the Java constructor parameter.
-# + arg5 - The `DefaultConstructorMarker?` value required to map with the Java constructor parameter.
+# + arg5 - The `DefaultConstructorMarker` value required to map with the Java constructor parameter.
 # + return - The new `OptionalBody` class generated.
-public function newOptionalBody5(State? arg0, byte[] arg1, ContentType? arg2, ContentTypeHint? arg3, int arg4, DefaultConstructorMarker? arg5) returns OptionalBody|error {
-    handle externalObj = au_com_dius_pact_core_model_OptionalBody_newOptionalBody5(arg0 is () ? java:createNull() : arg0.jObj, check jarrays:toHandle(arg1, "byte"), arg2 is () ? java:createNull() : arg2.jObj, arg3 is () ? java:createNull() : arg3.jObj, arg4, arg5 is () ? java:createNull() : arg5.jObj);
+public function newOptionalBody5(State arg0, byte[] arg1, ContentType arg2, ContentTypeHint arg3, int arg4, DefaultConstructorMarker arg5) returns OptionalBody|error {
+    handle externalObj = au_com_dius_pact_core_model_OptionalBody_newOptionalBody5(arg0.jObj, check jarrays:toHandle(arg1, "byte"), arg2.jObj, arg3.jObj, arg4, arg5.jObj);
     OptionalBody newObj = new (externalObj);
     return newObj;
 }
@@ -367,90 +367,90 @@ public function newOptionalBody5(State? arg0, byte[] arg1, ContentType? arg2, Co
 # The function that maps to the `body` method of `au.com.dius.pact.core.model.OptionalBody`.
 #
 # + arg0 - The `byte[]` value required to map with the Java method parameter.
-# + return - The `OptionalBody?` value returning from the Java mapping.
-public function OptionalBody_body(byte[] arg0) returns OptionalBody?|error {
+# + return - The `OptionalBody` value returning from the Java mapping.
+public function OptionalBody_body(byte[] arg0) returns OptionalBody|error {
     handle externalObj = au_com_dius_pact_core_model_OptionalBody_body(check jarrays:toHandle(arg0, "byte"));
     OptionalBody newObj = new (externalObj);
-    return java:isNull(newObj.jObj) ? () : newObj;
+    return newObj;
 }
 
 # The function that maps to the `body` method of `au.com.dius.pact.core.model.OptionalBody`.
 #
 # + arg0 - The `byte[]` value required to map with the Java method parameter.
-# + arg1 - The `ContentType?` value required to map with the Java method parameter.
-# + return - The `OptionalBody?` value returning from the Java mapping.
-public function OptionalBody_body2(byte[] arg0, ContentType? arg1) returns OptionalBody?|error {
-    handle externalObj = au_com_dius_pact_core_model_OptionalBody_body2(check jarrays:toHandle(arg0, "byte"), arg1 is () ? java:createNull() : arg1.jObj);
+# + arg1 - The `ContentType` value required to map with the Java method parameter.
+# + return - The `OptionalBody` value returning from the Java mapping.
+public function OptionalBody_body2(byte[] arg0, ContentType arg1) returns OptionalBody|error {
+    handle externalObj = au_com_dius_pact_core_model_OptionalBody_body2(check jarrays:toHandle(arg0, "byte"), arg1.jObj);
     OptionalBody newObj = new (externalObj);
-    return java:isNull(newObj.jObj) ? () : newObj;
+    return newObj;
 }
 
 # The function that maps to the `body` method of `au.com.dius.pact.core.model.OptionalBody`.
 #
 # + arg0 - The `byte[]` value required to map with the Java method parameter.
-# + arg1 - The `ContentType?` value required to map with the Java method parameter.
-# + arg2 - The `ContentTypeHint?` value required to map with the Java method parameter.
-# + return - The `OptionalBody?` value returning from the Java mapping.
-public function OptionalBody_body3(byte[] arg0, ContentType? arg1, ContentTypeHint? arg2) returns OptionalBody?|error {
-    handle externalObj = au_com_dius_pact_core_model_OptionalBody_body3(check jarrays:toHandle(arg0, "byte"), arg1 is () ? java:createNull() : arg1.jObj, arg2 is () ? java:createNull() : arg2.jObj);
+# + arg1 - The `ContentType` value required to map with the Java method parameter.
+# + arg2 - The `ContentTypeHint` value required to map with the Java method parameter.
+# + return - The `OptionalBody` value returning from the Java mapping.
+public function OptionalBody_body3(byte[] arg0, ContentType arg1, ContentTypeHint arg2) returns OptionalBody|error {
+    handle externalObj = au_com_dius_pact_core_model_OptionalBody_body3(check jarrays:toHandle(arg0, "byte"), arg1.jObj, arg2.jObj);
     OptionalBody newObj = new (externalObj);
-    return java:isNull(newObj.jObj) ? () : newObj;
+    return newObj;
 }
 
 # The function that maps to the `body` method of `au.com.dius.pact.core.model.OptionalBody`.
 #
-# + arg0 - The `string?` value required to map with the Java method parameter.
-# + return - The `OptionalBody?` value returning from the Java mapping.
-public function OptionalBody_body4(string? arg0) returns OptionalBody? {
-    handle externalObj = au_com_dius_pact_core_model_OptionalBody_body4(arg0 is () ? java:createNull() : java:fromString(arg0));
+# + arg0 - The `string` value required to map with the Java method parameter.
+# + return - The `OptionalBody` value returning from the Java mapping.
+public function OptionalBody_body4(string arg0) returns OptionalBody {
+    handle externalObj = au_com_dius_pact_core_model_OptionalBody_body4(java:fromString(arg0));
     OptionalBody newObj = new (externalObj);
-    return java:isNull(newObj.jObj) ? () : newObj;
+    return newObj;
 }
 
 # The function that maps to the `body` method of `au.com.dius.pact.core.model.OptionalBody`.
 #
-# + arg0 - The `string?` value required to map with the Java method parameter.
-# + arg1 - The `ContentType?` value required to map with the Java method parameter.
-# + return - The `OptionalBody?` value returning from the Java mapping.
-public function OptionalBody_body5(string? arg0, ContentType? arg1) returns OptionalBody? {
-    handle externalObj = au_com_dius_pact_core_model_OptionalBody_body5(arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : arg1.jObj);
+# + arg0 - The `string` value required to map with the Java method parameter.
+# + arg1 - The `ContentType` value required to map with the Java method parameter.
+# + return - The `OptionalBody` value returning from the Java mapping.
+public function OptionalBody_body5(string arg0, ContentType arg1) returns OptionalBody {
+    handle externalObj = au_com_dius_pact_core_model_OptionalBody_body5(java:fromString(arg0), arg1.jObj);
     OptionalBody newObj = new (externalObj);
-    return java:isNull(newObj.jObj) ? () : newObj;
+    return newObj;
 }
 
 # The function that maps to the `empty` method of `au.com.dius.pact.core.model.OptionalBody`.
 #
-# + return - The `OptionalBody?` value returning from the Java mapping.
-public function OptionalBody_empty() returns OptionalBody? {
+# + return - The `OptionalBody` value returning from the Java mapping.
+public function OptionalBody_empty() returns OptionalBody {
     handle externalObj = au_com_dius_pact_core_model_OptionalBody_empty();
     OptionalBody newObj = new (externalObj);
-    return java:isNull(newObj.jObj) ? () : newObj;
+    return newObj;
 }
 
 # The function that maps to the `missing` method of `au.com.dius.pact.core.model.OptionalBody`.
 #
-# + return - The `OptionalBody?` value returning from the Java mapping.
-public function OptionalBody_missing() returns OptionalBody? {
+# + return - The `OptionalBody` value returning from the Java mapping.
+public function OptionalBody_missing() returns OptionalBody {
     handle externalObj = au_com_dius_pact_core_model_OptionalBody_missing();
     OptionalBody newObj = new (externalObj);
-    return java:isNull(newObj.jObj) ? () : newObj;
+    return newObj;
 }
 
 # The function that maps to the `nullBody` method of `au.com.dius.pact.core.model.OptionalBody`.
 #
-# + return - The `OptionalBody?` value returning from the Java mapping.
-public function OptionalBody_nullBody() returns OptionalBody? {
+# + return - The `OptionalBody` value returning from the Java mapping.
+public function OptionalBody_nullBody() returns OptionalBody {
     handle externalObj = au_com_dius_pact_core_model_OptionalBody_nullBody();
     OptionalBody newObj = new (externalObj);
-    return java:isNull(newObj.jObj) ? () : newObj;
+    return newObj;
 }
 
 # The function that retrieves the value of the public field `Companion`.
 #
-# + return - The `Companion?` value of the field.
-public function OptionalBody_getCompanion() returns Companion? {
+# + return - The `Companion` value of the field.
+public function OptionalBody_getCompanion() returns Companion {
     handle externalObj = au_com_dius_pact_core_model_OptionalBody_getCompanion();
-    Companion? newObj = new (externalObj);
+    Companion newObj = new (externalObj);
     return newObj;
 }
 

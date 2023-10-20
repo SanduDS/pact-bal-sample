@@ -21,8 +21,8 @@ public distinct class File {
     # The function to retrieve the string representation of the Ballerina class mapping the `java.io.File` Java class.
     #
     # + return - The `string` form of the Java object instance.
-    public function toString() returns string? {
-        return java:toString(self.jObj);
+    public function toString() returns string {
+        return java:toString(self.jObj) ?: "";
     }
     # The function that maps to the `canExecute` method of `java.io.File`.
     #
@@ -47,10 +47,10 @@ public distinct class File {
 
     # The function that maps to the `compareTo` method of `java.io.File`.
     #
-    # + arg0 - The `File?` value required to map with the Java method parameter.
+    # + arg0 - The `File` value required to map with the Java method parameter.
     # + return - The `int` value returning from the Java mapping.
-    public function compareTo(File? arg0) returns int {
-        return java_io_File_compareTo(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    public function compareTo(File arg0) returns int {
+        return java_io_File_compareTo(self.jObj, arg0.jObj);
     }
 
     # The function that maps to the `createNewFile` method of `java.io.File`.
@@ -80,10 +80,10 @@ public distinct class File {
 
     # The function that maps to the `equals` method of `java.io.File`.
     #
-    # + arg0 - The `Object?` value required to map with the Java method parameter.
+    # + arg0 - The `Object` value required to map with the Java method parameter.
     # + return - The `boolean` value returning from the Java mapping.
-    public function 'equals(Object? arg0) returns boolean {
-        return java_io_File_equals(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    public function 'equals(Object arg0) returns boolean {
+        return java_io_File_equals(self.jObj, arg0.jObj);
     }
 
     # The function that maps to the `exists` method of `java.io.File`.
@@ -95,54 +95,54 @@ public distinct class File {
 
     # The function that maps to the `getAbsoluteFile` method of `java.io.File`.
     #
-    # + return - The `File?` value returning from the Java mapping.
-    public function getAbsoluteFile() returns File? {
+    # + return - The `File` value returning from the Java mapping.
+    public function getAbsoluteFile() returns File {
         handle externalObj = java_io_File_getAbsoluteFile(self.jObj);
         File newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `getAbsolutePath` method of `java.io.File`.
     #
-    # + return - The `string?` value returning from the Java mapping.
-    public function getAbsolutePath() returns string? {
-        return java:toString(java_io_File_getAbsolutePath(self.jObj));
+    # + return - The `string` value returning from the Java mapping.
+    public function getAbsolutePath() returns string {
+        return java:toString(java_io_File_getAbsolutePath(self.jObj)) ?: "";
     }
 
     # The function that maps to the `getCanonicalFile` method of `java.io.File`.
     #
-    # + return - The `File?` or the `IOException` value returning from the Java mapping.
-    public function getCanonicalFile() returns File?|IOException {
+    # + return - The `File` or the `IOException` value returning from the Java mapping.
+    public function getCanonicalFile() returns File|IOException {
         handle|error externalObj = java_io_File_getCanonicalFile(self.jObj);
         if (externalObj is error) {
             IOException e = error IOException(IOEXCEPTION, externalObj, message = externalObj.message());
             return e;
         } else {
-            File? newObj = new (externalObj);
+            File newObj = new (externalObj);
             return newObj;
         }
     }
 
     # The function that maps to the `getCanonicalPath` method of `java.io.File`.
     #
-    # + return - The `string?` or the `IOException` value returning from the Java mapping.
-    public function getCanonicalPath() returns string?|IOException {
+    # + return - The `string` or the `IOException` value returning from the Java mapping.
+    public function getCanonicalPath() returns string|IOException {
         handle|error externalObj = java_io_File_getCanonicalPath(self.jObj);
         if (externalObj is error) {
             IOException e = error IOException(IOEXCEPTION, externalObj, message = externalObj.message());
             return e;
         } else {
-            return java:toString(externalObj);
+            return java:toString(externalObj) ?: "";
         }
     }
 
     # The function that maps to the `getClass` method of `java.io.File`.
     #
-    # + return - The `Class?` value returning from the Java mapping.
-    public function getClass() returns Class? {
+    # + return - The `Class` value returning from the Java mapping.
+    public function getClass() returns Class {
         handle externalObj = java_io_File_getClass(self.jObj);
         Class newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `getFreeSpace` method of `java.io.File`.
@@ -154,32 +154,32 @@ public distinct class File {
 
     # The function that maps to the `getName` method of `java.io.File`.
     #
-    # + return - The `string?` value returning from the Java mapping.
-    public function getName() returns string? {
-        return java:toString(java_io_File_getName(self.jObj));
+    # + return - The `string` value returning from the Java mapping.
+    public function getName() returns string {
+        return java:toString(java_io_File_getName(self.jObj)) ?: "";
     }
 
     # The function that maps to the `getParent` method of `java.io.File`.
     #
-    # + return - The `string?` value returning from the Java mapping.
-    public function getParent() returns string? {
-        return java:toString(java_io_File_getParent(self.jObj));
+    # + return - The `string` value returning from the Java mapping.
+    public function getParent() returns string {
+        return java:toString(java_io_File_getParent(self.jObj)) ?: "";
     }
 
     # The function that maps to the `getParentFile` method of `java.io.File`.
     #
-    # + return - The `File?` value returning from the Java mapping.
-    public function getParentFile() returns File? {
+    # + return - The `File` value returning from the Java mapping.
+    public function getParentFile() returns File {
         handle externalObj = java_io_File_getParentFile(self.jObj);
         File newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `getPath` method of `java.io.File`.
     #
-    # + return - The `string?` value returning from the Java mapping.
-    public function getPath() returns string? {
-        return java:toString(java_io_File_getPath(self.jObj));
+    # + return - The `string` value returning from the Java mapping.
+    public function getPath() returns string {
+        return java:toString(java_io_File_getPath(self.jObj)) ?: "";
     }
 
     # The function that maps to the `getTotalSpace` method of `java.io.File`.
@@ -247,76 +247,70 @@ public distinct class File {
 
     # The function that maps to the `list` method of `java.io.File`.
     #
-    # + return - The `string?[]?` value returning from the Java mapping.
-    public function list() returns string?[]?|error {
+    # + return - The `string[]` value returning from the Java mapping.
+    public function list() returns string[]|error {
         handle externalObj = java_io_File_list(self.jObj);
         if java:isNull(externalObj) {
-            return ();
+            return [];
         }
         return <string[]>check jarrays:fromHandle(externalObj, "string");
     }
 
     # The function that maps to the `list` method of `java.io.File`.
     #
-    # + arg0 - The `FilenameFilter?` value required to map with the Java method parameter.
-    # + return - The `string?[]?` value returning from the Java mapping.
-    public function list2(FilenameFilter? arg0) returns string?[]?|error {
-        handle externalObj = java_io_File_list2(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    # + arg0 - The `FilenameFilter` value required to map with the Java method parameter.
+    # + return - The `string[]` value returning from the Java mapping.
+    public function list2(FilenameFilter arg0) returns string[]|error {
+        handle externalObj = java_io_File_list2(self.jObj, arg0.jObj);
         if java:isNull(externalObj) {
-            return ();
+            return [];
         }
         return <string[]>check jarrays:fromHandle(externalObj, "string");
     }
 
     # The function that maps to the `listFiles` method of `java.io.File`.
     #
-    # + return - The `File?[]?` value returning from the Java mapping.
-    public function listFiles() returns File?[]?|error {
+    # + return - The `File[]` value returning from the Java mapping.
+    public function listFiles() returns File[]|error {
         handle externalObj = java_io_File_listFiles(self.jObj);
-        File?[]? newObj = [];
+        File[] newObj = [];
         handle[] anyObj = <handle[]>check jarrays:fromHandle(externalObj, "handle");
         int count = anyObj.length();
         foreach int i in 0 ... count - 1 {
-            File? element = new (anyObj[i]);
-            if (newObj is File?[]) {
-                newObj[i] = element;
-            }
+            File element = new (anyObj[i]);
+            newObj[i] = element;
         }
         return newObj;
     }
 
     # The function that maps to the `listFiles` method of `java.io.File`.
     #
-    # + arg0 - The `FileFilter?` value required to map with the Java method parameter.
-    # + return - The `File?[]?` value returning from the Java mapping.
-    public function listFiles2(FileFilter? arg0) returns File?[]?|error {
-        handle externalObj = java_io_File_listFiles2(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
-        File?[]? newObj = [];
+    # + arg0 - The `FileFilter` value required to map with the Java method parameter.
+    # + return - The `File[]` value returning from the Java mapping.
+    public function listFiles2(FileFilter arg0) returns File[]|error {
+        handle externalObj = java_io_File_listFiles2(self.jObj, arg0.jObj);
+        File[] newObj = [];
         handle[] anyObj = <handle[]>check jarrays:fromHandle(externalObj, "handle");
         int count = anyObj.length();
         foreach int i in 0 ... count - 1 {
-            File? element = new (anyObj[i]);
-            if (newObj is File?[]) {
-                newObj[i] = element;
-            }
+            File element = new (anyObj[i]);
+            newObj[i] = element;
         }
         return newObj;
     }
 
     # The function that maps to the `listFiles` method of `java.io.File`.
     #
-    # + arg0 - The `FilenameFilter?` value required to map with the Java method parameter.
-    # + return - The `File?[]?` value returning from the Java mapping.
-    public function listFiles3(FilenameFilter? arg0) returns File?[]?|error {
-        handle externalObj = java_io_File_listFiles3(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
-        File?[]? newObj = [];
+    # + arg0 - The `FilenameFilter` value required to map with the Java method parameter.
+    # + return - The `File[]` value returning from the Java mapping.
+    public function listFiles3(FilenameFilter arg0) returns File[]|error {
+        handle externalObj = java_io_File_listFiles3(self.jObj, arg0.jObj);
+        File[] newObj = [];
         handle[] anyObj = <handle[]>check jarrays:fromHandle(externalObj, "handle");
         int count = anyObj.length();
         foreach int i in 0 ... count - 1 {
-            File? element = new (anyObj[i]);
-            if (newObj is File?[]) {
-                newObj[i] = element;
-            }
+            File element = new (anyObj[i]);
+            newObj[i] = element;
         }
         return newObj;
     }
@@ -347,10 +341,10 @@ public distinct class File {
 
     # The function that maps to the `renameTo` method of `java.io.File`.
     #
-    # + arg0 - The `File?` value required to map with the Java method parameter.
+    # + arg0 - The `File` value required to map with the Java method parameter.
     # + return - The `boolean` value returning from the Java mapping.
-    public function renameTo(File? arg0) returns boolean {
-        return java_io_File_renameTo(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    public function renameTo(File arg0) returns boolean {
+        return java_io_File_renameTo(self.jObj, arg0.jObj);
     }
 
     # The function that maps to the `setExecutable` method of `java.io.File`.
@@ -421,32 +415,32 @@ public distinct class File {
 
     # The function that maps to the `toPath` method of `java.io.File`.
     #
-    # + return - The `Path?` value returning from the Java mapping.
-    public function toPath() returns Path? {
+    # + return - The `Path` value returning from the Java mapping.
+    public function toPath() returns Path {
         handle externalObj = java_io_File_toPath(self.jObj);
         Path newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `toURI` method of `java.io.File`.
     #
-    # + return - The `URI?` value returning from the Java mapping.
-    public function toURI() returns URI? {
+    # + return - The `URI` value returning from the Java mapping.
+    public function toURI() returns URI {
         handle externalObj = java_io_File_toURI(self.jObj);
         URI newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `toURL` method of `java.io.File`.
     #
-    # + return - The `URL?` or the `MalformedURLException` value returning from the Java mapping.
-    public function toURL() returns URL?|MalformedURLException {
+    # + return - The `URL` or the `MalformedURLException` value returning from the Java mapping.
+    public function toURL() returns URL|MalformedURLException {
         handle|error externalObj = java_io_File_toURL(self.jObj);
         if (externalObj is error) {
             MalformedURLException e = error MalformedURLException(MALFORMEDURLEXCEPTION, externalObj, message = externalObj.message());
             return e;
         } else {
-            URL? newObj = new (externalObj);
+            URL newObj = new (externalObj);
             return newObj;
         }
     }
@@ -491,92 +485,90 @@ public distinct class File {
 
 # The constructor function to generate an object of `java.io.File`.
 #
-# + arg0 - The `File?` value required to map with the Java constructor parameter.
-# + arg1 - The `string?` value required to map with the Java constructor parameter.
+# + arg0 - The `File` value required to map with the Java constructor parameter.
+# + arg1 - The `string` value required to map with the Java constructor parameter.
 # + return - The new `File` class generated.
-public function newFile1(File? arg0, string? arg1) returns File {
-    handle externalObj = java_io_File_newFile1(arg0 is () ? java:createNull() : arg0.jObj, arg1 is () ? java:createNull() : java:fromString(arg1));
+public function newFile1(File arg0, string arg1) returns File {
+    handle externalObj = java_io_File_newFile1(arg0.jObj, java:fromString(arg1));
     File newObj = new (externalObj);
     return newObj;
 }
 
 # The constructor function to generate an object of `java.io.File`.
 #
-# + arg0 - The `string?` value required to map with the Java constructor parameter.
+# + arg0 - The `string` value required to map with the Java constructor parameter.
 # + return - The new `File` class generated.
-public function newFile2(string? arg0) returns File {
-    handle externalObj = java_io_File_newFile2(arg0 is () ? java:createNull() : java:fromString(arg0));
+public function newFile2(string arg0) returns File {
+    handle externalObj = java_io_File_newFile2(java:fromString(arg0));
     File newObj = new (externalObj);
     return newObj;
 }
 
 # The constructor function to generate an object of `java.io.File`.
 #
-# + arg0 - The `string?` value required to map with the Java constructor parameter.
-# + arg1 - The `string?` value required to map with the Java constructor parameter.
+# + arg0 - The `string` value required to map with the Java constructor parameter.
+# + arg1 - The `string` value required to map with the Java constructor parameter.
 # + return - The new `File` class generated.
-public function newFile3(string? arg0, string? arg1) returns File {
-    handle externalObj = java_io_File_newFile3(arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : java:fromString(arg1));
+public function newFile3(string arg0, string arg1) returns File {
+    handle externalObj = java_io_File_newFile3(java:fromString(arg0), java:fromString(arg1));
     File newObj = new (externalObj);
     return newObj;
 }
 
 # The constructor function to generate an object of `java.io.File`.
 #
-# + arg0 - The `URI?` value required to map with the Java constructor parameter.
+# + arg0 - The `URI` value required to map with the Java constructor parameter.
 # + return - The new `File` class generated.
-public function newFile4(URI? arg0) returns File {
-    handle externalObj = java_io_File_newFile4(arg0 is () ? java:createNull() : arg0.jObj);
+public function newFile4(URI arg0) returns File {
+    handle externalObj = java_io_File_newFile4(arg0.jObj);
     File newObj = new (externalObj);
     return newObj;
 }
 
 # The function that maps to the `createTempFile` method of `java.io.File`.
 #
-# + arg0 - The `string?` value required to map with the Java method parameter.
-# + arg1 - The `string?` value required to map with the Java method parameter.
-# + return - The `File?` or the `IOException` value returning from the Java mapping.
-public function File_createTempFile(string? arg0, string? arg1) returns File?|IOException {
-    handle|error externalObj = java_io_File_createTempFile(arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : java:fromString(arg1));
+# + arg0 - The `string` value required to map with the Java method parameter.
+# + arg1 - The `string` value required to map with the Java method parameter.
+# + return - The `File` or the `IOException` value returning from the Java mapping.
+public function File_createTempFile(string arg0, string arg1) returns File|IOException {
+    handle|error externalObj = java_io_File_createTempFile(java:fromString(arg0), java:fromString(arg1));
     if (externalObj is error) {
         IOException e = error IOException(IOEXCEPTION, externalObj, message = externalObj.message());
         return e;
     } else {
-        File? newObj = new (externalObj);
+        File newObj = new (externalObj);
         return newObj;
     }
 }
 
 # The function that maps to the `createTempFile` method of `java.io.File`.
 #
-# + arg0 - The `string?` value required to map with the Java method parameter.
-# + arg1 - The `string?` value required to map with the Java method parameter.
-# + arg2 - The `File?` value required to map with the Java method parameter.
-# + return - The `File?` or the `IOException` value returning from the Java mapping.
-public function File_createTempFile2(string? arg0, string? arg1, File? arg2) returns File?|IOException {
-    handle|error externalObj = java_io_File_createTempFile2(arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : java:fromString(arg1), arg2 is () ? java:createNull() : arg2.jObj);
+# + arg0 - The `string` value required to map with the Java method parameter.
+# + arg1 - The `string` value required to map with the Java method parameter.
+# + arg2 - The `File` value required to map with the Java method parameter.
+# + return - The `File` or the `IOException` value returning from the Java mapping.
+public function File_createTempFile2(string arg0, string arg1, File arg2) returns File|IOException {
+    handle|error externalObj = java_io_File_createTempFile2(java:fromString(arg0), java:fromString(arg1), arg2.jObj);
     if (externalObj is error) {
         IOException e = error IOException(IOEXCEPTION, externalObj, message = externalObj.message());
         return e;
     } else {
-        File? newObj = new (externalObj);
+        File newObj = new (externalObj);
         return newObj;
     }
 }
 
 # The function that maps to the `listRoots` method of `java.io.File`.
 #
-# + return - The `File?[]?` value returning from the Java mapping.
-public function File_listRoots() returns File?[]?|error {
+# + return - The `File[]` value returning from the Java mapping.
+public function File_listRoots() returns File[]|error {
     handle externalObj = java_io_File_listRoots();
-    File?[]? newObj = [];
+    File[] newObj = [];
     handle[] anyObj = <handle[]>check jarrays:fromHandle(externalObj, "handle");
     int count = anyObj.length();
     foreach int i in 0 ... count - 1 {
-        File? element = new (anyObj[i]);
-        if (newObj is File?[]) {
-            newObj[i] = element;
-        }
+        File element = new (anyObj[i]);
+        newObj[i] = element;
     }
     return newObj;
 }
@@ -590,9 +582,9 @@ public function File_getSeparatorChar() returns int {
 
 # The function that retrieves the value of the public field `separator`.
 #
-# + return - The `string?` value of the field.
-public function File_getSeparator() returns string? {
-    return java:toString(java_io_File_getSeparator());
+# + return - The `string` value of the field.
+public function File_getSeparator() returns string {
+    return java:toString(java_io_File_getSeparator()) ?: "";
 }
 
 # The function that retrieves the value of the public field `pathSeparatorChar`.
@@ -604,9 +596,9 @@ public function File_getPathSeparatorChar() returns int {
 
 # The function that retrieves the value of the public field `pathSeparator`.
 #
-# + return - The `string?` value of the field.
-public function File_getPathSeparator() returns string? {
-    return java:toString(java_io_File_getPathSeparator());
+# + return - The `string` value of the field.
+public function File_getPathSeparator() returns string {
+    return java:toString(java_io_File_getPathSeparator()) ?: "";
 }
 
 function java_io_File_canExecute(handle receiver) returns boolean = @java:Method {

@@ -14,7 +14,7 @@ import ballerina/jballerina.java;
 
 # Ballerina class mapping for the Java `java.util.Map` interface.
 @java:Binding {'class: "java.util.Map"}
-distinct class Map {
+public distinct class Map {
 
     *java:JObject;
 

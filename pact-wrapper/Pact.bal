@@ -14,7 +14,7 @@ import ballerina/jballerina.java;
 
 # Ballerina class mapping for the Java `au.com.dius.pact.core.model.Pact` interface.
 @java:Binding {'class: "au.com.dius.pact.core.model.Pact"}
-distinct class Pact {
+public distinct class Pact {
 
     *java:JObject;
 

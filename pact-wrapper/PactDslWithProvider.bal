@@ -21,98 +21,98 @@ public distinct class PactDslWithProvider {
     # The function to retrieve the string representation of the Ballerina class mapping the `au.com.dius.pact.consumer.dsl.PactDslWithProvider` Java class.
     #
     # + return - The `string` form of the Java object instance.
-    public function toString() returns string? {
-        return java:toString(self.jObj);
+    public function toString() returns string {
+        return java:toString(self.jObj) ?: "";
     }
     # The function that maps to the `addMetadataValue` method of `au.com.dius.pact.consumer.dsl.PactDslWithProvider`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    # + arg1 - The `JsonValue?` value required to map with the Java method parameter.
-    # + return - The `PactDslWithProvider?` value returning from the Java mapping.
-    public function addMetadataValue(string? arg0, JsonValue? arg1) returns PactDslWithProvider? {
-        handle externalObj = au_com_dius_pact_consumer_dsl_PactDslWithProvider_addMetadataValue(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : arg1.jObj);
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    # + arg1 - The `JsonValue` value required to map with the Java method parameter.
+    # + return - The `PactDslWithProvider` value returning from the Java mapping.
+    public function addMetadataValue(string arg0, JsonValue arg1) returns PactDslWithProvider {
+        handle externalObj = au_com_dius_pact_consumer_dsl_PactDslWithProvider_addMetadataValue(self.jObj, java:fromString(arg0), arg1.jObj);
         PactDslWithProvider newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `addMetadataValue` method of `au.com.dius.pact.consumer.dsl.PactDslWithProvider`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    # + arg1 - The `string?` value required to map with the Java method parameter.
-    # + return - The `PactDslWithProvider?` value returning from the Java mapping.
-    public function addMetadataValue2(string? arg0, string? arg1) returns PactDslWithProvider? {
-        handle externalObj = au_com_dius_pact_consumer_dsl_PactDslWithProvider_addMetadataValue2(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : java:fromString(arg1));
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    # + arg1 - The `string` value required to map with the Java method parameter.
+    # + return - The `PactDslWithProvider` value returning from the Java mapping.
+    public function addMetadataValue2(string arg0, string arg1) returns PactDslWithProvider {
+        handle externalObj = au_com_dius_pact_consumer_dsl_PactDslWithProvider_addMetadataValue2(self.jObj, java:fromString(arg0), java:fromString(arg1));
         PactDslWithProvider newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `equals` method of `au.com.dius.pact.consumer.dsl.PactDslWithProvider`.
     #
-    # + arg0 - The `Object?` value required to map with the Java method parameter.
+    # + arg0 - The `Object` value required to map with the Java method parameter.
     # + return - The `boolean` value returning from the Java mapping.
-    public function 'equals(Object? arg0) returns boolean {
-        return au_com_dius_pact_consumer_dsl_PactDslWithProvider_equals(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    public function 'equals(Object arg0) returns boolean {
+        return au_com_dius_pact_consumer_dsl_PactDslWithProvider_equals(self.jObj, arg0.jObj);
     }
 
     # The function that maps to the `getClass` method of `au.com.dius.pact.consumer.dsl.PactDslWithProvider`.
     #
-    # + return - The `Class?` value returning from the Java mapping.
-    public function getClass() returns Class? {
+    # + return - The `Class` value returning from the Java mapping.
+    public function getClass() returns Class {
         handle externalObj = au_com_dius_pact_consumer_dsl_PactDslWithProvider_getClass(self.jObj);
         Class newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `getConsumerPactBuilder` method of `au.com.dius.pact.consumer.dsl.PactDslWithProvider`.
     #
-    # + return - The `ConsumerPactBuilder?` value returning from the Java mapping.
-    public function getConsumerPactBuilder() returns ConsumerPactBuilder? {
+    # + return - The `ConsumerPactBuilder` value returning from the Java mapping.
+    public function getConsumerPactBuilder() returns ConsumerPactBuilder {
         handle externalObj = au_com_dius_pact_consumer_dsl_PactDslWithProvider_getConsumerPactBuilder(self.jObj);
         ConsumerPactBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `getVersion` method of `au.com.dius.pact.consumer.dsl.PactDslWithProvider`.
     #
-    # + return - The `PactSpecVersion?` value returning from the Java mapping.
-    public function getVersion() returns PactSpecVersion? {
+    # + return - The `PactSpecVersion` value returning from the Java mapping.
+    public function getVersion() returns PactSpecVersion {
         handle externalObj = au_com_dius_pact_consumer_dsl_PactDslWithProvider_getVersion(self.jObj);
         PactSpecVersion newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `given` method of `au.com.dius.pact.consumer.dsl.PactDslWithProvider`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    # + return - The `PactDslWithState?` value returning from the Java mapping.
-    public function given(string? arg0) returns PactDslWithState? {
-        handle externalObj = au_com_dius_pact_consumer_dsl_PactDslWithProvider_given(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0));
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    # + return - The `PactDslWithState` value returning from the Java mapping.
+    public function given(string arg0) returns PactDslWithState {
+        handle externalObj = au_com_dius_pact_consumer_dsl_PactDslWithProvider_given(self.jObj, java:fromString(arg0));
         PactDslWithState newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `given` method of `au.com.dius.pact.consumer.dsl.PactDslWithProvider`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    # + arg1 - The `Map?` value required to map with the Java method parameter.
-    # + return - The `PactDslWithState?` value returning from the Java mapping.
-    public function given2(string? arg0, Map? arg1) returns PactDslWithState? {
-        handle externalObj = au_com_dius_pact_consumer_dsl_PactDslWithProvider_given2(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : arg1.jObj);
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    # + arg1 - The `Map` value required to map with the Java method parameter.
+    # + return - The `PactDslWithState` value returning from the Java mapping.
+    public function given2(string arg0, Map arg1) returns PactDslWithState {
+        handle externalObj = au_com_dius_pact_consumer_dsl_PactDslWithProvider_given2(self.jObj, java:fromString(arg0), arg1.jObj);
         PactDslWithState newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `given` method of `au.com.dius.pact.consumer.dsl.PactDslWithProvider`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    # + arg1 - The `string?` value required to map with the Java method parameter.
-    # + arg2 - The `Object?` value required to map with the Java method parameter.
-    # + arg3 - The `Object?[]?` value required to map with the Java method parameter.
-    # + return - The `PactDslWithState?` value returning from the Java mapping.
-    public function given3(string? arg0, string? arg1, Object? arg2, Object?[]? arg3) returns PactDslWithState?|error {
-        handle externalObj = au_com_dius_pact_consumer_dsl_PactDslWithProvider_given3(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : java:fromString(arg1), arg2 is () ? java:createNull() : arg2.jObj, check jarrays:toHandle(arg3 ?: [], "java.lang.Object"));
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    # + arg1 - The `string` value required to map with the Java method parameter.
+    # + arg2 - The `Object` value required to map with the Java method parameter.
+    # + arg3 - The `Object[]` value required to map with the Java method parameter.
+    # + return - The `PactDslWithState` value returning from the Java mapping.
+    public function given3(string arg0, string arg1, Object arg2, Object[] arg3) returns PactDslWithState|error {
+        handle externalObj = au_com_dius_pact_consumer_dsl_PactDslWithProvider_given3(self.jObj, java:fromString(arg0), java:fromString(arg1), arg2.jObj, check jarrays:toHandle(arg3, "java.lang.Object"));
         PactDslWithState newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `hashCode` method of `au.com.dius.pact.consumer.dsl.PactDslWithProvider`.
@@ -134,26 +134,26 @@ public distinct class PactDslWithProvider {
 
     # The function that maps to the `setDefaultRequestValues` method of `au.com.dius.pact.consumer.dsl.PactDslWithProvider`.
     #
-    # + arg0 - The `PactDslRequestWithoutPath?` value required to map with the Java method parameter.
-    public function setDefaultRequestValues(PactDslRequestWithoutPath? arg0) {
-        au_com_dius_pact_consumer_dsl_PactDslWithProvider_setDefaultRequestValues(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    # + arg0 - The `PactDslRequestWithoutPath` value required to map with the Java method parameter.
+    public function setDefaultRequestValues(PactDslRequestWithoutPath arg0) {
+        au_com_dius_pact_consumer_dsl_PactDslWithProvider_setDefaultRequestValues(self.jObj, arg0.jObj);
     }
 
     # The function that maps to the `setDefaultResponseValues` method of `au.com.dius.pact.consumer.dsl.PactDslWithProvider`.
     #
-    # + arg0 - The `PactDslResponse?` value required to map with the Java method parameter.
-    public function setDefaultResponseValues(PactDslResponse? arg0) {
-        au_com_dius_pact_consumer_dsl_PactDslWithProvider_setDefaultResponseValues(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    # + arg0 - The `PactDslResponse` value required to map with the Java method parameter.
+    public function setDefaultResponseValues(PactDslResponse arg0) {
+        au_com_dius_pact_consumer_dsl_PactDslWithProvider_setDefaultResponseValues(self.jObj, arg0.jObj);
     }
 
     # The function that maps to the `uponReceiving` method of `au.com.dius.pact.consumer.dsl.PactDslWithProvider`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    # + return - The `PactDslRequestWithoutPath?` value returning from the Java mapping.
-    public function uponReceiving(string? arg0) returns PactDslRequestWithoutPath? {
-        handle externalObj = au_com_dius_pact_consumer_dsl_PactDslWithProvider_uponReceiving(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0));
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    # + return - The `PactDslRequestWithoutPath` value returning from the Java mapping.
+    public function uponReceiving(string arg0) returns PactDslRequestWithoutPath {
+        handle externalObj = au_com_dius_pact_consumer_dsl_PactDslWithProvider_uponReceiving(self.jObj, java:fromString(arg0));
         PactDslRequestWithoutPath newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `wait` method of `au.com.dius.pact.consumer.dsl.PactDslWithProvider`.
@@ -196,37 +196,37 @@ public distinct class PactDslWithProvider {
 
 # The constructor function to generate an object of `au.com.dius.pact.consumer.dsl.PactDslWithProvider`.
 #
-# + arg0 - The `ConsumerPactBuilder?` value required to map with the Java constructor parameter.
-# + arg1 - The `string?` value required to map with the Java constructor parameter.
+# + arg0 - The `ConsumerPactBuilder` value required to map with the Java constructor parameter.
+# + arg1 - The `string` value required to map with the Java constructor parameter.
 # + return - The new `PactDslWithProvider` class generated.
-public function newPactDslWithProvider1(ConsumerPactBuilder? arg0, string? arg1) returns PactDslWithProvider {
-    handle externalObj = au_com_dius_pact_consumer_dsl_PactDslWithProvider_newPactDslWithProvider1(arg0 is () ? java:createNull() : arg0.jObj, arg1 is () ? java:createNull() : java:fromString(arg1));
+public function newPactDslWithProvider1(ConsumerPactBuilder arg0, string arg1) returns PactDslWithProvider {
+    handle externalObj = au_com_dius_pact_consumer_dsl_PactDslWithProvider_newPactDslWithProvider1(arg0.jObj, java:fromString(arg1));
     PactDslWithProvider newObj = new (externalObj);
     return newObj;
 }
 
 # The constructor function to generate an object of `au.com.dius.pact.consumer.dsl.PactDslWithProvider`.
 #
-# + arg0 - The `ConsumerPactBuilder?` value required to map with the Java constructor parameter.
-# + arg1 - The `string?` value required to map with the Java constructor parameter.
-# + arg2 - The `PactSpecVersion?` value required to map with the Java constructor parameter.
+# + arg0 - The `ConsumerPactBuilder` value required to map with the Java constructor parameter.
+# + arg1 - The `string` value required to map with the Java constructor parameter.
+# + arg2 - The `PactSpecVersion` value required to map with the Java constructor parameter.
 # + return - The new `PactDslWithProvider` class generated.
-public function newPactDslWithProvider2(ConsumerPactBuilder? arg0, string? arg1, PactSpecVersion? arg2) returns PactDslWithProvider {
-    handle externalObj = au_com_dius_pact_consumer_dsl_PactDslWithProvider_newPactDslWithProvider2(arg0 is () ? java:createNull() : arg0.jObj, arg1 is () ? java:createNull() : java:fromString(arg1), arg2 is () ? java:createNull() : arg2.jObj);
+public function newPactDslWithProvider2(ConsumerPactBuilder arg0, string arg1, PactSpecVersion arg2) returns PactDslWithProvider {
+    handle externalObj = au_com_dius_pact_consumer_dsl_PactDslWithProvider_newPactDslWithProvider2(arg0.jObj, java:fromString(arg1), arg2.jObj);
     PactDslWithProvider newObj = new (externalObj);
     return newObj;
 }
 
 # The constructor function to generate an object of `au.com.dius.pact.consumer.dsl.PactDslWithProvider`.
 #
-# + arg0 - The `ConsumerPactBuilder?` value required to map with the Java constructor parameter.
-# + arg1 - The `string?` value required to map with the Java constructor parameter.
-# + arg2 - The `PactSpecVersion?` value required to map with the Java constructor parameter.
+# + arg0 - The `ConsumerPactBuilder` value required to map with the Java constructor parameter.
+# + arg1 - The `string` value required to map with the Java constructor parameter.
+# + arg2 - The `PactSpecVersion` value required to map with the Java constructor parameter.
 # + arg3 - The `int` value required to map with the Java constructor parameter.
-# + arg4 - The `DefaultConstructorMarker?` value required to map with the Java constructor parameter.
+# + arg4 - The `DefaultConstructorMarker` value required to map with the Java constructor parameter.
 # + return - The new `PactDslWithProvider` class generated.
-public function newPactDslWithProvider3(ConsumerPactBuilder? arg0, string? arg1, PactSpecVersion? arg2, int arg3, DefaultConstructorMarker? arg4) returns PactDslWithProvider {
-    handle externalObj = au_com_dius_pact_consumer_dsl_PactDslWithProvider_newPactDslWithProvider3(arg0 is () ? java:createNull() : arg0.jObj, arg1 is () ? java:createNull() : java:fromString(arg1), arg2 is () ? java:createNull() : arg2.jObj, arg3, arg4 is () ? java:createNull() : arg4.jObj);
+public function newPactDslWithProvider3(ConsumerPactBuilder arg0, string arg1, PactSpecVersion arg2, int arg3, DefaultConstructorMarker arg4) returns PactDslWithProvider {
+    handle externalObj = au_com_dius_pact_consumer_dsl_PactDslWithProvider_newPactDslWithProvider3(arg0.jObj, java:fromString(arg1), arg2.jObj, arg3, arg4.jObj);
     PactDslWithProvider newObj = new (externalObj);
     return newObj;
 }

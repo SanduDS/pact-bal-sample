@@ -20,41 +20,41 @@ public distinct class Enum {
     # The function to retrieve the string representation of the Ballerina class mapping the `java.lang.Enum` Java class.
     #
     # + return - The `string` form of the Java object instance.
-    public function toString() returns string? {
-        return java:toString(self.jObj);
+    public function toString() returns string {
+        return java:toString(self.jObj) ?: "";
     }
     # The function that maps to the `compareTo` method of `java.lang.Enum`.
     #
-    # + arg0 - The `Enum?` value required to map with the Java method parameter.
+    # + arg0 - The `Enum` value required to map with the Java method parameter.
     # + return - The `int` value returning from the Java mapping.
-    public function compareTo(Enum? arg0) returns int {
-        return java_lang_Enum_compareTo(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    public function compareTo(Enum arg0) returns int {
+        return java_lang_Enum_compareTo(self.jObj, arg0.jObj);
     }
 
     # The function that maps to the `equals` method of `java.lang.Enum`.
     #
-    # + arg0 - The `Object?` value required to map with the Java method parameter.
+    # + arg0 - The `Object` value required to map with the Java method parameter.
     # + return - The `boolean` value returning from the Java mapping.
-    public function 'equals(Object? arg0) returns boolean {
-        return java_lang_Enum_equals(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    public function 'equals(Object arg0) returns boolean {
+        return java_lang_Enum_equals(self.jObj, arg0.jObj);
     }
 
     # The function that maps to the `getClass` method of `java.lang.Enum`.
     #
-    # + return - The `Class?` value returning from the Java mapping.
-    public function getClass() returns Class? {
+    # + return - The `Class` value returning from the Java mapping.
+    public function getClass() returns Class {
         handle externalObj = java_lang_Enum_getClass(self.jObj);
         Class newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `getDeclaringClass` method of `java.lang.Enum`.
     #
-    # + return - The `Class?` value returning from the Java mapping.
-    public function getDeclaringClass() returns Class? {
+    # + return - The `Class` value returning from the Java mapping.
+    public function getDeclaringClass() returns Class {
         handle externalObj = java_lang_Enum_getDeclaringClass(self.jObj);
         Class newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `hashCode` method of `java.lang.Enum`.
@@ -66,9 +66,9 @@ public distinct class Enum {
 
     # The function that maps to the `name` method of `java.lang.Enum`.
     #
-    # + return - The `string?` value returning from the Java mapping.
-    public function name() returns string? {
-        return java:toString(java_lang_Enum_name(self.jObj));
+    # + return - The `string` value returning from the Java mapping.
+    public function name() returns string {
+        return java:toString(java_lang_Enum_name(self.jObj)) ?: "";
     }
 
     # The function that maps to the `notify` method of `java.lang.Enum`.
@@ -128,13 +128,13 @@ public distinct class Enum {
 
 # The function that maps to the `valueOf` method of `java.lang.Enum`.
 #
-# + arg0 - The `Class?` value required to map with the Java method parameter.
-# + arg1 - The `string?` value required to map with the Java method parameter.
-# + return - The `Enum?` value returning from the Java mapping.
-public function Enum_valueOf(Class? arg0, string? arg1) returns Enum? {
-    handle externalObj = java_lang_Enum_valueOf(arg0 is () ? java:createNull() : arg0.jObj, arg1 is () ? java:createNull() : java:fromString(arg1));
+# + arg0 - The `Class` value required to map with the Java method parameter.
+# + arg1 - The `string` value required to map with the Java method parameter.
+# + return - The `Enum` value returning from the Java mapping.
+public function Enum_valueOf(Class arg0, string arg1) returns Enum {
+    handle externalObj = java_lang_Enum_valueOf(arg0.jObj, java:fromString(arg1));
     Enum newObj = new (externalObj);
-    return java:isNull(newObj.jObj) ? () : newObj;
+    return newObj;
 }
 
 function java_lang_Enum_compareTo(handle receiver, handle arg0) returns int = @java:Method {

@@ -20,42 +20,42 @@ public distinct class MatchingConfig {
     # The function to retrieve the string representation of the Ballerina class mapping the `au.com.dius.pact.core.matchers.MatchingConfig` Java class.
     #
     # + return - The `string` form of the Java object instance.
-    public function toString() returns string? {
-        return java:toString(self.jObj);
+    public function toString() returns string {
+        return java:toString(self.jObj) ?: "";
     }
     # The function that maps to the `contentHandlerCatalogueEntries` method of `au.com.dius.pact.core.matchers.MatchingConfig`.
     #
-    # + return - The `List?` value returning from the Java mapping.
-    public function contentHandlerCatalogueEntries() returns List? {
+    # + return - The `List` value returning from the Java mapping.
+    public function contentHandlerCatalogueEntries() returns List {
         handle externalObj = au_com_dius_pact_core_matchers_MatchingConfig_contentHandlerCatalogueEntries(self.jObj);
         List newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `contentMatcherCatalogueEntries` method of `au.com.dius.pact.core.matchers.MatchingConfig`.
     #
-    # + return - The `List?` value returning from the Java mapping.
-    public function contentMatcherCatalogueEntries() returns List? {
+    # + return - The `List` value returning from the Java mapping.
+    public function contentMatcherCatalogueEntries() returns List {
         handle externalObj = au_com_dius_pact_core_matchers_MatchingConfig_contentMatcherCatalogueEntries(self.jObj);
         List newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `equals` method of `au.com.dius.pact.core.matchers.MatchingConfig`.
     #
-    # + arg0 - The `Object?` value required to map with the Java method parameter.
+    # + arg0 - The `Object` value required to map with the Java method parameter.
     # + return - The `boolean` value returning from the Java mapping.
-    public function 'equals(Object? arg0) returns boolean {
-        return au_com_dius_pact_core_matchers_MatchingConfig_equals(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    public function 'equals(Object arg0) returns boolean {
+        return au_com_dius_pact_core_matchers_MatchingConfig_equals(self.jObj, arg0.jObj);
     }
 
     # The function that maps to the `getClass` method of `au.com.dius.pact.core.matchers.MatchingConfig`.
     #
-    # + return - The `Class?` value returning from the Java mapping.
-    public function getClass() returns Class? {
+    # + return - The `Class` value returning from the Java mapping.
+    public function getClass() returns Class {
         handle externalObj = au_com_dius_pact_core_matchers_MatchingConfig_getClass(self.jObj);
         Class newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `hashCode` method of `au.com.dius.pact.core.matchers.MatchingConfig`.
@@ -115,20 +115,20 @@ public distinct class MatchingConfig {
 
 # The function that maps to the `lookupContentMatcher` method of `au.com.dius.pact.core.matchers.MatchingConfig`.
 #
-# + arg0 - The `string?` value required to map with the Java method parameter.
-# + return - The `ContentMatcher?` value returning from the Java mapping.
-public function MatchingConfig_lookupContentMatcher(string? arg0) returns ContentMatcher? {
-    handle externalObj = au_com_dius_pact_core_matchers_MatchingConfig_lookupContentMatcher(arg0 is () ? java:createNull() : java:fromString(arg0));
+# + arg0 - The `string` value required to map with the Java method parameter.
+# + return - The `ContentMatcher` value returning from the Java mapping.
+public function MatchingConfig_lookupContentMatcher(string arg0) returns ContentMatcher {
+    handle externalObj = au_com_dius_pact_core_matchers_MatchingConfig_lookupContentMatcher(java:fromString(arg0));
     ContentMatcher newObj = new (externalObj);
-    return java:isNull(newObj.jObj) ? () : newObj;
+    return newObj;
 }
 
 # The function that retrieves the value of the public field `INSTANCE`.
 #
-# + return - The `MatchingConfig?` value of the field.
-public function MatchingConfig_getINSTANCE() returns MatchingConfig? {
+# + return - The `MatchingConfig` value of the field.
+public function MatchingConfig_getINSTANCE() returns MatchingConfig {
     handle externalObj = au_com_dius_pact_core_matchers_MatchingConfig_getINSTANCE();
-    MatchingConfig? newObj = new (externalObj);
+    MatchingConfig newObj = new (externalObj);
     return newObj;
 }
 

@@ -21,8 +21,8 @@ public distinct class PactXmlBuilder {
     # The function to retrieve the string representation of the Ballerina class mapping the `au.com.dius.pact.consumer.xml.PactXmlBuilder` Java class.
     #
     # + return - The `string` form of the Java object instance.
-    public function toString() returns string? {
-        return java:toString(self.jObj);
+    public function toString() returns string {
+        return java:toString(self.jObj) ?: "";
     }
     # The function that maps to the `asBytes` method of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
     #
@@ -34,21 +34,21 @@ public distinct class PactXmlBuilder {
 
     # The function that maps to the `asBytes` method of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
     #
-    # + arg0 - The `Charset?` value required to map with the Java method parameter.
+    # + arg0 - The `Charset` value required to map with the Java method parameter.
     # + return - The `byte[]` value returning from the Java mapping.
-    public function asBytes2(Charset? arg0) returns byte[]|error {
-        handle externalObj = au_com_dius_pact_consumer_xml_PactXmlBuilder_asBytes2(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    public function asBytes2(Charset arg0) returns byte[]|error {
+        handle externalObj = au_com_dius_pact_consumer_xml_PactXmlBuilder_asBytes2(self.jObj, arg0.jObj);
         return <byte[]>check jarrays:fromHandle(externalObj, "byte");
     }
 
     # The function that maps to the `build` method of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
     #
-    # + arg0 - The `Consumer?` value required to map with the Java method parameter.
-    # + return - The `PactXmlBuilder?` value returning from the Java mapping.
-    public function build(Consumer? arg0) returns PactXmlBuilder? {
-        handle externalObj = au_com_dius_pact_consumer_xml_PactXmlBuilder_build(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    # + arg0 - The `Consumer` value required to map with the Java method parameter.
+    # + return - The `PactXmlBuilder` value returning from the Java mapping.
+    public function build(Consumer arg0) returns PactXmlBuilder {
+        handle externalObj = au_com_dius_pact_consumer_xml_PactXmlBuilder_build(self.jObj, arg0.jObj);
         PactXmlBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `buildBody` method of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
@@ -61,94 +61,94 @@ public distinct class PactXmlBuilder {
 
     # The function that maps to the `equals` method of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
     #
-    # + arg0 - The `Object?` value required to map with the Java method parameter.
+    # + arg0 - The `Object` value required to map with the Java method parameter.
     # + return - The `boolean` value returning from the Java mapping.
-    public function 'equals(Object? arg0) returns boolean {
-        return au_com_dius_pact_consumer_xml_PactXmlBuilder_equals(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    public function 'equals(Object arg0) returns boolean {
+        return au_com_dius_pact_consumer_xml_PactXmlBuilder_equals(self.jObj, arg0.jObj);
     }
 
     # The function that maps to the `getCharset` method of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
     #
-    # + return - The `string?` value returning from the Java mapping.
-    public function getCharset() returns string? {
-        return java:toString(au_com_dius_pact_consumer_xml_PactXmlBuilder_getCharset(self.jObj));
+    # + return - The `string` value returning from the Java mapping.
+    public function getCharset() returns string {
+        return java:toString(au_com_dius_pact_consumer_xml_PactXmlBuilder_getCharset(self.jObj)) ?: "";
     }
 
     # The function that maps to the `getClass` method of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
     #
-    # + return - The `Class?` value returning from the Java mapping.
-    public function getClass() returns Class? {
+    # + return - The `Class` value returning from the Java mapping.
+    public function getClass() returns Class {
         handle externalObj = au_com_dius_pact_consumer_xml_PactXmlBuilder_getClass(self.jObj);
         Class newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `getContentType` method of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
     #
-    # + return - The `ContentType?` value returning from the Java mapping.
-    public function getContentType() returns ContentType? {
+    # + return - The `ContentType` value returning from the Java mapping.
+    public function getContentType() returns ContentType {
         handle externalObj = au_com_dius_pact_consumer_xml_PactXmlBuilder_getContentType(self.jObj);
         ContentType newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `getDoc` method of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
     #
-    # + return - The `Document?` value returning from the Java mapping.
-    public function getDoc() returns Document? {
+    # + return - The `Document` value returning from the Java mapping.
+    public function getDoc() returns Document {
         handle externalObj = au_com_dius_pact_consumer_xml_PactXmlBuilder_getDoc(self.jObj);
         Document newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `getGenerators` method of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
     #
-    # + return - The `Generators?` value returning from the Java mapping.
-    public function getGenerators() returns Generators? {
+    # + return - The `Generators` value returning from the Java mapping.
+    public function getGenerators() returns Generators {
         handle externalObj = au_com_dius_pact_consumer_xml_PactXmlBuilder_getGenerators(self.jObj);
         Generators newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `getMatchers` method of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
     #
-    # + return - The `MatchingRuleCategory?` value returning from the Java mapping.
-    public function getMatchers() returns MatchingRuleCategory? {
+    # + return - The `MatchingRuleCategory` value returning from the Java mapping.
+    public function getMatchers() returns MatchingRuleCategory {
         handle externalObj = au_com_dius_pact_consumer_xml_PactXmlBuilder_getMatchers(self.jObj);
         MatchingRuleCategory newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `getMatchingRules` method of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
     #
-    # + return - The `MatchingRuleCategory?` value returning from the Java mapping.
-    public function getMatchingRules() returns MatchingRuleCategory? {
+    # + return - The `MatchingRuleCategory` value returning from the Java mapping.
+    public function getMatchingRules() returns MatchingRuleCategory {
         handle externalObj = au_com_dius_pact_consumer_xml_PactXmlBuilder_getMatchingRules(self.jObj);
         MatchingRuleCategory newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `getNamespaces` method of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
     #
-    # + return - The `Map?` value returning from the Java mapping.
-    public function getNamespaces() returns Map? {
+    # + return - The `Map` value returning from the Java mapping.
+    public function getNamespaces() returns Map {
         handle externalObj = au_com_dius_pact_consumer_xml_PactXmlBuilder_getNamespaces(self.jObj);
         Map newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `getRootName` method of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
     #
-    # + return - The `string?` value returning from the Java mapping.
-    public function getRootName() returns string? {
-        return java:toString(au_com_dius_pact_consumer_xml_PactXmlBuilder_getRootName(self.jObj));
+    # + return - The `string` value returning from the Java mapping.
+    public function getRootName() returns string {
+        return java:toString(au_com_dius_pact_consumer_xml_PactXmlBuilder_getRootName(self.jObj)) ?: "";
     }
 
     # The function that maps to the `getRootNameSpace` method of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
     #
-    # + return - The `string?` value returning from the Java mapping.
-    public function getRootNameSpace() returns string? {
-        return java:toString(au_com_dius_pact_consumer_xml_PactXmlBuilder_getRootNameSpace(self.jObj));
+    # + return - The `string` value returning from the Java mapping.
+    public function getRootNameSpace() returns string {
+        return java:toString(au_com_dius_pact_consumer_xml_PactXmlBuilder_getRootNameSpace(self.jObj)) ?: "";
     }
 
     # The function that maps to the `getStandalone` method of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
@@ -160,9 +160,9 @@ public distinct class PactXmlBuilder {
 
     # The function that maps to the `getVersion` method of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
     #
-    # + return - The `string?` value returning from the Java mapping.
-    public function getVersion() returns string? {
-        return java:toString(au_com_dius_pact_consumer_xml_PactXmlBuilder_getVersion(self.jObj));
+    # + return - The `string` value returning from the Java mapping.
+    public function getVersion() returns string {
+        return java:toString(au_com_dius_pact_consumer_xml_PactXmlBuilder_getVersion(self.jObj)) ?: "";
     }
 
     # The function that maps to the `hashCode` method of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
@@ -184,45 +184,45 @@ public distinct class PactXmlBuilder {
 
     # The function that maps to the `qualifiedName` method of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    # + return - The `string?` value returning from the Java mapping.
-    public function qualifiedName(string? arg0) returns string? {
-        return java:toString(au_com_dius_pact_consumer_xml_PactXmlBuilder_qualifiedName(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0)));
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    # + return - The `string` value returning from the Java mapping.
+    public function qualifiedName(string arg0) returns string {
+        return java:toString(au_com_dius_pact_consumer_xml_PactXmlBuilder_qualifiedName(self.jObj, java:fromString(arg0))) ?: "";
     }
 
     # The function that maps to the `setCharset` method of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    public function setCharset(string? arg0) {
-        au_com_dius_pact_consumer_xml_PactXmlBuilder_setCharset(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0));
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    public function setCharset(string arg0) {
+        au_com_dius_pact_consumer_xml_PactXmlBuilder_setCharset(self.jObj, java:fromString(arg0));
     }
 
     # The function that maps to the `setDoc` method of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
     #
-    # + arg0 - The `Document?` value required to map with the Java method parameter.
-    public function setDoc(Document? arg0) {
-        au_com_dius_pact_consumer_xml_PactXmlBuilder_setDoc(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    # + arg0 - The `Document` value required to map with the Java method parameter.
+    public function setDoc(Document arg0) {
+        au_com_dius_pact_consumer_xml_PactXmlBuilder_setDoc(self.jObj, arg0.jObj);
     }
 
     # The function that maps to the `setNamespaces` method of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
     #
-    # + arg0 - The `Map?` value required to map with the Java method parameter.
-    public function setNamespaces(Map? arg0) {
-        au_com_dius_pact_consumer_xml_PactXmlBuilder_setNamespaces(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    # + arg0 - The `Map` value required to map with the Java method parameter.
+    public function setNamespaces(Map arg0) {
+        au_com_dius_pact_consumer_xml_PactXmlBuilder_setNamespaces(self.jObj, arg0.jObj);
     }
 
     # The function that maps to the `setRootName` method of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    public function setRootName(string? arg0) {
-        au_com_dius_pact_consumer_xml_PactXmlBuilder_setRootName(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0));
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    public function setRootName(string arg0) {
+        au_com_dius_pact_consumer_xml_PactXmlBuilder_setRootName(self.jObj, java:fromString(arg0));
     }
 
     # The function that maps to the `setRootNameSpace` method of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    public function setRootNameSpace(string? arg0) {
-        au_com_dius_pact_consumer_xml_PactXmlBuilder_setRootNameSpace(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0));
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    public function setRootNameSpace(string arg0) {
+        au_com_dius_pact_consumer_xml_PactXmlBuilder_setRootNameSpace(self.jObj, java:fromString(arg0));
     }
 
     # The function that maps to the `setStandalone` method of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
@@ -234,9 +234,9 @@ public distinct class PactXmlBuilder {
 
     # The function that maps to the `setVersion` method of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    public function setVersion(string? arg0) {
-        au_com_dius_pact_consumer_xml_PactXmlBuilder_setVersion(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0));
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    public function setVersion(string arg0) {
+        au_com_dius_pact_consumer_xml_PactXmlBuilder_setVersion(self.jObj, java:fromString(arg0));
     }
 
     # The function that maps to the `wait` method of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
@@ -277,154 +277,154 @@ public distinct class PactXmlBuilder {
 
     # The function that maps to the `withCharset` method of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    # + return - The `PactXmlBuilder?` value returning from the Java mapping.
-    public function withCharset(string? arg0) returns PactXmlBuilder? {
-        handle externalObj = au_com_dius_pact_consumer_xml_PactXmlBuilder_withCharset(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0));
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    # + return - The `PactXmlBuilder` value returning from the Java mapping.
+    public function withCharset(string arg0) returns PactXmlBuilder {
+        handle externalObj = au_com_dius_pact_consumer_xml_PactXmlBuilder_withCharset(self.jObj, java:fromString(arg0));
         PactXmlBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `withNamespaces` method of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
     #
-    # + arg0 - The `Map?` value required to map with the Java method parameter.
-    # + return - The `PactXmlBuilder?` value returning from the Java mapping.
-    public function withNamespaces(Map? arg0) returns PactXmlBuilder? {
-        handle externalObj = au_com_dius_pact_consumer_xml_PactXmlBuilder_withNamespaces(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    # + arg0 - The `Map` value required to map with the Java method parameter.
+    # + return - The `PactXmlBuilder` value returning from the Java mapping.
+    public function withNamespaces(Map arg0) returns PactXmlBuilder {
+        handle externalObj = au_com_dius_pact_consumer_xml_PactXmlBuilder_withNamespaces(self.jObj, arg0.jObj);
         PactXmlBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `withRootName` method of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    # + return - The `PactXmlBuilder?` value returning from the Java mapping.
-    public function withRootName(string? arg0) returns PactXmlBuilder? {
-        handle externalObj = au_com_dius_pact_consumer_xml_PactXmlBuilder_withRootName(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0));
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    # + return - The `PactXmlBuilder` value returning from the Java mapping.
+    public function withRootName(string arg0) returns PactXmlBuilder {
+        handle externalObj = au_com_dius_pact_consumer_xml_PactXmlBuilder_withRootName(self.jObj, java:fromString(arg0));
         PactXmlBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `withRootNameSpace` method of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    # + return - The `PactXmlBuilder?` value returning from the Java mapping.
-    public function withRootNameSpace(string? arg0) returns PactXmlBuilder? {
-        handle externalObj = au_com_dius_pact_consumer_xml_PactXmlBuilder_withRootNameSpace(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0));
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    # + return - The `PactXmlBuilder` value returning from the Java mapping.
+    public function withRootNameSpace(string arg0) returns PactXmlBuilder {
+        handle externalObj = au_com_dius_pact_consumer_xml_PactXmlBuilder_withRootNameSpace(self.jObj, java:fromString(arg0));
         PactXmlBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `withStandalone` method of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
     #
     # + arg0 - The `boolean` value required to map with the Java method parameter.
-    # + return - The `PactXmlBuilder?` value returning from the Java mapping.
-    public function withStandalone(boolean arg0) returns PactXmlBuilder? {
+    # + return - The `PactXmlBuilder` value returning from the Java mapping.
+    public function withStandalone(boolean arg0) returns PactXmlBuilder {
         handle externalObj = au_com_dius_pact_consumer_xml_PactXmlBuilder_withStandalone(self.jObj, arg0);
         PactXmlBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `withVersion` method of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    # + return - The `PactXmlBuilder?` value returning from the Java mapping.
-    public function withVersion(string? arg0) returns PactXmlBuilder? {
-        handle externalObj = au_com_dius_pact_consumer_xml_PactXmlBuilder_withVersion(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0));
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    # + return - The `PactXmlBuilder` value returning from the Java mapping.
+    public function withVersion(string arg0) returns PactXmlBuilder {
+        handle externalObj = au_com_dius_pact_consumer_xml_PactXmlBuilder_withVersion(self.jObj, java:fromString(arg0));
         PactXmlBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
 }
 
 # The constructor function to generate an object of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
 #
-# + arg0 - The `string?` value required to map with the Java constructor parameter.
+# + arg0 - The `string` value required to map with the Java constructor parameter.
 # + return - The new `PactXmlBuilder` class generated.
-public function newPactXmlBuilder1(string? arg0) returns PactXmlBuilder {
-    handle externalObj = au_com_dius_pact_consumer_xml_PactXmlBuilder_newPactXmlBuilder1(arg0 is () ? java:createNull() : java:fromString(arg0));
+public function newPactXmlBuilder1(string arg0) returns PactXmlBuilder {
+    handle externalObj = au_com_dius_pact_consumer_xml_PactXmlBuilder_newPactXmlBuilder1(java:fromString(arg0));
     PactXmlBuilder newObj = new (externalObj);
     return newObj;
 }
 
 # The constructor function to generate an object of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
 #
-# + arg0 - The `string?` value required to map with the Java constructor parameter.
-# + arg1 - The `string?` value required to map with the Java constructor parameter.
+# + arg0 - The `string` value required to map with the Java constructor parameter.
+# + arg1 - The `string` value required to map with the Java constructor parameter.
 # + return - The new `PactXmlBuilder` class generated.
-public function newPactXmlBuilder2(string? arg0, string? arg1) returns PactXmlBuilder {
-    handle externalObj = au_com_dius_pact_consumer_xml_PactXmlBuilder_newPactXmlBuilder2(arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : java:fromString(arg1));
+public function newPactXmlBuilder2(string arg0, string arg1) returns PactXmlBuilder {
+    handle externalObj = au_com_dius_pact_consumer_xml_PactXmlBuilder_newPactXmlBuilder2(java:fromString(arg0), java:fromString(arg1));
     PactXmlBuilder newObj = new (externalObj);
     return newObj;
 }
 
 # The constructor function to generate an object of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
 #
-# + arg0 - The `string?` value required to map with the Java constructor parameter.
-# + arg1 - The `string?` value required to map with the Java constructor parameter.
-# + arg2 - The `Map?` value required to map with the Java constructor parameter.
+# + arg0 - The `string` value required to map with the Java constructor parameter.
+# + arg1 - The `string` value required to map with the Java constructor parameter.
+# + arg2 - The `Map` value required to map with the Java constructor parameter.
 # + return - The new `PactXmlBuilder` class generated.
-public function newPactXmlBuilder3(string? arg0, string? arg1, Map? arg2) returns PactXmlBuilder {
-    handle externalObj = au_com_dius_pact_consumer_xml_PactXmlBuilder_newPactXmlBuilder3(arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : java:fromString(arg1), arg2 is () ? java:createNull() : arg2.jObj);
+public function newPactXmlBuilder3(string arg0, string arg1, Map arg2) returns PactXmlBuilder {
+    handle externalObj = au_com_dius_pact_consumer_xml_PactXmlBuilder_newPactXmlBuilder3(java:fromString(arg0), java:fromString(arg1), arg2.jObj);
     PactXmlBuilder newObj = new (externalObj);
     return newObj;
 }
 
 # The constructor function to generate an object of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
 #
-# + arg0 - The `string?` value required to map with the Java constructor parameter.
-# + arg1 - The `string?` value required to map with the Java constructor parameter.
-# + arg2 - The `Map?` value required to map with the Java constructor parameter.
-# + arg3 - The `string?` value required to map with the Java constructor parameter.
+# + arg0 - The `string` value required to map with the Java constructor parameter.
+# + arg1 - The `string` value required to map with the Java constructor parameter.
+# + arg2 - The `Map` value required to map with the Java constructor parameter.
+# + arg3 - The `string` value required to map with the Java constructor parameter.
 # + return - The new `PactXmlBuilder` class generated.
-public function newPactXmlBuilder4(string? arg0, string? arg1, Map? arg2, string? arg3) returns PactXmlBuilder {
-    handle externalObj = au_com_dius_pact_consumer_xml_PactXmlBuilder_newPactXmlBuilder4(arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : java:fromString(arg1), arg2 is () ? java:createNull() : arg2.jObj, arg3 is () ? java:createNull() : java:fromString(arg3));
+public function newPactXmlBuilder4(string arg0, string arg1, Map arg2, string arg3) returns PactXmlBuilder {
+    handle externalObj = au_com_dius_pact_consumer_xml_PactXmlBuilder_newPactXmlBuilder4(java:fromString(arg0), java:fromString(arg1), arg2.jObj, java:fromString(arg3));
     PactXmlBuilder newObj = new (externalObj);
     return newObj;
 }
 
 # The constructor function to generate an object of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
 #
-# + arg0 - The `string?` value required to map with the Java constructor parameter.
-# + arg1 - The `string?` value required to map with the Java constructor parameter.
-# + arg2 - The `Map?` value required to map with the Java constructor parameter.
-# + arg3 - The `string?` value required to map with the Java constructor parameter.
-# + arg4 - The `string?` value required to map with the Java constructor parameter.
+# + arg0 - The `string` value required to map with the Java constructor parameter.
+# + arg1 - The `string` value required to map with the Java constructor parameter.
+# + arg2 - The `Map` value required to map with the Java constructor parameter.
+# + arg3 - The `string` value required to map with the Java constructor parameter.
+# + arg4 - The `string` value required to map with the Java constructor parameter.
 # + return - The new `PactXmlBuilder` class generated.
-public function newPactXmlBuilder5(string? arg0, string? arg1, Map? arg2, string? arg3, string? arg4) returns PactXmlBuilder {
-    handle externalObj = au_com_dius_pact_consumer_xml_PactXmlBuilder_newPactXmlBuilder5(arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : java:fromString(arg1), arg2 is () ? java:createNull() : arg2.jObj, arg3 is () ? java:createNull() : java:fromString(arg3), arg4 is () ? java:createNull() : java:fromString(arg4));
+public function newPactXmlBuilder5(string arg0, string arg1, Map arg2, string arg3, string arg4) returns PactXmlBuilder {
+    handle externalObj = au_com_dius_pact_consumer_xml_PactXmlBuilder_newPactXmlBuilder5(java:fromString(arg0), java:fromString(arg1), arg2.jObj, java:fromString(arg3), java:fromString(arg4));
     PactXmlBuilder newObj = new (externalObj);
     return newObj;
 }
 
 # The constructor function to generate an object of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
 #
-# + arg0 - The `string?` value required to map with the Java constructor parameter.
-# + arg1 - The `string?` value required to map with the Java constructor parameter.
-# + arg2 - The `Map?` value required to map with the Java constructor parameter.
-# + arg3 - The `string?` value required to map with the Java constructor parameter.
-# + arg4 - The `string?` value required to map with the Java constructor parameter.
+# + arg0 - The `string` value required to map with the Java constructor parameter.
+# + arg1 - The `string` value required to map with the Java constructor parameter.
+# + arg2 - The `Map` value required to map with the Java constructor parameter.
+# + arg3 - The `string` value required to map with the Java constructor parameter.
+# + arg4 - The `string` value required to map with the Java constructor parameter.
 # + arg5 - The `boolean` value required to map with the Java constructor parameter.
 # + return - The new `PactXmlBuilder` class generated.
-public function newPactXmlBuilder6(string? arg0, string? arg1, Map? arg2, string? arg3, string? arg4, boolean arg5) returns PactXmlBuilder {
-    handle externalObj = au_com_dius_pact_consumer_xml_PactXmlBuilder_newPactXmlBuilder6(arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : java:fromString(arg1), arg2 is () ? java:createNull() : arg2.jObj, arg3 is () ? java:createNull() : java:fromString(arg3), arg4 is () ? java:createNull() : java:fromString(arg4), arg5);
+public function newPactXmlBuilder6(string arg0, string arg1, Map arg2, string arg3, string arg4, boolean arg5) returns PactXmlBuilder {
+    handle externalObj = au_com_dius_pact_consumer_xml_PactXmlBuilder_newPactXmlBuilder6(java:fromString(arg0), java:fromString(arg1), arg2.jObj, java:fromString(arg3), java:fromString(arg4), arg5);
     PactXmlBuilder newObj = new (externalObj);
     return newObj;
 }
 
 # The constructor function to generate an object of `au.com.dius.pact.consumer.xml.PactXmlBuilder`.
 #
-# + arg0 - The `string?` value required to map with the Java constructor parameter.
-# + arg1 - The `string?` value required to map with the Java constructor parameter.
-# + arg2 - The `Map?` value required to map with the Java constructor parameter.
-# + arg3 - The `string?` value required to map with the Java constructor parameter.
-# + arg4 - The `string?` value required to map with the Java constructor parameter.
+# + arg0 - The `string` value required to map with the Java constructor parameter.
+# + arg1 - The `string` value required to map with the Java constructor parameter.
+# + arg2 - The `Map` value required to map with the Java constructor parameter.
+# + arg3 - The `string` value required to map with the Java constructor parameter.
+# + arg4 - The `string` value required to map with the Java constructor parameter.
 # + arg5 - The `boolean` value required to map with the Java constructor parameter.
 # + arg6 - The `int` value required to map with the Java constructor parameter.
-# + arg7 - The `DefaultConstructorMarker?` value required to map with the Java constructor parameter.
+# + arg7 - The `DefaultConstructorMarker` value required to map with the Java constructor parameter.
 # + return - The new `PactXmlBuilder` class generated.
-public function newPactXmlBuilder7(string? arg0, string? arg1, Map? arg2, string? arg3, string? arg4, boolean arg5, int arg6, DefaultConstructorMarker? arg7) returns PactXmlBuilder {
-    handle externalObj = au_com_dius_pact_consumer_xml_PactXmlBuilder_newPactXmlBuilder7(arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : java:fromString(arg1), arg2 is () ? java:createNull() : arg2.jObj, arg3 is () ? java:createNull() : java:fromString(arg3), arg4 is () ? java:createNull() : java:fromString(arg4), arg5, arg6, arg7 is () ? java:createNull() : arg7.jObj);
+public function newPactXmlBuilder7(string arg0, string arg1, Map arg2, string arg3, string arg4, boolean arg5, int arg6, DefaultConstructorMarker arg7) returns PactXmlBuilder {
+    handle externalObj = au_com_dius_pact_consumer_xml_PactXmlBuilder_newPactXmlBuilder7(java:fromString(arg0), java:fromString(arg1), arg2.jObj, java:fromString(arg3), java:fromString(arg4), arg5, arg6, arg7.jObj);
     PactXmlBuilder newObj = new (externalObj);
     return newObj;
 }

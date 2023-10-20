@@ -20,85 +20,85 @@ public distinct class MessagePactBuilder {
     # The function to retrieve the string representation of the Ballerina class mapping the `au.com.dius.pact.consumer.MessagePactBuilder` Java class.
     #
     # + return - The `string` form of the Java object instance.
-    public function toString() returns string? {
-        return java:toString(self.jObj);
+    public function toString() returns string {
+        return java:toString(self.jObj) ?: "";
     }
     # The function that maps to the `consumer` method of `au.com.dius.pact.consumer.MessagePactBuilder`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    # + return - The `MessagePactBuilder?` value returning from the Java mapping.
-    public function consumer(string? arg0) returns MessagePactBuilder? {
-        handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_consumer(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0));
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    # + return - The `MessagePactBuilder` value returning from the Java mapping.
+    public function consumer(string arg0) returns MessagePactBuilder {
+        handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_consumer(self.jObj, java:fromString(arg0));
         MessagePactBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `equals` method of `au.com.dius.pact.consumer.MessagePactBuilder`.
     #
-    # + arg0 - The `Object?` value required to map with the Java method parameter.
+    # + arg0 - The `Object` value required to map with the Java method parameter.
     # + return - The `boolean` value returning from the Java mapping.
-    public function 'equals(Object? arg0) returns boolean {
-        return au_com_dius_pact_consumer_MessagePactBuilder_equals(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    public function 'equals(Object arg0) returns boolean {
+        return au_com_dius_pact_consumer_MessagePactBuilder_equals(self.jObj, arg0.jObj);
     }
 
     # The function that maps to the `expectsToReceive` method of `au.com.dius.pact.consumer.MessagePactBuilder`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    # + return - The `MessagePactBuilder?` value returning from the Java mapping.
-    public function expectsToReceive(string? arg0) returns MessagePactBuilder? {
-        handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_expectsToReceive(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0));
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    # + return - The `MessagePactBuilder` value returning from the Java mapping.
+    public function expectsToReceive(string arg0) returns MessagePactBuilder {
+        handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_expectsToReceive(self.jObj, java:fromString(arg0));
         MessagePactBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `getClass` method of `au.com.dius.pact.consumer.MessagePactBuilder`.
     #
-    # + return - The `Class?` value returning from the Java mapping.
-    public function getClass() returns Class? {
+    # + return - The `Class` value returning from the Java mapping.
+    public function getClass() returns Class {
         handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_getClass(self.jObj);
         Class newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `given` method of `au.com.dius.pact.consumer.MessagePactBuilder`.
     #
-    # + arg0 - The `ProviderState?` value required to map with the Java method parameter.
-    # + return - The `MessagePactBuilder?` value returning from the Java mapping.
-    public function given(ProviderState? arg0) returns MessagePactBuilder? {
-        handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_given(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    # + arg0 - The `ProviderState` value required to map with the Java method parameter.
+    # + return - The `MessagePactBuilder` value returning from the Java mapping.
+    public function given(ProviderState arg0) returns MessagePactBuilder {
+        handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_given(self.jObj, arg0.jObj);
         MessagePactBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `given` method of `au.com.dius.pact.consumer.MessagePactBuilder`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    # + return - The `MessagePactBuilder?` value returning from the Java mapping.
-    public function given2(string? arg0) returns MessagePactBuilder? {
-        handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_given2(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0));
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    # + return - The `MessagePactBuilder` value returning from the Java mapping.
+    public function given2(string arg0) returns MessagePactBuilder {
+        handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_given2(self.jObj, java:fromString(arg0));
         MessagePactBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `given` method of `au.com.dius.pact.consumer.MessagePactBuilder`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    # + arg1 - The `Map?` value required to map with the Java method parameter.
-    # + return - The `MessagePactBuilder?` value returning from the Java mapping.
-    public function given3(string? arg0, Map? arg1) returns MessagePactBuilder? {
-        handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_given3(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : arg1.jObj);
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    # + arg1 - The `Map` value required to map with the Java method parameter.
+    # + return - The `MessagePactBuilder` value returning from the Java mapping.
+    public function given3(string arg0, Map arg1) returns MessagePactBuilder {
+        handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_given3(self.jObj, java:fromString(arg0), arg1.jObj);
         MessagePactBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `hasPactWith` method of `au.com.dius.pact.consumer.MessagePactBuilder`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    # + return - The `MessagePactBuilder?` value returning from the Java mapping.
-    public function hasPactWith(string? arg0) returns MessagePactBuilder? {
-        handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_hasPactWith(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0));
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    # + return - The `MessagePactBuilder` value returning from the Java mapping.
+    public function hasPactWith(string arg0) returns MessagePactBuilder {
+        handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_hasPactWith(self.jObj, java:fromString(arg0));
         MessagePactBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `hashCode` method of `au.com.dius.pact.consumer.MessagePactBuilder`.
@@ -120,21 +120,21 @@ public distinct class MessagePactBuilder {
 
     # The function that maps to the `toPact` method of `au.com.dius.pact.consumer.MessagePactBuilder`.
     #
-    # + return - The `Pact?` value returning from the Java mapping.
-    public function toPact() returns Pact? {
+    # + return - The `Pact` value returning from the Java mapping.
+    public function toPact() returns Pact {
         handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_toPact(self.jObj);
         Pact newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `toPact` method of `au.com.dius.pact.consumer.MessagePactBuilder`.
     #
-    # + arg0 - The `Class?` value required to map with the Java method parameter.
-    # + return - The `Pact?` value returning from the Java mapping.
-    public function toPact2(Class? arg0) returns Pact? {
-        handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_toPact2(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    # + arg0 - The `Class` value required to map with the Java method parameter.
+    # + return - The `Pact` value returning from the Java mapping.
+    public function toPact2(Class arg0) returns Pact {
+        handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_toPact2(self.jObj, arg0.jObj);
         Pact newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `wait` method of `au.com.dius.pact.consumer.MessagePactBuilder`.
@@ -175,73 +175,73 @@ public distinct class MessagePactBuilder {
 
     # The function that maps to the `withContent` method of `au.com.dius.pact.consumer.MessagePactBuilder`.
     #
-    # + arg0 - The `DslPart?` value required to map with the Java method parameter.
-    # + return - The `MessagePactBuilder?` value returning from the Java mapping.
-    public function withContent(DslPart? arg0) returns MessagePactBuilder? {
-        handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_withContent(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    # + arg0 - The `DslPart` value required to map with the Java method parameter.
+    # + return - The `MessagePactBuilder` value returning from the Java mapping.
+    public function withContent(DslPart arg0) returns MessagePactBuilder {
+        handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_withContent(self.jObj, arg0.jObj);
         MessagePactBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `withContent` method of `au.com.dius.pact.consumer.MessagePactBuilder`.
     #
-    # + arg0 - The `JSONObject?` value required to map with the Java method parameter.
-    # + return - The `MessagePactBuilder?` value returning from the Java mapping.
-    public function withContent2(JSONObject? arg0) returns MessagePactBuilder? {
-        handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_withContent2(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    # + arg0 - The `JSONObject` value required to map with the Java method parameter.
+    # + return - The `MessagePactBuilder` value returning from the Java mapping.
+    public function withContent2(JSONObject arg0) returns MessagePactBuilder {
+        handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_withContent2(self.jObj, arg0.jObj);
         MessagePactBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `withContent` method of `au.com.dius.pact.consumer.MessagePactBuilder`.
     #
-    # + arg0 - The `PactXmlBuilder?` value required to map with the Java method parameter.
-    # + return - The `MessagePactBuilder?` value returning from the Java mapping.
-    public function withContent3(PactXmlBuilder? arg0) returns MessagePactBuilder? {
-        handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_withContent3(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    # + arg0 - The `PactXmlBuilder` value required to map with the Java method parameter.
+    # + return - The `MessagePactBuilder` value returning from the Java mapping.
+    public function withContent3(PactXmlBuilder arg0) returns MessagePactBuilder {
+        handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_withContent3(self.jObj, arg0.jObj);
         MessagePactBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `withContent` method of `au.com.dius.pact.consumer.MessagePactBuilder`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    # + return - The `MessagePactBuilder?` value returning from the Java mapping.
-    public function withContent4(string? arg0) returns MessagePactBuilder? {
-        handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_withContent4(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0));
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    # + return - The `MessagePactBuilder` value returning from the Java mapping.
+    public function withContent4(string arg0) returns MessagePactBuilder {
+        handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_withContent4(self.jObj, java:fromString(arg0));
         MessagePactBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `withContent` method of `au.com.dius.pact.consumer.MessagePactBuilder`.
     #
-    # + arg0 - The `string?` value required to map with the Java method parameter.
-    # + arg1 - The `string?` value required to map with the Java method parameter.
-    # + return - The `MessagePactBuilder?` value returning from the Java mapping.
-    public function withContent5(string? arg0, string? arg1) returns MessagePactBuilder? {
-        handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_withContent5(self.jObj, arg0 is () ? java:createNull() : java:fromString(arg0), arg1 is () ? java:createNull() : java:fromString(arg1));
+    # + arg0 - The `string` value required to map with the Java method parameter.
+    # + arg1 - The `string` value required to map with the Java method parameter.
+    # + return - The `MessagePactBuilder` value returning from the Java mapping.
+    public function withContent5(string arg0, string arg1) returns MessagePactBuilder {
+        handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_withContent5(self.jObj, java:fromString(arg0), java:fromString(arg1));
         MessagePactBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `withMetadata` method of `au.com.dius.pact.consumer.MessagePactBuilder`.
     #
-    # + arg0 - The `Consumer2?` value required to map with the Java method parameter.
-    # + return - The `MessagePactBuilder?` value returning from the Java mapping.
-    public function withMetadata(Consumer? arg0) returns MessagePactBuilder? {
-        handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_withMetadata(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    # + arg0 - The `Consumer2` value required to map with the Java method parameter.
+    # + return - The `MessagePactBuilder` value returning from the Java mapping.
+    public function withMetadata(Consumer2 arg0) returns MessagePactBuilder {
+        handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_withMetadata(self.jObj, arg0.jObj);
         MessagePactBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
     # The function that maps to the `withMetadata` method of `au.com.dius.pact.consumer.MessagePactBuilder`.
     #
-    # + arg0 - The `Map?` value required to map with the Java method parameter.
-    # + return - The `MessagePactBuilder?` value returning from the Java mapping.
-    public function withMetadata2(Map? arg0) returns MessagePactBuilder? {
-        handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_withMetadata2(self.jObj, arg0 is () ? java:createNull() : arg0.jObj);
+    # + arg0 - The `Map` value required to map with the Java method parameter.
+    # + return - The `MessagePactBuilder` value returning from the Java mapping.
+    public function withMetadata2(Map arg0) returns MessagePactBuilder {
+        handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_withMetadata2(self.jObj, arg0.jObj);
         MessagePactBuilder newObj = new (externalObj);
-        return java:isNull(newObj.jObj) ? () : newObj;
+        return newObj;
     }
 
 }
@@ -257,86 +257,86 @@ public function newMessagePactBuilder1() returns MessagePactBuilder {
 
 # The constructor function to generate an object of `au.com.dius.pact.consumer.MessagePactBuilder`.
 #
-# + arg0 - The `Consumer?` value required to map with the Java constructor parameter.
+# + arg0 - The `Consumer` value required to map with the Java constructor parameter.
 # + return - The new `MessagePactBuilder` class generated.
-public function newMessagePactBuilder2(Consumer? arg0) returns MessagePactBuilder {
-    handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_newMessagePactBuilder2(arg0 is () ? java:createNull() : arg0.jObj);
+public function newMessagePactBuilder2(Consumer arg0) returns MessagePactBuilder {
+    handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_newMessagePactBuilder2(arg0.jObj);
     MessagePactBuilder newObj = new (externalObj);
     return newObj;
 }
 
 # The constructor function to generate an object of `au.com.dius.pact.consumer.MessagePactBuilder`.
 #
-# + arg0 - The `Consumer?` value required to map with the Java constructor parameter.
-# + arg1 - The `Provider?` value required to map with the Java constructor parameter.
+# + arg0 - The `Consumer` value required to map with the Java constructor parameter.
+# + arg1 - The `Provider` value required to map with the Java constructor parameter.
 # + return - The new `MessagePactBuilder` class generated.
-public function newMessagePactBuilder3(Consumer? arg0, Provider? arg1) returns MessagePactBuilder {
-    handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_newMessagePactBuilder3(arg0 is () ? java:createNull() : arg0.jObj, arg1 is () ? java:createNull() : arg1.jObj);
+public function newMessagePactBuilder3(Consumer arg0, Provider arg1) returns MessagePactBuilder {
+    handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_newMessagePactBuilder3(arg0.jObj, arg1.jObj);
     MessagePactBuilder newObj = new (externalObj);
     return newObj;
 }
 
 # The constructor function to generate an object of `au.com.dius.pact.consumer.MessagePactBuilder`.
 #
-# + arg0 - The `Consumer?` value required to map with the Java constructor parameter.
-# + arg1 - The `Provider?` value required to map with the Java constructor parameter.
-# + arg2 - The `List?` value required to map with the Java constructor parameter.
+# + arg0 - The `Consumer` value required to map with the Java constructor parameter.
+# + arg1 - The `Provider` value required to map with the Java constructor parameter.
+# + arg2 - The `List` value required to map with the Java constructor parameter.
 # + return - The new `MessagePactBuilder` class generated.
-public function newMessagePactBuilder4(Consumer? arg0, Provider? arg1, List? arg2) returns MessagePactBuilder {
-    handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_newMessagePactBuilder4(arg0 is () ? java:createNull() : arg0.jObj, arg1 is () ? java:createNull() : arg1.jObj, arg2 is () ? java:createNull() : arg2.jObj);
+public function newMessagePactBuilder4(Consumer arg0, Provider arg1, List arg2) returns MessagePactBuilder {
+    handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_newMessagePactBuilder4(arg0.jObj, arg1.jObj, arg2.jObj);
     MessagePactBuilder newObj = new (externalObj);
     return newObj;
 }
 
 # The constructor function to generate an object of `au.com.dius.pact.consumer.MessagePactBuilder`.
 #
-# + arg0 - The `Consumer?` value required to map with the Java constructor parameter.
-# + arg1 - The `Provider?` value required to map with the Java constructor parameter.
-# + arg2 - The `List?` value required to map with the Java constructor parameter.
-# + arg3 - The `List?` value required to map with the Java constructor parameter.
+# + arg0 - The `Consumer` value required to map with the Java constructor parameter.
+# + arg1 - The `Provider` value required to map with the Java constructor parameter.
+# + arg2 - The `List` value required to map with the Java constructor parameter.
+# + arg3 - The `List` value required to map with the Java constructor parameter.
 # + return - The new `MessagePactBuilder` class generated.
-public function newMessagePactBuilder5(Consumer? arg0, Provider? arg1, List? arg2, List? arg3) returns MessagePactBuilder {
-    handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_newMessagePactBuilder5(arg0 is () ? java:createNull() : arg0.jObj, arg1 is () ? java:createNull() : arg1.jObj, arg2 is () ? java:createNull() : arg2.jObj, arg3 is () ? java:createNull() : arg3.jObj);
+public function newMessagePactBuilder5(Consumer arg0, Provider arg1, List arg2, List arg3) returns MessagePactBuilder {
+    handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_newMessagePactBuilder5(arg0.jObj, arg1.jObj, arg2.jObj, arg3.jObj);
     MessagePactBuilder newObj = new (externalObj);
     return newObj;
 }
 
 # The constructor function to generate an object of `au.com.dius.pact.consumer.MessagePactBuilder`.
 #
-# + arg0 - The `Consumer?` value required to map with the Java constructor parameter.
-# + arg1 - The `Provider?` value required to map with the Java constructor parameter.
-# + arg2 - The `List?` value required to map with the Java constructor parameter.
-# + arg3 - The `List?` value required to map with the Java constructor parameter.
-# + arg4 - The `PactSpecVersion?` value required to map with the Java constructor parameter.
+# + arg0 - The `Consumer` value required to map with the Java constructor parameter.
+# + arg1 - The `Provider` value required to map with the Java constructor parameter.
+# + arg2 - The `List` value required to map with the Java constructor parameter.
+# + arg3 - The `List` value required to map with the Java constructor parameter.
+# + arg4 - The `PactSpecVersion` value required to map with the Java constructor parameter.
 # + return - The new `MessagePactBuilder` class generated.
-public function newMessagePactBuilder6(Consumer? arg0, Provider? arg1, List? arg2, List? arg3, PactSpecVersion? arg4) returns MessagePactBuilder {
-    handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_newMessagePactBuilder6(arg0 is () ? java:createNull() : arg0.jObj, arg1 is () ? java:createNull() : arg1.jObj, arg2 is () ? java:createNull() : arg2.jObj, arg3 is () ? java:createNull() : arg3.jObj, arg4 is () ? java:createNull() : arg4.jObj);
+public function newMessagePactBuilder6(Consumer arg0, Provider arg1, List arg2, List arg3, PactSpecVersion arg4) returns MessagePactBuilder {
+    handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_newMessagePactBuilder6(arg0.jObj, arg1.jObj, arg2.jObj, arg3.jObj, arg4.jObj);
     MessagePactBuilder newObj = new (externalObj);
     return newObj;
 }
 
 # The constructor function to generate an object of `au.com.dius.pact.consumer.MessagePactBuilder`.
 #
-# + arg0 - The `Consumer?` value required to map with the Java constructor parameter.
-# + arg1 - The `Provider?` value required to map with the Java constructor parameter.
-# + arg2 - The `List?` value required to map with the Java constructor parameter.
-# + arg3 - The `List?` value required to map with the Java constructor parameter.
-# + arg4 - The `PactSpecVersion?` value required to map with the Java constructor parameter.
+# + arg0 - The `Consumer` value required to map with the Java constructor parameter.
+# + arg1 - The `Provider` value required to map with the Java constructor parameter.
+# + arg2 - The `List` value required to map with the Java constructor parameter.
+# + arg3 - The `List` value required to map with the Java constructor parameter.
+# + arg4 - The `PactSpecVersion` value required to map with the Java constructor parameter.
 # + arg5 - The `int` value required to map with the Java constructor parameter.
-# + arg6 - The `DefaultConstructorMarker?` value required to map with the Java constructor parameter.
+# + arg6 - The `DefaultConstructorMarker` value required to map with the Java constructor parameter.
 # + return - The new `MessagePactBuilder` class generated.
-public function newMessagePactBuilder7(Consumer? arg0, Provider? arg1, List? arg2, List? arg3, PactSpecVersion? arg4, int arg5, DefaultConstructorMarker? arg6) returns MessagePactBuilder {
-    handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_newMessagePactBuilder7(arg0 is () ? java:createNull() : arg0.jObj, arg1 is () ? java:createNull() : arg1.jObj, arg2 is () ? java:createNull() : arg2.jObj, arg3 is () ? java:createNull() : arg3.jObj, arg4 is () ? java:createNull() : arg4.jObj, arg5, arg6 is () ? java:createNull() : arg6.jObj);
+public function newMessagePactBuilder7(Consumer arg0, Provider arg1, List arg2, List arg3, PactSpecVersion arg4, int arg5, DefaultConstructorMarker arg6) returns MessagePactBuilder {
+    handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_newMessagePactBuilder7(arg0.jObj, arg1.jObj, arg2.jObj, arg3.jObj, arg4.jObj, arg5, arg6.jObj);
     MessagePactBuilder newObj = new (externalObj);
     return newObj;
 }
 
 # The constructor function to generate an object of `au.com.dius.pact.consumer.MessagePactBuilder`.
 #
-# + arg0 - The `PactSpecVersion?` value required to map with the Java constructor parameter.
+# + arg0 - The `PactSpecVersion` value required to map with the Java constructor parameter.
 # + return - The new `MessagePactBuilder` class generated.
-public function newMessagePactBuilder8(PactSpecVersion? arg0) returns MessagePactBuilder {
-    handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_newMessagePactBuilder8(arg0 is () ? java:createNull() : arg0.jObj);
+public function newMessagePactBuilder8(PactSpecVersion arg0) returns MessagePactBuilder {
+    handle externalObj = au_com_dius_pact_consumer_MessagePactBuilder_newMessagePactBuilder8(arg0.jObj);
     MessagePactBuilder newObj = new (externalObj);
     return newObj;
 }

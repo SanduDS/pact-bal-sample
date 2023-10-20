@@ -9,7 +9,7 @@ run_bindgen() {
     if [[ $line == *"error: unable to generate the"* ]]; then
       errors+=("$line")
     fi
-  done < <(bal bindgen --public --with-optional-types -o . "$1" 2>&1)
+  done < <(bal bindgen --public -o . "$1" 2>&1)
 }
 
 # List of items to pass to bal bindgen
@@ -26,6 +26,13 @@ items=(
   "au.com.dius.pact.consumer.dsl.PactDslWithProvider"
   "au.com.dius.pact.consumer.dsl.PactDslWithState"
   "au.com.dius.pact.consumer.xml.PactXmlBuilder"
+  "au.com.dius.pact.consumer.MockServer"
+  "au.com.dius.pact.consumer.model.MockProviderConfig"
+  "au.com.dius.pact.consumer.ConsumerPactRunnerKt"
+  "au.com.dius.pact.consumer.PactTestRun"
+  "au.com.dius.pact.consumer.PactVerificationResult"
+  "au.com.dius.pact.core.model.RequestResponsePact"
+  "au.com.dius.pact.core.support.Result"
   # "au.com.dius.pact.core.matchers"
   # "au.com.dius.pact.consumer.interactionCatalogueEntries"
   # "au.com.dius.pact.core.matchers.MatchingConfig"
