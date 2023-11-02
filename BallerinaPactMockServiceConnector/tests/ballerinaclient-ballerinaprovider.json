@@ -1,0 +1,50 @@
+{
+  "consumer": {
+    "name": "BallerinaClient"
+  },
+  "provider": {
+    "name": "BallerinaProvider"
+  },
+  "interactions": [
+    {
+      "description": "foo get",
+      "request": {
+        "method": "GET",
+        "path": "/foo"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "greet": "Hello world get"
+        }
+      }
+    },
+    {
+      "description": "foo post",
+      "request": {
+        "method": "POST",
+        "path": "/foo",
+        "body": {
+          "message": "Hello"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "greet": "Hello world post"
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}
