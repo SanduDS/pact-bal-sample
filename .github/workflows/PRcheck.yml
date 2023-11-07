@@ -30,9 +30,8 @@ jobs:
       - name: Install Pact Mock Server
         run: |
           # Install the Pact Mock Server
-          npm install -g pact-mock-service
-        env:
-          NODE_VERSION: 16.13.0
+          curl -LO https://github.com/pact-foundation/pact-ruby-standalone/releases/download/v2.0.10/pact-2.0.10-linux-x86_64.tar.gz
+          tar xzf pact-2.0.10-linux-x86_64.tar.gz
 
       - name: Start Pact Mock Server
         run: |
