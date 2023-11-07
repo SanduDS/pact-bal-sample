@@ -29,9 +29,6 @@ jobs:
 
       - name: Install Pact Mock Server
         run: |
-          cd ..
-          mkdir packBuild
-          cd packBuild
           # Install the Pact Mock Server
           curl -LO https://github.com/pact-foundation/pact-ruby-standalone/releases/download/v2.0.10/pact-2.0.10-linux-x86_64.tar.gz
           tar xzf pact-2.0.10-linux-x86_64.tar.gz
