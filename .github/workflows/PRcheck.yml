@@ -32,7 +32,7 @@ jobs:
           # Install the Pact Mock Server
           npm install -g pact-mock-service
         env:
-          NODE_VERSION: 14  # Replace with your desired Node.js version
+          NODE_VERSION: 16.13.0
 
       - name: Start Pact Mock Server
         run: |
