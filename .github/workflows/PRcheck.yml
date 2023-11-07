@@ -46,7 +46,7 @@ jobs:
           LOG_LEVEL: DEBUG
 
       - name: Run Ballerina tests & generate Pact file
-        run: bal test -groups g1
+        run: bal test --groups g1
         env:
           PACT_MOCK_SERVER_PORT: 1234
 
