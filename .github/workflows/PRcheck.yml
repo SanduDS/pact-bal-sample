@@ -32,10 +32,8 @@ jobs:
           # Install the Pact Mock Server
           curl -LO https://github.com/pact-foundation/pact-ruby-standalone/releases/download/v2.0.10/pact-2.0.10-linux-x86_64.tar.gz
           tar xzf pact-2.0.10-linux-x86_64.tar.gz
-
-      - name: Start Pact Mock Server
-        run: |
-          # Start the Pact Mock Server with environment variable configurations
+          ls
+          whereami
           ./pact-mock-service --consumer $PACT_CONSUMER --provider $PACT_PROVIDER --port $PACT_SERVER_PORT --pact-dir $PACT_DIR --log $LOG_PATH --log-level $LOG_LEVEL
         env:
           PACT_CONSUMER: "BallerinaClient"
