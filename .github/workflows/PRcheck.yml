@@ -41,8 +41,8 @@ jobs:
           PACT_CONSUMER: "BallerinaClient"
           PACT_PROVIDER: "BallerinaProvider"
           PACT_SERVER_PORT: 1234
-          PACT_DIR: "/tests"
-          LOG_PATH: "/tests/ballerina_mock_service.log"
+          PACT_DIR: "/home/runner/work/pact-bal-sample/pact-bal-sample/tests"
+          LOG_PATH: "/home/runner/work/pact-bal-sample/tests/ballerina_mock_service.log"
           LOG_LEVEL: DEBUG
 
       - name: Run Ballerina tests & generate Pact file
