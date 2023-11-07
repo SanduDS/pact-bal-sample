@@ -1,0 +1,64 @@
+name: PR Check
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+  push:
+    branches:
+      - master
+jobs:
+  consumer_pr_check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Setup Ballerina Environment
+      - name: Set Up Ballerina
+        uses: ballerina-platform/setup-ballerina@v1.1.0
+        with:
+          version: latest
+
+      - name: Install dependencies
+        run: bal build
+        env:
+          JAVA_HOME: /usr/lib/jvm/default-jvm
+
+      - name: Install Pact Mock Server
+        run: |
+          # Install the Pact Mock Server
+          npm install -g pact-mock-service
+        env:
+          NODE_VERSION: 14  # Replace with your desired Node.js version
+
+      - name: Start Pact Mock Server
+        run: |
+          # Start the Pact Mock Server with environment variable configurations
+          ./pact-mock-service --consumer $PACT_CONSUMER --provider $PACT_PROVIDER --port $PACT_SERVER_PORT --pact-dir $PACT_DIR --log $LOG_PATH --log-level $LOG_LEVEL
+        env:
+          PACT_CONSUMER: "BallerinaClient"
+          PACT_PROVIDER: "BallerinaProvider"
+          PACT_SERVER_PORT: 1234
+          PACT_DIR: "/tests"
+          LOG_PATH: "/tests/ballerina_mock_service.log"
+          LOG_LEVEL: DEBUG
+
+      - name: Run Ballerina tests & generate Pact file
+        run: bal test -groups g1
+        env:
+          PACT_MOCK_SERVER_PORT: 1234
+
+      - name: Publish Pact file to Pact Broker
+        run: |
+          # Publish the Pact file to the Pact Broker with basic authentication
+          ./pact-broker publish /test \
+            --broker-base-url $PACT_BROKER_URL \
+            --broker-username $PACT_BROKER_USERNAME \
+            --broker-password $PACT_BROKER_PASSWORD
+        env:
+          PACT_BROKER_URL: ${{ secrets.PACT_BROKER_URL }}
+          PACT_BROKER_USERNAME: ${{ secrets.PACT_BROKER_USERNAME }}
+          PACT_BROKER_PASSWORD: ${{ secrets.PACT_BROKER_PASSWORD }}
