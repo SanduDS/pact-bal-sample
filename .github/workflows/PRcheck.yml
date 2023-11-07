@@ -36,15 +36,9 @@ jobs:
           curl -LO https://github.com/pact-foundation/pact-ruby-standalone/releases/download/v2.0.10/pact-2.0.10-linux-x86_64.tar.gz
           tar xzf pact-2.0.10-linux-x86_64.tar.gz
           ls
-          
-
-      - name: Go back directory and install and Start Pact Mock Server
-        run: |
           cd pact/bin
           ./pact-mock-service --consumer $PACT_CONSUMER --provider $PACT_PROVIDER --port $PACT_SERVER_PORT --pact-dir $PACT_DIR --log $LOG_PATH --log-level $LOG_LEVEL
           cd ..
-          ls
-          cd ballerinaconsumerv3
         env:
           PACT_CONSUMER: "BallerinaClient"
           PACT_PROVIDER: "BallerinaProvider"
