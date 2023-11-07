@@ -40,7 +40,8 @@ jobs:
 
       - name: Go back directory and install and Start Pact Mock Server
         run: |
-          ./pact/bin/pact-mock-service --consumer $PACT_CONSUMER --provider $PACT_PROVIDER --port $PACT_SERVER_PORT --pact-dir $PACT_DIR --log $LOG_PATH --log-level $LOG_LEVEL
+          cd pact/bin
+          ./pact-mock-service --consumer $PACT_CONSUMER --provider $PACT_PROVIDER --port $PACT_SERVER_PORT --pact-dir $PACT_DIR --log $LOG_PATH --log-level $LOG_LEVEL
           cd ..
           ls
           cd ballerinaconsumerv3
