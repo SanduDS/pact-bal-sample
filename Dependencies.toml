@@ -308,7 +308,7 @@ modules = [
 [[package]]
 org = "dhanushkas"
 name = "BallerinaConsumerV3"
-version = "0.1.0"
+version = "0.2.2"
 dependencies = [
 	{org = "ballerina", name = "http"},
 	{org = "ballerina", name = "log"},
