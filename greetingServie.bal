@@ -8,6 +8,13 @@ public isolated function getGreeting() returns GreetingResponse|error {
     return response;
 }
 
+
+public isolated function getGreetingHi(string name) returns GreetingResponse|error {
+    http:Client greetingBalService = check new (baseURL);
+    GreetingResponse response = check greetingBalService->/hi/name;
+    return response;
+}
+
 public type GreetingResponse record {|
     string message;
 |};

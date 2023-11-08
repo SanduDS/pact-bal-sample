@@ -50,6 +50,38 @@ function getGreetingPactTest() returns error? {
 
 }
 
+@test:Config {enable: true, groups: ["g1"]}
+function getGreetingHiPactTest() returns error? {
+    log:printInfo("Registering interactions");
+    pact:Interaction interaction = {
+        description: "Get hi from ballerina service",
+        request: {
+            path: "/hi/Ballerina",
+            method: "GET"
+        },
+        response: {
+            status: 200,
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: {
+                message: "hi Ballerina"
+            }
+        }
+    };
+
+    string registrationStatus = check pactCreatorClient->registerInteraction(interaction);
+    test:assertEquals(registrationStatus.toString().trim(), "Registered interactions", "Registration fails");
+    log:printInfo("Testing interactions");
+    GreetingResponse actualResponse = check getGreetingHi("Ballerina");
+    GreetingResponse expectedResponse = {
+        message: "hi Ballerina"
+    };
+
+    test:assertEquals(actualResponse, expectedResponse);
+
+}
+
 @test:AfterSuite {}
 function afterSuite() returns error? {
     log:printInfo("After all");
