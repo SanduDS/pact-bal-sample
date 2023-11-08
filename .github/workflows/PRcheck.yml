@@ -53,7 +53,8 @@ jobs:
       - name: Publish Pact file to Pact Broker
         run: |
           # Publish the Pact file to the Pact Broker with basic authentication
-          ./pact-broker publish /test \
+          cd pact/bin
+          ./pact-broker publish /home/runner/work/pact-bal-sample/pact-bal-sample/tests \
             --broker-base-url $PACT_BROKER_URL \
             --broker-username $PACT_BROKER_USERNAME \
             --broker-password $PACT_BROKER_PASSWORD
