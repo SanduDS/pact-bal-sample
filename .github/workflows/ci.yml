@@ -56,7 +56,7 @@ jobs:
             --broker-base-url $PACT_BROKER_URL \
             --broker-username $PACT_BROKER_USERNAME \
             --broker-password $PACT_BROKER_PASSWORD \
-            --consumer-app-version=0.1.0 \
+            --consumer-app-version=0.1.1 \
             --auto-detect-version-properties=true \
             --tag-with-git-branch=true
         env:
