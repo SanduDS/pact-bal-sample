@@ -73,7 +73,7 @@ function getGreetingHiPactTest() returns error? {
     string registrationStatus = check pactCreatorClient->registerInteraction(interaction);
     test:assertEquals(registrationStatus.toString().trim(), "Registered interactions", "Registration fails");
     log:printInfo("Testing interactions");
-    GreetingResponse actualResponse = check getGreetingHi("Ballerina");
+    GreetingResponse actualResponse = check getGreetingHey("Ballerina");
     GreetingResponse expectedResponse = {
         message: "hey Ballerina"
     };
