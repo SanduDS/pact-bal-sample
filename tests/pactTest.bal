@@ -54,9 +54,9 @@ function getGreetingPactTest() returns error? {
 function getGreetingHiPactTest() returns error? {
     log:printInfo("Registering interactions");
     pact:Interaction interaction = {
-        description: "Get hi from ballerina service",
+        description: "Get hey from ballerina service",
         request: {
-            path: "/hi/Ballerina",
+            path: "/hey/Ballerina",
             method: "GET"
         },
         response: {
@@ -65,7 +65,7 @@ function getGreetingHiPactTest() returns error? {
                 "Content-Type": "application/json"
             },
             body: {
-                message: "hi Ballerina"
+                message: "hey Ballerina"
             }
         }
     };
@@ -75,7 +75,7 @@ function getGreetingHiPactTest() returns error? {
     log:printInfo("Testing interactions");
     GreetingResponse actualResponse = check getGreetingHi("Ballerina");
     GreetingResponse expectedResponse = {
-        message: "hi Ballerina"
+        message: "hey Ballerina"
     };
 
     test:assertEquals(actualResponse, expectedResponse);
